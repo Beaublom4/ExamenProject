@@ -7,9 +7,9 @@ public class EnemyBehavior : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform playerTransform;
-    private enum state {Idle, Aggro, Attacking};
+    public enum enemyState {Idle, Aggro, Attacking};
 
-    private state currentState = state.Idle;
+    private enemyState currentState = enemyState.Idle;
 
     private void Start()
     {
@@ -19,15 +19,31 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (currentState == enemyState.Attacking)
+            return;
+
         if (other.tag == "Player")
-        {
-            currentState = state.Aggro;
-        }
+            SetCurrentState(enemyState.Aggro);
+    }
+
+    public IEnumerator Attack()
+    {
+        SetCurrentState(enemyState.Attacking);
+
+        ///Physics.OverlapSphere(); or other hitbox spawn to detect player
+        ///do damage if not blocked
+        
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    public void SetCurrentState(enemyState state)
+    {
+        currentState = state;
     }
 
     private void LateUpdate()
     {
-        if (currentState == state.Aggro)
+        if (currentState == enemyState.Aggro)
         {
             agent.SetDestination(playerTransform.position);
         }
