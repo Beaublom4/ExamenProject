@@ -25,13 +25,13 @@ public class PlayerMovement : MonoBehaviour
             moveCharacter(movement);
 
             if (movement.x > 0)
-                anim.SetInteger("direction", 2);
-            else if (movement.x < 0)
                 anim.SetInteger("direction", 3);
-            else if (movement.z > 0)
-                anim.SetInteger("direction", 1);
+            else if (movement.x < 0)
+                anim.SetInteger("direction", 4);
+            if (movement.z > 0)
+                anim.SetInteger("direction", 2);
             else if (movement.z < 0)
-                anim.SetInteger("direction", 0);
+                anim.SetInteger("direction", 1);
         }
     }
 
