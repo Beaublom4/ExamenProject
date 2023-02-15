@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d88ba4a206f13a344b4c8a0d78ed89ef
+guid: 3a83b52a73daf484193fa8f7cf98aeef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkSpriteBack_0
+      name: ShieldBlockSprite-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
-        height: 20
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d1ad739e03177a43801c839226f8ec3
-      internalID: 1331011006
+      spriteID: 17dc55f93818ef0489d240276d045886
+      internalID: -2028589328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSpriteBack_1
+      name: ShieldBlockSprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af27fda6df9461d4999a49b474b6b36b
+      internalID: -1478793195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBlockSprite-Sheet_2
       rect:
         serializedVersion: 2
         x: 20
         y: 0
-        width: 20
-        height: 20
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +161,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85752785e2d4574cb91c36bd0ba3095
-      internalID: -357919358
+      spriteID: 3c46088435fc09341a7f5686e7457f65
+      internalID: -335812161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSpriteBack_2
+      name: ShieldBlockSprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e846756a17697134cb4774da4efd216b
+      internalID: -563735265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBlockSprite-Sheet_4
       rect:
         serializedVersion: 2
         x: 40
         y: 0
-        width: 20
-        height: 20
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +203,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8a68fe710b422e4491d74494978ab00
-      internalID: -95255737
+      spriteID: 769f293e0ebba5a498ba6fb648ed6666
+      internalID: -363706086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSpriteBack_3
+      name: ShieldBlockSprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb999b86586a6747b05596ec5cf210c
+      internalID: -1042834182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldBlockSprite-Sheet_6
       rect:
         serializedVersion: 2
         x: 60
         y: 0
-        width: 20
-        height: 20
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c53059b550e3d44c878b2a6091f9213
-      internalID: 284688487
+      spriteID: f20015315695fe74ca84dc454354ac7f
+      internalID: 1114238670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkSpriteBack_4
+      name: ShieldBlockSprite-Sheet_7
       rect:
         serializedVersion: 2
-        x: 80
+        x: 70
         y: 0
-        width: 20
-        height: 20
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,29 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1365d8d4bd0706c43872c0c44c39ff48
-      internalID: -850267443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WalkSpriteBack_5
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63751d687f9fdcf4e81c88a836bc9baf
-      internalID: 1331741084
+      spriteID: b5b29d47313aac149bc338051d569ad0
+      internalID: 1213012912
       vertices: []
       indices: 
       edges: []
@@ -233,7 +275,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a49d752fd8e8d6f40ba71a60fe5d2468
+    spriteID: c48b93f552796854f8969f6a97b41eaf
     internalID: 0
     vertices: []
     indices: 
@@ -241,12 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WalkSpriteBack_3: 284688487
-      WalkSpriteBack_1: -357919358
-      WalkSpriteBack_5: 1331741084
-      WalkSpriteBack_2: -95255737
-      WalkSpriteBack_0: 1331011006
-      WalkSpriteBack_4: -850267443
+      ShieldBlockSprite-Sheet_0: -2028589328
+      ShieldBlockSprite-Sheet_5: -1042834182
+      ShieldBlockSprite-Sheet_4: -363706086
+      ShieldBlockSprite-Sheet_3: -563735265
+      ShieldBlockSprite-Sheet_6: 1114238670
+      ShieldBlockSprite-Sheet_7: 1213012912
+      ShieldBlockSprite-Sheet_1: -1478793195
+      ShieldBlockSprite-Sheet_2: -335812161
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
