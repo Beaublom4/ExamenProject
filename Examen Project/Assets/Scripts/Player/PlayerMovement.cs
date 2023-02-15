@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public Rigidbody rb;
     public Vector3 movement;
+    public Animator anim;
+    public bool canMove;
 
     // Use this for initialization
     void Start()
@@ -17,8 +19,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveCharacter(movement);
+        if (canMove)
+        {
+            movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+            moveCharacter(movement);
+
+            if (movement.x > 0)
+                anim.SetInteger("direction", 2);
+            else if (movement.x < 0)
+                anim.SetInteger("direction", 3);
+            else if (movement.z > 0)
+                anim.SetInteger("direction", 1);
+            else if (movement.z < 0)
+                anim.SetInteger("direction", 0);
+        }
     }
 
     void moveCharacter(Vector3 direction)
