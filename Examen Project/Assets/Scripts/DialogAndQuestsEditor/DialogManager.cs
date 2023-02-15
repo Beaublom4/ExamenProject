@@ -5,6 +5,8 @@ using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
+    public static DialogManager Instance;
+
     public float messageSpeed;
 
     public GameObject messageBox;
@@ -19,10 +21,9 @@ public class DialogManager : MonoBehaviour
 
     public List<Message> messages = new();
 
-    private void Start()
+    private void Awake()
     {
-        Message[] messageList = new Message[] {new("Wil je deze quest accepteren?", true, new("Be happy", "Happiness")) , new("Dankjewel!", false)};
-        AddMessageAndPlay(messageList);
+        Instance = this;
     }
     public void AddMessageAndPlay(Message _message)
     {

@@ -26,19 +26,13 @@ public class QuestManager : MonoBehaviour
     private void DisplayQuest()
     {
         questText.text = currentQuest.questName;
-        questText.text += "<br>" + currentQuest.questObjective;
+        questText.text += "<br>" + "Find: " + currentQuest.questObjective.itemName + " and return it";
         questBox.SetActive(true);
     }
 }
 [System.Serializable]
 public class Quest
 {
-    public Quest(string _questName, string _questObjective)
-    {
-        questName = _questName;
-        questObjective = _questObjective;
-    }
-
     public string questName;
-    public string questObjective;
+    public ItemScrObj questObjective;
 }
