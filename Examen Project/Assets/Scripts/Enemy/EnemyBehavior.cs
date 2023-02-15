@@ -5,11 +5,16 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public enum enemyState {Idle, Aggro, Attacking};
+    
+    private enemyState currentState = enemyState.Idle;
     private NavMeshAgent agent;
     private Transform playerTransform;
-    public enum enemyState {Idle, Aggro, Attacking};
 
-    private enemyState currentState = enemyState.Idle;
+    public Enemy_Stats _Stats;
+
+    public GameObject[] lootPrefabList;
+    [Range(0, 100)]public int lootChange;
 
     private void Start()
     {
@@ -39,6 +44,16 @@ public class EnemyBehavior : MonoBehaviour
     public void SetCurrentState(enemyState state)
     {
         currentState = state;
+    }
+
+    [ContextMenu("loot")]
+    public void OnDeath()
+    {
+        if (Random.Range(0, 101) > lootChange)
+            return;
+
+        int newLootIndex = Random.Range(0, lootPrefabList.Length);
+        GameObject newLoot = Instantiate(lootPrefabList[newLootIndex], transform.position, transform.rotation, null);
     }
 
     private void LateUpdate()

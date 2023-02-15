@@ -8,7 +8,7 @@ public class EnemyAttackRangeFinder : MonoBehaviour
 
     private void Awake()
     {
-        gameObject.GetComponent<EnemyBehavior>();
+        GetComponentInParent<EnemyBehavior>();
     }
 
     private void OnTriggerEnter(Collider other)
