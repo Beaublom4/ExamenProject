@@ -12,7 +12,9 @@ public class EnemyBehavior : MonoBehaviour
     private Transform playerTransform;
 
     public Enemy_Stats _Stats;
+    public Animator anim;
 
+    [Space]
     public GameObject[] lootPrefabList;
     [Range(0, 100)]public int lootChange;
 
@@ -20,6 +22,23 @@ public class EnemyBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         playerTransform = GameObject.FindWithTag("Player").transform;
+    }
+
+    private void Update()
+    {
+        if (currentState == enemyState.Aggro)
+        {
+            agent.SetDestination(playerTransform.position);
+        }
+
+        //if (movement.x > 0)
+        //    anim.SetInteger("direction", 3);
+        //else if (movement.x < 0)
+        //    anim.SetInteger("direction", 4);
+        //if (movement.z > 0)
+        //    anim.SetInteger("direction", 2);
+        //else if (movement.z < 0)
+        //    anim.SetInteger("direction", 1);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,12 +75,5 @@ public class EnemyBehavior : MonoBehaviour
         GameObject newLoot = Instantiate(lootPrefabList[newLootIndex], transform.position, transform.rotation, null);
     }
 
-    private void LateUpdate()
-    {
-        if (currentState == enemyState.Aggro)
-        {
-            agent.SetDestination(playerTransform.position);
-        }
-    }
 
 }
