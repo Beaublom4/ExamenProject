@@ -173,8 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  rb: {fileID: 566119114}
-  movement: {x: 0, y: 0, z: 0}
   anim: {fileID: 0}
   canMove: 0
 --- !u!136 &566119116
@@ -271,7 +269,7 @@ GameObject:
   - component: {fileID: 719916045}
   - component: {fileID: 719916044}
   m_Layer: 0
-  m_Name: BaseSprite
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,9 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cfe9cbc31f2ec4fb2a57379f71d489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
-  rb: {fileID: 719916045}
-  movement: {x: 0, y: 0, z: 0}
+  speed: 5
   anim: {fileID: 719916047}
   canMove: 1
 --- !u!54 &719916045
@@ -403,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719916043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.8, y: 0.99, z: 0}
+  m_LocalPosition: {x: -17.8, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

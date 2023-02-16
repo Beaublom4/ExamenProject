@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
-    public Rigidbody rb;
-    public Vector3 movement;
+    private Vector3 movement;
     public Animator anim;
     public bool canMove;
 
@@ -37,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     void moveCharacter(Vector3 direction)
     {
-        rb.velocity = direction * speed * Time.deltaTime;
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 
 
