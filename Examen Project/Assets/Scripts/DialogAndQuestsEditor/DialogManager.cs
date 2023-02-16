@@ -9,6 +9,8 @@ public class DialogManager : MonoBehaviour
 
     public float messageSpeed;
 
+    public Message[] dontHaveAnythingMessages;
+
     public GameObject messageBox;
     public GameObject continueButton;
     public GameObject[] questButtons;
@@ -20,6 +22,8 @@ public class DialogManager : MonoBehaviour
     private bool typingMessage;
 
     public List<Message> messages = new();
+
+    private NPC currentNpc;
 
     private void Awake()
     {
@@ -34,9 +38,10 @@ public class DialogManager : MonoBehaviour
             StartDisplayingMessages();
         }
     }
-    public void AddMessageAndPlay(Message[] _messages)
+    public void AddMessageAndPlay(Message[] _messages, NPC _npc)
     {
-        foreach(Message m in _messages)
+        currentNpc = _npc;
+        foreach (Message m in _messages)
         {
             AddMessageAndPlay(m);
         }
@@ -86,7 +91,7 @@ public class DialogManager : MonoBehaviour
     }
     public void AcceptQuest()
     {
-        QuestManager.Instance.SetQuest(quest);
+        QuestManager.Instance.StartQuest(quest, currentNpc);
 
         QuestButtons(false);
         ContinueMessage();
