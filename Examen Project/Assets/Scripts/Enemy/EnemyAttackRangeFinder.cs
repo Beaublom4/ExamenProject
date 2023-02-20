@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script is to be placed on a child object of the enemy.
+/// This object should have a trigger to start the attack.
+/// </summary>
+
 public class EnemyAttackRangeFinder : MonoBehaviour
 {
-    EnemyBehavior thisEnemy;
+    public EnemyBehavior thisEnemy;
 
     private void Awake()
     {
-        GetComponentInParent<EnemyBehavior>();
+        thisEnemy = GetComponentInParent<EnemyBehavior>();
     }
 
     private void OnTriggerEnter(Collider other)
