@@ -15,7 +15,7 @@ public class QuestManager : MonoBehaviour
     public Message[] noQuestItemFoundMessage, questItemFoundMessage;
 
 
-    private Quest currentQuest;
+    public Quest currentQuest;
 
     private void Awake()
     {
@@ -65,4 +65,5 @@ public class Quest
 {
     public string questName;
     public ItemScrObj questObjective;
+    public int questCount = 1;
 }

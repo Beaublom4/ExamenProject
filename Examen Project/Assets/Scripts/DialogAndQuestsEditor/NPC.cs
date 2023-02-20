@@ -10,14 +10,25 @@ public class NPC : MonoBehaviour
     public Animator anim;
 
     private bool questActive;
+    public bool isInteracted;
     public bool hasItem;
 
     [ContextMenu("Interact")]
     public void Interact()
     {
-        //TODO: Check if the npc has more messages, and check for more quests
+        if (isInteracted)
+            return;
+        else
+            isInteracted = true;
 
-        //turn off movement
+        FindObjectOfType<PlayerMovement>().canMove = false;
+
+        Quest currentQuest = QuestManager.Instance.currentQuest;
+        if (currentQuest != null)
+            hasItem = InventoryManager.Instance.HasItem(currentQuest.questObjective, currentQuest.questCount);
+        else
+            questActive = false;
+
         if (!questActive)
         {
             if (currentMessages >= messages.Length)
@@ -33,6 +44,7 @@ public class NPC : MonoBehaviour
         {
             if (hasItem)
             {
+                InventoryManager.Instance.RemoveItem(QuestManager.Instance.currentQuest.questObjective, currentQuest.questCount);
                 QuestManager.Instance.FinishQuest();
                 DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.questItemFoundMessage, this);
                 currentMessages++;

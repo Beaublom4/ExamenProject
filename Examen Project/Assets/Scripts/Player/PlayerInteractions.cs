@@ -43,6 +43,7 @@ public class PlayerInteractions : MonoBehaviour
                 }
                 if (interactionRayHit.transform.tag == "Item")
                 {
+                    interactionRayHit.transform.GetComponent<Item>().PickUpItem();
                     print("Item True");
                 }
                 if (interactionRayHit.transform.tag == "Shop")

@@ -139,16 +139,20 @@ MonoBehaviour:
       quest:
         questName: 
         questObjective: {fileID: 0}
+        questCount: 0
     - message: I have a question for you!
       isQuest: 0
       quest:
         questName: 
         questObjective: {fileID: 0}
+        questCount: 0
     - message: Can you get me this item?
       isQuest: 1
       quest:
         questName: Find item
         questObjective: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
           type: 2}
+        questCount: 1
   anim: {fileID: 7008977316861116365}
+  isInteracted: 0
   hasItem: 0

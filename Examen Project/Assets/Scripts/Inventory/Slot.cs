@@ -7,6 +7,7 @@ using TMPro;
 public class Slot : MonoBehaviour
 {
     public ItemScrObj item;
+    public int count;
 
     public TMP_Text itemText;
     public Image itemImage;
@@ -14,9 +15,21 @@ public class Slot : MonoBehaviour
     /// <summary>
     /// Puts item in a slot and updates slot
     /// </summary>
-    public void SetSlot(ItemScrObj _item)
+    public void SetSlot(ItemScrObj _item, int _count)
     {
-        item = _item;
+        if (item != null && item != _item)
+            EmptySlot();
+
+        if (item == null) 
+        {
+            item = _item;
+            count = _count;
+        }
+        else
+        {
+            count += _count;
+        }
+
         UpdateSlot(item.itemName, item.itemIcon);
     }
     /// <summary>
@@ -24,7 +37,10 @@ public class Slot : MonoBehaviour
     /// </summary>
     public void EmptySlot()
     {
-
+        item = null;
+        count = 0;
+        itemText.text = "Item";
+        itemImage.sprite = null;
     }
     /// <summary>
     /// Set display slot to variables
@@ -33,5 +49,15 @@ public class Slot : MonoBehaviour
     {
         itemText.text = itemName;
         itemImage.sprite = itemSprite;
+    }
+    /// <summary>
+    /// Use item in slot
+    /// </summary>
+    public void UseSlot()
+    {
+        if (item == null)
+            return;
+
+        InventoryManager.Instance.DisplayItem(this);
     }
 }
