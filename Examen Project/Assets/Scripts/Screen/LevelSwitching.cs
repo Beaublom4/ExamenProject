@@ -9,6 +9,7 @@ public class LevelSwitching : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //calles SwitchCam when player collides with this object.
         if(other.transform.tag == "Player")
         {
             if(cam.transform.parent == camPos1.transform)
