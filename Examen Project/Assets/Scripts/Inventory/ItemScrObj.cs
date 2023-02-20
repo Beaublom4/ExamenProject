@@ -7,6 +7,8 @@ public class ItemScrObj : ScriptableObject
 {
     public string itemName;
     public Sprite itemIcon;
+    [TextArea]
+    public string itemDiscription;
     public int itemId;
 
     [Header("Weapon Type")]
@@ -14,7 +16,9 @@ public class ItemScrObj : ScriptableObject
     public bool range;
     public bool magic;
     public bool shield;
-    [Header("Item Type")]
+    [Header("Food")]
     public bool food;
+    public int healAmount;
+    [Header("Key Item")]
     public bool keyItem;
 }

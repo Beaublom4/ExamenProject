@@ -104,9 +104,14 @@ public class DialogManager : MonoBehaviour
         else
         {
             messages.RemoveAt(0);
-            if(messages.Count > 0)
+            if (messages.Count > 0)
                 StartDisplayingMessages();
-            else messageBox.SetActive(false);
+            else
+            {
+                FindObjectOfType<PlayerMovement>().canMove = true;
+                currentNpc.isInteracted = false;
+                messageBox.SetActive(false);
+            }
         }
     }
     /// <summary>
