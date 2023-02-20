@@ -7,6 +7,8 @@ public class NPC : MonoBehaviour
     public MessageHolder[] messages;
     int currentMessages = 0;
 
+    public Animator anim;
+
     private bool questActive;
     public bool hasItem;
 

@@ -21,12 +21,20 @@ public class QuestManager : MonoBehaviour
     {
         Instance = this;
     }
+    /// <summary>
+    /// Start a new quest
+    /// </summary>
+    /// <param name="_quest"></param>
+    /// <param name="_npc"></param>
     public void StartQuest(Quest _quest, NPC _npc)
     {
         _npc.StartQuest();
         currentQuest = _quest;
         DisplayQuest();
     }
+    /// <summary>
+    /// Finish the current quest
+    /// </summary>
     public void FinishQuest()
     {
         //Remove item from inventory
@@ -34,12 +42,18 @@ public class QuestManager : MonoBehaviour
         currentQuest = null;
         EmptyQuest();
     }
+    /// <summary>
+    /// Display the current quests titel and discription
+    /// </summary>
     private void DisplayQuest()
     {
         questText.text = currentQuest.questName;
         questText.text += "<br>" + "Find: " + currentQuest.questObjective.itemName + " and return it";
         questBox.SetActive(true);
     }
+    /// <summary>
+    /// Clear current quest
+    /// </summary>
     private void EmptyQuest()
     {
         questText.text = "";

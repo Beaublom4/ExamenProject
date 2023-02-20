@@ -25,10 +25,15 @@ public class DialogManager : MonoBehaviour
 
     private NPC currentNpc;
 
+    //Set instance
     private void Awake()
     {
         Instance = this;
     }
+    /// <summary>
+    /// Add a message to the list of messages, and play if its not yet playing
+    /// </summary>
+    /// <param name="_message"></param>
     public void AddMessageAndPlay(Message _message)
     {
         messages.Add(_message);
@@ -38,6 +43,11 @@ public class DialogManager : MonoBehaviour
             StartDisplayingMessages();
         }
     }
+    /// <summary>
+    /// Add messages as array to the list of messages, and play if its not yet playing
+    /// </summary>
+    /// <param name="_messages"></param>
+    /// <param name="_npc"></param>
     public void AddMessageAndPlay(Message[] _messages, NPC _npc)
     {
         currentNpc = _npc;
@@ -47,20 +57,23 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    //Routine of messages playing
     IEnumerator DislayMessage(Message _message)
     {
         typingMessage = true;
         messageText.maxVisibleCharacters = 0;
+        currentNpc.anim.SetBool("talking", true);
 
         currentDisplayingMessage = _message.message;
         messageText.text = _message.message;
 
+        //Displaying message 1 char for 1 char
         while (messageText.maxVisibleCharacters < _message.message.Length)
         {
             messageText.maxVisibleCharacters++;
             yield return new WaitForSeconds(messageSpeed);
         }
-
+        //Check if current message has a quest connected
         if (_message.isQuest)
         {
             quest = _message.quest;
@@ -68,18 +81,25 @@ public class DialogManager : MonoBehaviour
         }
 
         typingMessage = false;
+        currentNpc.anim.SetBool("talking", false);
     }
-    
+    /// <summary>
+    /// Start coroutine from here (public)
+    /// </summary>
     public void StartDisplayingMessages()
     {
         StartCoroutine(DislayMessage(messages[0]));
     }
+    /// <summary>
+    /// Press continue button to skip the displaying animation
+    /// </summary>
     public void ContinueMessage()
     {
         currentDisplayingMessage = "";
         if (messageText.maxVisibleCharacters < currentDisplayingMessage.Length)
         {
             messageText.maxVisibleCharacters = currentDisplayingMessage.Length;
+            currentNpc.anim.SetBool("talking", false);
         }
         else
         {
@@ -89,6 +109,9 @@ public class DialogManager : MonoBehaviour
             else messageBox.SetActive(false);
         }
     }
+    /// <summary>
+    /// Accept the quest and sent it to the quest manager
+    /// </summary>
     public void AcceptQuest()
     {
         QuestManager.Instance.StartQuest(quest, currentNpc);
@@ -96,12 +119,15 @@ public class DialogManager : MonoBehaviour
         QuestButtons(false);
         ContinueMessage();
     }
+    /// <summary>
+    /// Deny quest and continue
+    /// </summary>
     public void DenyQuest()
     {
         QuestButtons(false);
         ContinueMessage();
     }
-
+    //Set the quest buttons active or not active
     public void QuestButtons(bool b)
     {
         continueButton.SetActive(!b);
