@@ -704,6 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages: []
+  anim: {fileID: 0}
   hasItem: 0
 --- !u!1 &912743336
 GameObject:
@@ -1184,6 +1185,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7132737540205777929, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.67323875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132737540205777929, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1453807
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132737540205777929, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0332613
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132737540205777929, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.06102252
+      objectReference: {fileID: 0}
     - target: {fileID: 7132737540205777932, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
       propertyPath: m_Name
@@ -1202,7 +1223,7 @@ PrefabInstance:
     - target: {fileID: 7132737540205777942, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.03
+      value: 1.169
       objectReference: {fileID: 0}
     - target: {fileID: 7132737540205777942, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
