@@ -7,9 +7,10 @@ using UnityEngine;
 /// This object should have a trigger to start the attack.
 /// </summary>
 
+[RequireComponent(typeof(Collider))]
 public class EnemyAttackRangeFinder : MonoBehaviour
 {
-    public EnemyBehavior thisEnemy;
+    EnemyBehavior thisEnemy;
 
     private void Awake()
     {

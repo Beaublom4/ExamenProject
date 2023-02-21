@@ -6,17 +6,21 @@ using UnityEngine;
 /// Make sure that this object has a empty child or other way to assign the spawnpoint for the loot
 /// </summary>
 
-public class LootDmgButton : DamageButton
+public class LootPPlate : PressurePlate
 {
     [SerializeField] LootTable lootTable;
     [SerializeField] Transform lootSpawnPoint;
 
-    public override void TriggerOnDamage()
+    public override IEnumerator CheckPressure()
     {
-        base.TriggerOnDamage();
-        Debug.Log("Loot Button overide triggerd!");
+        base.CheckPressure();
+        print("wow cool loot");
 
         int newLootIndex = Random.Range(0, lootTable.lootPrefabList.Length);
         GameObject newLoot = Instantiate(lootTable.lootPrefabList[newLootIndex], lootSpawnPoint.position, Quaternion.identity, null);
+
+
+        checkPressureIsRunning = false;
+        yield return null;
     }
 }
