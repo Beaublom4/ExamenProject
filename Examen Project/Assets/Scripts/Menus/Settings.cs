@@ -21,16 +21,28 @@ public class Settings : MonoBehaviour
     {
         
     }
+    /// <summary>
+    /// Set the volume with calculation volume
+    /// </summary>
+    /// <param name="value"></param>
     public void SetVolume(float value)
     {
         volume = value;
         mixer.SetFloat("Master", Mathf.Log10(value) * 20);
     }
+    /// <summary>
+    /// Set windowed mode to toggle
+    /// </summary>
+    /// <param name="toggle"></param>
     public void SetWindowedMode(bool toggle)
     {
         windowed = toggle;
         Screen.fullScreen = !toggle;
     }
+    /// <summary>
+    /// Set resolution to different options
+    /// </summary>
+    /// <param name="dropdown"></param>
     public void SetResolution(int dropdown)
     {
         resolution = dropdown;
@@ -50,6 +62,9 @@ public class Settings : MonoBehaviour
                 break;
         }
     }
+    /// <summary>
+    /// Return out of options
+    /// </summary>
     public void Return()
     {
         gameObject.SetActive(false);
