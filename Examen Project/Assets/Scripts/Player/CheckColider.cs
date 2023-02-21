@@ -9,7 +9,7 @@ public class CheckColider : MonoBehaviour
         //check if the object that enterd the trigger has a Health or DamageButton scripts and call the right function.
         if(other.GetComponent<Health>())
         {
-            other.GetComponent<Health>().takeHealth(5);
+            other.GetComponent<Health>().DoDmg(5);
         }
         else if(other.GetComponent<DamageButton>())
         {
