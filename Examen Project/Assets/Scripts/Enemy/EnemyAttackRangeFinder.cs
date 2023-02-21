@@ -21,7 +21,7 @@ public class EnemyAttackRangeFinder : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            StartCoroutine(thisEnemy.Attack());
+            StartCoroutine(thisEnemy.Attack(other));
         }
     }
 }

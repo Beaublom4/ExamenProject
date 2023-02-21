@@ -16,6 +16,7 @@ public class EnemyBehavior : MonoBehaviour
     private float _attackSpeed;
     private int _attackDamage;
     private LootTable _lootTable;
+    private Health health;
 
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
@@ -59,18 +60,34 @@ public class EnemyBehavior : MonoBehaviour
         agent.SetDestination(other.transform.position);
     }
 
-    public IEnumerator Attack()
+    public IEnumerator Attack(Collider player)
     {
-        print("Attack start");
+print("Attack called");
+
+        if (currentState == enemyState.Attacking)
+            yield break;
+
+        StartCoroutine(AttackCoolDown());
+print("Attack start");
 
         SetCurrentState(enemyState.Attacking);
+        yield return new WaitForEndOfFrame();
+
+        //if (blocked)
+        //{
+        //  SetCurrentState(enemyState.Idle);
+        //  yield break;
+        //}
+        player.GetComponent<Health>().DoDmg(_attackDamage);
         
-        ///do damage if not blocked
-        
+
+print("Attack end");
+    }
+
+    private IEnumerator AttackCoolDown()
+    {
         yield return new WaitForSeconds(_attackSpeed);
         SetCurrentState(enemyState.Idle);
-
-        print("Attack end");
     }
 
     public void SetCurrentState(enemyState state)
@@ -83,12 +100,12 @@ public class EnemyBehavior : MonoBehaviour
         _moveSpeed = stats.getMoveSpeed();
         _attackSpeed = stats.getAttackSpeed();
         _attackDamage = stats.getAttackDamage();
-        //HealthScript.health = stats.getMaxHealth()
         _lootTable = stats.getLootTable();
 
+        health = GetComponent<Health>();
+        health.maxHealth = stats.getMaxHealth();
     }
 
-    [ContextMenu("loot")]
     public void OnDeath()
     {
         if (Random.Range(0, 101) > _lootTable.getLootChance())
@@ -96,6 +113,8 @@ public class EnemyBehavior : MonoBehaviour
 
         int newLootIndex = Random.Range(0, _lootTable.lootPrefabList.Length);
         GameObject newLoot = Instantiate(_lootTable.lootPrefabList[newLootIndex], transform.position, transform.rotation, null);
+
+        Destroy(this);
     }
 
 
