@@ -13,7 +13,7 @@ public class ItemScrObj : ScriptableObject
 
     [Header("Melee")]
     public bool melee;
-    public float meleeDamage;
+    public int meleeDamage;
     public float meleeCooldown;
     [Header("Shield")]
     public bool shield;
