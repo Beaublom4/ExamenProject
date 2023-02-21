@@ -108,9 +108,9 @@ TextureImporter:
       name: ShieldBlockSide_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -129,9 +129,9 @@ TextureImporter:
       name: ShieldBlockSide_1
       rect:
         serializedVersion: 2
-        x: 10
+        x: 11
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,9 +150,9 @@ TextureImporter:
       name: ShieldBlockSide_2
       rect:
         serializedVersion: 2
-        x: 20
+        x: 21
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,9 +171,9 @@ TextureImporter:
       name: ShieldBlockSide_3
       rect:
         serializedVersion: 2
-        x: 30
+        x: 31
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,9 +192,9 @@ TextureImporter:
       name: ShieldBlockSide_4
       rect:
         serializedVersion: 2
-        x: 40
+        x: 41
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,9 +213,9 @@ TextureImporter:
       name: ShieldBlockSide_5
       rect:
         serializedVersion: 2
-        x: 50
+        x: 51
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,9 +234,9 @@ TextureImporter:
       name: ShieldBlockSide_6
       rect:
         serializedVersion: 2
-        x: 60
+        x: 61
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -255,9 +255,9 @@ TextureImporter:
       name: ShieldBlockSide_7
       rect:
         serializedVersion: 2
-        x: 70
+        x: 71
         y: 0
-        width: 10
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
