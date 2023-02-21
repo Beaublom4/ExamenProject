@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     }
     public void die()
     {
-        //die
+        //DEATH
         print("DIE");
     }
 
