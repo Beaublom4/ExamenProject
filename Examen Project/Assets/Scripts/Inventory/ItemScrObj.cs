@@ -11,11 +11,18 @@ public class ItemScrObj : ScriptableObject
     public string itemDiscription;
     public int itemId;
 
-    [Header("Weapon Type")]
+    [Header("Melee")]
     public bool melee;
-    public bool range;
-    public bool magic;
+    public float meleeDamage;
+    public float meleeCooldown;
+    [Header("Shield")]
     public bool shield;
+    public float shieldDuration;
+    public float shieldCooldown;
+    [Header("Range")]
+    public bool range;
+    [Header("Magic")]
+    public bool magic;
     [Header("Food")]
     public bool food;
     public int healAmount;

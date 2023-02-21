@@ -23,13 +23,26 @@ public class InventoryManager : MonoBehaviour
     {
         Instance = this;
     }
+    /// <summary>
+    /// Update checks input to open inventory
+    /// </summary>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventory.SetActive(!inventory.activeSelf);
+            if (inventory.activeSelf)
+            {
+                ClearDisplay();
+            }
         }
     }
+    /// <summary>
+    /// Add item to inventory with item, count of added items, object to destroy
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="count"></param>
+    /// <param name="itemObj"></param>
     public void AddItem(ItemScrObj item, int count, GameObject itemObj)
     {
         if (item.melee)
@@ -59,6 +72,11 @@ public class InventoryManager : MonoBehaviour
         if (itemObj != null)
             Destroy(itemObj);
     }
+    /// <summary>
+    /// Remove item from inventory with item and count of item
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="count"></param>
     public void RemoveItem(ItemScrObj item, int count)
     {
         foreach(Slot s in itemSlots)
@@ -74,6 +92,11 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Find a slot thats or already has item in it or finds empty slot to put item in
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
     public int FindSlot(ItemScrObj item)
     {
         for (int i = 0; i < itemSlots.Length; i++)
@@ -89,6 +112,12 @@ public class InventoryManager : MonoBehaviour
         
         return -1;
     }
+    /// <summary>
+    /// Check in all item slots if item is present en if the count is >= than count
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="count"></param>
+    /// <returns></returns>
     public bool HasItem(ItemScrObj item, int count)
     {
         foreach(Slot s in itemSlots)
@@ -103,6 +132,10 @@ public class InventoryManager : MonoBehaviour
         }
         return false;
     }
+    /// <summary>
+    /// Shows item in display right on screen with an use button
+    /// </summary>
+    /// <param name="slot"></param>
     public void DisplayItem(Slot slot)
     {
         currentSlot = slot;
@@ -111,13 +144,31 @@ public class InventoryManager : MonoBehaviour
         itemDiscription.text = currentSlot.item.itemDiscription;
         itemImage.sprite = currentSlot.item.itemIcon;
     }
+    /// <summary>
+    /// Clears display from all info
+    /// </summary>
+    public void ClearDisplay()
+    {
+        currentSlot = null;
+
+        itemName.text = "";
+        itemDiscription.text = "";
+        itemImage.sprite = null;
+    }
+    /// <summary>
+    /// Uses current item displayed in display screen
+    /// </summary>
     public void UseCurrentItem()
     {
+        if (currentSlot == null)
+            return;
         if (currentSlot.item.food)
         {
             //Heal
             Debug.Log($"Heal for {currentSlot.item.healAmount}");
             RemoveItem(currentSlot.item, 1);
         }
+        if (currentSlot.item == null)
+            ClearDisplay();
     }
 }

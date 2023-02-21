@@ -81,7 +81,6 @@ public class DialogManager : MonoBehaviour
         }
 
         typingMessage = false;
-        currentNpc.anim.SetBool("talking", false);
     }
     /// <summary>
     /// Start coroutine from here (public)
@@ -99,7 +98,6 @@ public class DialogManager : MonoBehaviour
         if (messageText.maxVisibleCharacters < currentDisplayingMessage.Length)
         {
             messageText.maxVisibleCharacters = currentDisplayingMessage.Length;
-            currentNpc.anim.SetBool("talking", false);
         }
         else
         {
@@ -111,6 +109,7 @@ public class DialogManager : MonoBehaviour
                 FindObjectOfType<PlayerMovement>().canMove = true;
                 currentNpc.isInteracted = false;
                 messageBox.SetActive(false);
+                currentNpc.anim.SetBool("talking", false);
             }
         }
     }

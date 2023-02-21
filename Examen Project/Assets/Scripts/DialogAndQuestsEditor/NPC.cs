@@ -13,9 +13,18 @@ public class NPC : MonoBehaviour
     public bool isInteracted;
     public bool hasItem;
 
+    /// <summary>
+    /// Intracts with the npc to start the conversation
+    /// </summary>
     [ContextMenu("Interact")]
     public void Interact()
     {
+        if (QuestManager.Instance.currentNPC != null && QuestManager.Instance.currentNPC != this)
+        {
+            DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.alreadyStartedQuestMessage, this);
+            return;
+        }
+
         if (isInteracted)
             return;
         else
@@ -57,6 +66,9 @@ public class NPC : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Start the quest on npc
+    /// </summary>
     public void StartQuest()
     {
         questActive = true;

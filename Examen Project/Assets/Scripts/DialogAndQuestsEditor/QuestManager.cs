@@ -12,10 +12,11 @@ public class QuestManager : MonoBehaviour
     public GameObject questBox;
     public TMP_Text questText;
 
-    public Message[] noQuestItemFoundMessage, questItemFoundMessage;
+    public Message[] noQuestItemFoundMessage, questItemFoundMessage, alreadyStartedQuestMessage;
 
 
     public Quest currentQuest;
+    public NPC currentNPC;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class QuestManager : MonoBehaviour
     public void StartQuest(Quest _quest, NPC _npc)
     {
         _npc.StartQuest();
+        currentNPC = _npc;
         currentQuest = _quest;
         DisplayQuest();
     }
@@ -58,6 +60,9 @@ public class QuestManager : MonoBehaviour
     {
         questText.text = "";
         questBox.SetActive(false);
+
+        currentQuest = null;
+        currentNPC = null;
     }
 }
 [System.Serializable]
