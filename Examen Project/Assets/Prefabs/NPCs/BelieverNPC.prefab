@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5838058445104132668}
   - component: {fileID: 7763398324463732149}
   - component: {fileID: 7942057795536770677}
-  - component: {fileID: 2588181314004793115}
-  - component: {fileID: 7376508164938945997}
+  - component: {fileID: 231937158806750741}
+  - component: {fileID: 3724903833899105737}
   m_Layer: 0
-  m_Name: GhostNPC
+  m_Name: BelieverNPC
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1179661548, guid: ca188b10726284a4d8ac187922bf1f8b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8352941}
+  m_Sprite: {fileID: 1988637075, guid: 889abb95bf3aeac40971a9223a8ff62f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,10 +120,10 @@ MonoBehaviour:
         questObjective: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
           type: 2}
         questCount: 1
-  anim: {fileID: 2588181314004793115}
+  anim: {fileID: 231937158806750741}
   isInteracted: 0
   hasItem: 0
---- !u!95 &2588181314004793115
+--- !u!95 &231937158806750741
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ Animator:
   m_GameObject: {fileID: 5213659356277627484}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 293e001dabc8ca946aa118b7ddc72e35, type: 2}
+  m_Controller: {fileID: 9100000, guid: 36b362ae9b3555f47b6fd15dc91069c5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -143,7 +143,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!136 &7376508164938945997
+--- !u!136 &3724903833899105737
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2040746651523512608}
   - component: {fileID: 8722148846271544939}
   - component: {fileID: 7008977316861116365}
-  - component: {fileID: 1971732751}
   - component: {fileID: 1971732750}
+  - component: {fileID: 8052761387100282666}
   m_Layer: 0
   m_Name: BaseNPC
   m_TagString: NPC
@@ -107,19 +107,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!65 &1971732751
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7092741286676083353}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5701375, y: 0.9125999, z: 0.2}
-  m_Center: {x: 0.030968666, y: -0.04370004, z: 0}
 --- !u!114 &1971732750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +143,17 @@ MonoBehaviour:
   anim: {fileID: 7008977316861116365}
   isInteracted: 0
   hasItem: 0
+--- !u!136 &8052761387100282666
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092741286676083353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.42
+  m_Height: 1.125
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
