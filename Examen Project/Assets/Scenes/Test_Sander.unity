@@ -190,11 +190,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcornEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5643893671415517085, guid: ef96c2e73f0c0ec43b3bf26ec35d3da4,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 07c28e56b7a46f945ae6a5bd535890b2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef96c2e73f0c0ec43b3bf26ec35d3da4, type: 3}
 --- !u!1 &398018238
@@ -527,26 +522,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &1089469208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2690868770825159063, guid: ef96c2e73f0c0ec43b3bf26ec35d3da4,
-    type: 3}
-  m_PrefabInstance: {fileID: 348381481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1089469210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089469208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ca2569183a5934798d12e821707a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  _lootTable: {fileID: 0}
 --- !u!1 &1201424909
 GameObject:
   m_ObjectHideFlags: 0
