@@ -9,7 +9,8 @@ public class CheckColider : MonoBehaviour
         //check if the object that enterd the trigger has a Health or DamageButton scripts and call the right function.
         if(other.GetComponent<Health>())
         {
-            other.GetComponent<Health>().DoDmg(5);
+            if(transform.tag == "Sword")
+                other.GetComponent<Health>().DoDmg(InventoryManager.Instance.meleeSlot.item.meleeDamage);
         }
         else if(other.GetComponent<DamageButton>())
         {
@@ -20,6 +21,12 @@ public class CheckColider : MonoBehaviour
     public void DestroyObj()
     {
         //destroys this gameobject called with a animation event.
+        if(transform.tag == "Shield")
+        {
+            GetComponentInParent<PlayerCombat>().isShielding = false;
+        }
+        GetComponentInParent<PlayerMovement>().canMove = true;
+        GetComponentInParent<PlayerCombat>().anim.SetBool("canMove", true);
         Destroy(this.gameObject);
     }
 }

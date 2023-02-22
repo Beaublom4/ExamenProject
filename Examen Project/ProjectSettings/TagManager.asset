@@ -8,6 +8,8 @@ TagManager:
   - Puzzel
   - Item
   - Shop
+  - Shield
+  - Sword
   layers:
   - Default
   - TransparentFX

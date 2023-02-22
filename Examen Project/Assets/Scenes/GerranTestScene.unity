@@ -1808,6 +1808,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 434323213426822350, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: sideShieldObj
+      value: 
+      objectReference: {fileID: 1038354857457198451, guid: 82d889c82de427745bc1a97aaa6114f8,
+        type: 3}
     - target: {fileID: 7132737540205777932, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
       propertyPath: m_Name

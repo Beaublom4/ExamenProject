@@ -18,25 +18,25 @@ public class PlayerMovement : MonoBehaviour
             //reads WASD inputs.
             movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             moveCharacter(movement);
-        }
-        //changes the paramater direction of the animator.
-        if (movement == new Vector3(0, 0, 0))
-            direction = 0;
-        else if (movement.x > 0)
-            direction = 3;
-        else if (movement.x < 0)
-            direction = 4;
-        if (movement.z > 0)
-            direction = 2;
-        else if (movement.z < 0)
-            direction = 1;
+            //changes the paramater direction of the animator.
+            if (movement == new Vector3(0, 0, 0))
+                direction = 0;
+            else if (movement.x > 0)
+                direction = 3;
+            else if (movement.x < 0)
+                direction = 4;
+            if (movement.z > 0)
+                direction = 2;
+            else if (movement.z < 0)
+                direction = 1;
             
-        anim.SetInteger("direction", direction);
+            anim.SetInteger("direction", direction);
+        }
     }
     void moveCharacter(Vector3 direction)
     {
         //moves the player in the right direction times speed.
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction.normalized * speed * Time.deltaTime);
     }
 
 
