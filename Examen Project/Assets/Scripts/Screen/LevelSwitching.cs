@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class LevelSwitching : MonoBehaviour
 {
-    public GameObject camPos1, camPos2, cam, playerPos1, playerPos2, player;
+    public GameObject newcamPos,  newPlayerpos;
+    private GameObject cam;
 
+    private void Start()
+    {
+        //gets the camera and assigns it to the gameobject
+        cam = Camera.main.gameObject;
+    }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         //calles SwitchCam when player collides with this object and sets player position to new position.
-        if(other.transform.tag == "Player")
+        if(collision.transform.tag == "Player")
         {
-            if(cam.transform.parent == camPos1.transform)
-            {
-                cam.GetComponent<Camera>().SwitchCam(camPos2.transform);
-                player.transform.position = playerPos1.transform.position;
-            }
-            else if(cam.transform.parent == camPos2.transform)
-            {
-                cam.GetComponent<Camera>().SwitchCam(camPos1.transform);
-                player.transform.position = playerPos2.transform.position;
-            }
+            cam.GetComponent<CameraScript>().SwitchCam(newcamPos.transform);
+            collision.transform.position = newPlayerpos.transform.position;
         }
     }
 }
