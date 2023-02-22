@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+[RequireComponent(typeof(Health), typeof(NavMeshAgent))]
 public class EnemyBehavior : MonoBehaviour
 {
     public enum enemyState { Idle, Aggro, Attacking };
 
     public enemyState currentState { private set; get; }
+
     private NavMeshAgent agent;
-    [SerializeField] Animator anim;
+    private Animator anim;
+    private EnemyDeath death;
 
     [SerializeField] Enemy_Stats stats;
-    private float _moveSpeed;
     private float _attackSpeed;
     private int _attackDamage;
-    private LootTable _lootTable;
     private Health health;
 
     Vector3 previousPosition;
@@ -24,6 +26,11 @@ public class EnemyBehavior : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponentInChildren<Animator>();
+        death = GetComponentInChildren<EnemyDeath>();
+        death.enemy = gameObject;
+
+
         SetCurrentState(enemyState.Idle);
         AssignStats();
 
@@ -38,11 +45,13 @@ public class EnemyBehavior : MonoBehaviour
             lastMoveDirection = (transform.position - previousPosition).normalized;
             previousPosition = transform.position;
 
-            if (lastMoveDirection.x > 0.5f)
-                anim.SetInteger("direction", 3);
+            //update for propper animations
+
+            if (lastMoveDirection.x > 0.5f) 
+                anim.SetInteger("direction", 1);
 
             else if (lastMoveDirection.x < -0.5f)
-                anim.SetInteger("direction", 4);
+                anim.SetInteger("direction", 1);
 
             if (lastMoveDirection.z > 0.5f)
                 anim.SetInteger("direction", 2);
@@ -67,7 +76,9 @@ print("Attack called");
         if (currentState == enemyState.Attacking)
             yield break;
 
+        anim.SetBool("attacking", true);
         StartCoroutine(AttackCoolDown());
+
 print("Attack start");
 
         SetCurrentState(enemyState.Attacking);
@@ -79,7 +90,6 @@ print("Attack start");
         //  yield break;
         //}
         player.GetComponent<Health>().DoDmg(_attackDamage);
-        
 
 print("Attack end");
     }
@@ -87,6 +97,8 @@ print("Attack end");
     private IEnumerator AttackCoolDown()
     {
         yield return new WaitForSeconds(_attackSpeed);
+
+        anim.SetBool("attacking", false);
         SetCurrentState(enemyState.Idle);
     }
 
@@ -97,25 +109,18 @@ print("Attack end");
 
     private void AssignStats()
     {
-        _moveSpeed = stats.getMoveSpeed();
         _attackSpeed = stats.getAttackSpeed();
         _attackDamage = stats.getAttackDamage();
-        _lootTable = stats.getLootTable();
+        death._lootTable = stats.getLootTable();
+        agent.speed = stats.getMoveSpeed();
 
         health = GetComponent<Health>();
         health.maxHealth = stats.getMaxHealth();
     }
 
-    public void OnDeath()
+    public void StartDeath()
     {
-        if (Random.Range(0, 101) > _lootTable.getLootChance())
-            return;
-
-        int newLootIndex = Random.Range(0, _lootTable.lootPrefabList.Length);
-        GameObject newLoot = Instantiate(_lootTable.lootPrefabList[newLootIndex], transform.position, transform.rotation, null);
-
-        Destroy(this);
+        anim.SetTrigger("death");
     }
-
 
 }

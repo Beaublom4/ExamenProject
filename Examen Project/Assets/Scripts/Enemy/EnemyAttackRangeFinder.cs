@@ -17,7 +17,7 @@ public class EnemyAttackRangeFinder : MonoBehaviour
         thisEnemy = GetComponentInParent<EnemyBehavior>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {

@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 1074387388552722029}
   - component: {fileID: 3423451288545772497}
   - component: {fileID: 5643893671415517085}
+  - component: {fileID: 1089469210}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -153,7 +154,7 @@ Animator:
   m_GameObject: {fileID: 2690868770825159063}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97ea62c66ba8a8b428dac3a9cbf7de38, type: 2}
+  m_Controller: {fileID: 9100000, guid: 07c28e56b7a46f945ae6a5bd535890b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -163,6 +164,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1089469210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2690868770825159063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ca2569183a5934798d12e821707a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  _lootTable: {fileID: 0}
 --- !u!1 &4432380228627563662
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21b3e9f5ef2fe2478e6f25f346cbb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   stats: {fileID: 11400000, guid: 68be3a23444decd4eae9fde20bca9e5b, type: 2}
 --- !u!54 &6270819912603026269
 Rigidbody:
