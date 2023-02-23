@@ -22,6 +22,7 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        
     }
     /// <summary>
     /// Update checks input to open inventory

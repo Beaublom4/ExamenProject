@@ -21,6 +21,8 @@ public class ShopManager : MonoBehaviour
     /// <param name="shopItems"></param>
     public void OpenShop(ShopItem[] shopItems)
     {
+        foreach (Transform t in shopItemsHolder)
+            Destroy(t.gameObject);
         foreach(ShopItem si in shopItems)
         {
             GameObject g = Instantiate(shopItemPrefab, shopItemsHolder);

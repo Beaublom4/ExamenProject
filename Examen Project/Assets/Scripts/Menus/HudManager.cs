@@ -8,6 +8,8 @@ public class HudManager : MonoBehaviour
     public static HudManager Instance;
     public Slider healthSlider;
 
+    public GameObject GameOverScreen;
+
     private void Awake()
     {
         Instance = this;
@@ -21,5 +23,9 @@ public class HudManager : MonoBehaviour
     {
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
+    }
+    public void GameOver()
+    {
+        GameOverScreen.SetActive(true);
     }
 }
