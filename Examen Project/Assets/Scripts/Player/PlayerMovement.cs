@@ -31,13 +31,11 @@ public class PlayerMovement : MonoBehaviour
             else if (movement.z < 0)
                 direction = 1;
 
-            print(direction + " " + pushDirection + " " + pushDirectionBack);
             if (isPushing)
             {
                 if (movement != new Vector3(0, 0, 0))
                     if (direction != pushDirection && direction != pushDirectionBack)
                     {
-                        isPushing = false;
                         GetComponentInChildren<PushPuzzel>().LeavePuzzel();
                     }
             }

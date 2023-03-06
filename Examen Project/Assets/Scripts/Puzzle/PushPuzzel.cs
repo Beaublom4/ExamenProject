@@ -5,6 +5,13 @@ using UnityEngine;
 public class PushPuzzel : MonoBehaviour
 {
     public int pushDir, pushDirBack;
+    public GameObject parent;
+    private int prevDirBack;
+
+    private void Start()
+    {
+        prevDirBack = pushDirBack;
+    }
     public void SelectedPuzzel(Transform player)
     {
         transform.SetParent(player);
@@ -13,6 +20,13 @@ public class PushPuzzel : MonoBehaviour
     }
     public void LeavePuzzel()
     {
-        transform.SetParent(null);
+        GetComponentInParent<PlayerMovement>().isPushing = false;
+        transform.SetParent(parent.transform);
+    }
+
+    public void ResetPushDirBack()
+    {
+        pushDirBack = prevDirBack;
+        GetComponentInParent<PlayerMovement>().pushDirectionBack = pushDirBack;
     }
 }
