@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8666948301298845493}
   - component: {fileID: 2072077865796391616}
   - component: {fileID: 8089652608665773949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,9 +107,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1640422056160354733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: loot 2
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 6057154381441597490}
   - component: {fileID: 3706184841032572994}
   - component: {fileID: 2819356150817443645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 6724850100180174536}
   - component: {fileID: 4405673927502576910}
   - component: {fileID: 203899101932796083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

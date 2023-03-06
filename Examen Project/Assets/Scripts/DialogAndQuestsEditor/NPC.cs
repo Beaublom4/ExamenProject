@@ -13,6 +13,13 @@ public class NPC : MonoBehaviour
     public bool isInteracted;
     public bool hasItem;
 
+    private void Start()
+    {
+        if (messages[currentMessages].onStartActivate)
+        {
+
+        }
+    }
     /// <summary>
     /// Intracts with the npc to start the conversation
     /// </summary>
@@ -78,4 +85,6 @@ public class NPC : MonoBehaviour
 public class MessageHolder
 {
     public Message[] messages = new Message[0];
+    public bool triggerActivate;
+    public bool onStartActivate;
 }

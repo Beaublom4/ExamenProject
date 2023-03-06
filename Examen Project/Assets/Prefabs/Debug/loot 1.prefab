@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3081888441167906749}
   - component: {fileID: 4456563857809925349}
   - component: {fileID: 9066905598727483762}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 5277593739481399018}
   - component: {fileID: 6257661087522616619}
   - component: {fileID: 7005195210480843599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,9 +203,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2831837171063361052}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: loot 1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

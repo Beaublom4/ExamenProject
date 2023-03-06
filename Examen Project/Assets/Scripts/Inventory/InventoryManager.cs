@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
 
     public GameObject inventory;
+    public int coins;
     [Space]
     public Slot meleeSlot;
     public Slot rangeSlot, magicSlot, shieldSlot;
@@ -172,5 +173,10 @@ public class InventoryManager : MonoBehaviour
         }
         if (currentSlot.item == null)
             ClearDisplay();
+    }
+    public void AddCoin()
+    {
+        coins++;
+        HudManager.Instance.SetCoins(coins);
     }
 }

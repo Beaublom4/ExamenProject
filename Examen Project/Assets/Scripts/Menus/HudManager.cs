@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class HudManager : MonoBehaviour
 {
     public static HudManager Instance;
     public Slider healthSlider;
+
+    public TMP_Text coinText;
 
     public GameObject GameOverScreen;
 
@@ -23,6 +26,10 @@ public class HudManager : MonoBehaviour
     {
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
+    }
+    public void SetCoins(int coins)
+    {
+        coinText.text = "Coins: " + coins.ToString();
     }
     public void GameOver()
     {
