@@ -253,11 +253,12 @@ MonoBehaviour:
   swordPos: {fileID: 1875648928}
   shieldObj: {fileID: 1038354857457198451, guid: 2dbb9725a3bce7e45aa7a170c55c4d02,
     type: 3}
-  sideShieldObj: {fileID: 1038354857457198451, guid: 2dbb9725a3bce7e45aa7a170c55c4d02,
+  sideShieldObj: {fileID: 1038354857457198451, guid: 82d889c82de427745bc1a97aaa6114f8,
     type: 3}
   sideShieldBool: 0
   canAttack: 1
   isShielding: 0
+  anim: {fileID: 0}
 --- !u!136 &3093294860337153564
 CapsuleCollider:
   m_ObjectHideFlags: 0
