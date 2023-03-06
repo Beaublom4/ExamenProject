@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4186966749816061826}
   - component: {fileID: 4118473019041322562}
   - component: {fileID: 255902712518655368}
+  - component: {fileID: 619829430446332368}
   m_Layer: 0
   m_Name: KasteelPilaar
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &619829430446332368
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662145597841029465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5115657401865131513, guid: f95676753c2e8714fbf3eece556139d6, type: 3}

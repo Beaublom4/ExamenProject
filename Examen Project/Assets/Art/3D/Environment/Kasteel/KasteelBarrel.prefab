@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1005992930442234999}
   - component: {fileID: 572807623972995431}
   - component: {fileID: 7019673529205689363}
+  - component: {fileID: 4616622447626016738}
   m_Layer: 0
   m_Name: KasteelBarrel
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4616622447626016738
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404463717741689846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5587163454035214528, guid: f95676753c2e8714fbf3eece556139d6, type: 3}
