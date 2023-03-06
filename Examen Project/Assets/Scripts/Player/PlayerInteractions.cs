@@ -35,25 +35,31 @@ public class PlayerInteractions : MonoBehaviour
                 if (interactionRayHit.transform.tag == "NPC")
                 {
                     interactionRayHit.transform.GetComponent<NPC>().Interact();
-                    print("NPC True");
                 }
-                if (interactionRayHit.transform.tag == "Puzzel")
+                else if (interactionRayHit.transform.tag == "Puzzel")
                 {
-                    transform.position = interactionRayHit.transform.GetChild(1).position;
-
-                    print("Puzzel True");
+                    transform.position = interactionRayHit.transform.GetChild(0).position;
+                    GetComponent<PlayerMovement>().isPushing = true;
+                    interactionRayHit.transform.GetComponent<PushPuzzel>().SelectedPuzzel(transform);
                 }
-                if (interactionRayHit.transform.tag == "Item")
+                else if (interactionRayHit.transform.tag == "Shop")
                 {
-                    interactionRayHit.transform.GetComponent<Item>().PickUpItem();
-                    print("Item True");
-                }
-                if (interactionRayHit.transform.tag == "Shop")
-                {
-                    print("Shop True");
+                    interactionRayHit.transform.GetComponent<ShopNPC>().OpenShop();
                 }
             }
 
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Item")
+        {
+            collision.transform.GetComponent<Item>().PickUpItem();
+        }
+        if (collision.transform.tag == "Coin")
+        {
+            InventoryManager.Instance.AddCoin();
         }
     }
 }

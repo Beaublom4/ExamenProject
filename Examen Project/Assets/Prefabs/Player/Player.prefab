@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5086182918716623058}
   - component: {fileID: 8655290236439747508}
   - component: {fileID: 3034235455101357467}
+  - component: {fileID: 5783369488338479947}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -136,6 +137,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5783369488338479947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724498897644129001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b56b44b0c42d24487599db96c31a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7132737540205777932
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +164,7 @@ GameObject:
   - component: {fileID: 501372130766937566}
   - component: {fileID: 434323213426822350}
   - component: {fileID: 3093294860337153564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -205,9 +218,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   direction: 0
+  pushDirection: 0
+  pushDirectionBack: 0
   movement: {x: 0, y: 0, z: 0}
   anim: {fileID: 3034235455101357467}
   canMove: 1
+  isPushing: 0
 --- !u!114 &7132737540205777941
 MonoBehaviour:
   m_ObjectHideFlags: 0

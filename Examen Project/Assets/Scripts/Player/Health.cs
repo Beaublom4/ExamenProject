@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
         //take dmg from current health and check if health is lower or equels 0 if true play death animation.
         curHealth -= dmg;
         if (curHealth <= 0)
-            anim.SetTrigger("death");
+            anim.SetBool("death", true);
         HudManager.Instance.SetHealth(curHealth, maxHealth);
     }
 }
