@@ -17,9 +17,6 @@ public class DialogManager : MonoBehaviour
 
     private Quest quest;
 
-    [Tooltip("Sprite display above player on player prefab")]
-    public SpriteRenderer spriteDisplay;
-
     public TMP_Text messageText;
     private string currentDisplayingMessage;
     private bool typingMessage;
@@ -63,15 +60,14 @@ public class DialogManager : MonoBehaviour
     //Routine of messages playing
     IEnumerator DislayMessage(Message _message)
     {
+        FindObjectOfType<PlayerMovement>().canMove = _message.continueMovement;
+
         typingMessage = true;
         messageText.maxVisibleCharacters = 0;
         currentNpc.anim.SetBool("talking", true);
 
         currentDisplayingMessage = _message.message;
         messageText.text = _message.message;
-
-        if (_message.visualDisplaySprite)
-            spriteDisplay.gameObject.SetActive(false);
 
         //Displaying message 1 char for 1 char
         while (messageText.maxVisibleCharacters < _message.message.Length)
@@ -84,12 +80,6 @@ public class DialogManager : MonoBehaviour
         {
             quest = _message.quest;
             QuestButtons(true);
-        }
-
-        if (_message.visualDisplaySprite)
-        {
-            spriteDisplay.sprite = _message.displaySprite;
-            spriteDisplay.gameObject.SetActive(true);
         }
 
         typingMessage = false;
@@ -106,7 +96,7 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void ContinueMessage()
     {
-        currentDisplayingMessage = "";
+        Debug.Log(messageText.maxVisibleCharacters + " " + currentDisplayingMessage.Length);
         if (messageText.maxVisibleCharacters < currentDisplayingMessage.Length)
         {
             messageText.maxVisibleCharacters = currentDisplayingMessage.Length;
@@ -154,23 +144,10 @@ public class DialogManager : MonoBehaviour
 [System.Serializable]
 public class Message
 {
-    public Message(string _message, bool _isQuest, Quest _quest)
-    {
-        message = _message;
-        isQuest = _isQuest;
-        quest = _quest;
-    }
-    public Message(string _message, bool _isQuest)
-    {
-        message = _message;
-        isQuest = _isQuest;
-    }
-
     public string message;
     [Space]
     public bool isQuest;
     public Quest quest;
     [Space]
-    public bool visualDisplaySprite;
-    public Sprite displaySprite;
+    public bool continueMovement;
 }

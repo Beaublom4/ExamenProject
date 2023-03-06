@@ -580,10 +580,10 @@ RectTransform:
   m_Father: {fileID: 3951951408088938104}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 211.7427, y: -31.370117}
-  m_SizeDelta: {x: 423.4854, y: 62.740234}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3162691469935649274
 CanvasRenderer:
@@ -3222,7 +3222,7 @@ RectTransform:
   - {fileID: 5340900559444669675}
   - {fileID: 556245614339734194}
   m_Father: {fileID: 7987680697945533269}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4989,22 +4989,19 @@ MonoBehaviour:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   - message: I dont have anything to tell you.
     isQuest: 0
     quest:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   messageBox: {fileID: 5340900559303897490}
   continueButton: {fileID: 5340900558436352769}
   questButtons:
   - {fileID: 5340900558942978949}
   - {fileID: 5340900559201031442}
-  spriteDisplay: {fileID: 0}
   messageText: {fileID: 5340900558909727136}
   messages: []
 --- !u!1 &7987680697836248140
@@ -5061,24 +5058,21 @@ MonoBehaviour:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   - message: You dont have the item I asked for.
     isQuest: 0
     quest:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   - message: Come back when you have it!
     isQuest: 0
     quest:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   questItemFoundMessage:
   - message: You've found it!
     isQuest: 0
@@ -5086,24 +5080,21 @@ MonoBehaviour:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   - message: Thanks!
     isQuest: 0
     quest:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   - message: Here is your reward.
     isQuest: 0
     quest:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   alreadyStartedQuestMessage:
   - message: You already started a quest!
     isQuest: 0
@@ -5111,16 +5102,14 @@ MonoBehaviour:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   - message: Come back when you finished it.
     isQuest: 0
     quest:
       questName: 
       questObjective: {fileID: 0}
       questCount: 0
-    visualDisplaySprite: 0
-    displaySprite: {fileID: 0}
+    continueMovement: 0
   currentQuest:
     questName: 
     questObjective: {fileID: 0}
@@ -5160,6 +5149,7 @@ Transform:
   - {fileID: 7987680698105817465}
   - {fileID: 103084233266127462}
   - {fileID: 2265532150650959477}
+  - {fileID: 7487616547666522093}
   - {fileID: 5340900559362469870}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5675,6 +5665,52 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &9201291829674580709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7487616547666522093}
+  - component: {fileID: 7198634156824910940}
+  m_Layer: 0
+  m_Name: PopupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7487616547666522093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201291829674580709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7987680697945533269}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7198634156824910940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201291829674580709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e0d419557ecfe4996ad2f9bbb209b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPos: {fileID: 0}
+  popUpTime: 4
 --- !u!1001 &881192123590559586
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -39,6 +39,7 @@ public class Slot : MonoBehaviour
         item = null;
         count = 0;
         itemImage.sprite = null;
+        itemImage.color = new Color(255, 255, 255, 0);
     }
     /// <summary>
     /// Set display slot to variables
@@ -46,6 +47,7 @@ public class Slot : MonoBehaviour
     public void UpdateSlot(string itemName, Sprite itemSprite)
     {
         itemImage.sprite = itemSprite;
+        itemImage.color = new Color(255, 255, 255, 1);
     }
     /// <summary>
     /// Use item in slot

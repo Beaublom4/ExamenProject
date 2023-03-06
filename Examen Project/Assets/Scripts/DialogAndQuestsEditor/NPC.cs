@@ -41,8 +41,6 @@ public class NPC : MonoBehaviour
         else
             isInteracted = true;
 
-        FindObjectOfType<PlayerMovement>().canMove = false;
-
         Quest currentQuest = QuestManager.Instance.currentQuest;
         if (currentQuest != null)
             hasItem = InventoryManager.Instance.HasItem(currentQuest.questObjective, currentQuest.questCount);
