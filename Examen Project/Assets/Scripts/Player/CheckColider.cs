@@ -6,6 +6,8 @@ public class CheckColider : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        if (other.GetComponent<Collider>().isTrigger)
+            return;
         //check if the object that enterd the trigger has a Health or DamageButton scripts and call the right function.
         if(other.GetComponent<Health>())
         {
