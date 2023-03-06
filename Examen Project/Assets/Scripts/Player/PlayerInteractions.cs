@@ -39,6 +39,8 @@ public class PlayerInteractions : MonoBehaviour
                 }
                 if (interactionRayHit.transform.tag == "Puzzel")
                 {
+                    transform.position = interactionRayHit.transform.GetChild(1).position;
+
                     print("Puzzel True");
                 }
                 if (interactionRayHit.transform.tag == "Item")
