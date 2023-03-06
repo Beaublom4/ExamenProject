@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f63f741219245b4586081bd88c6888f, type: 3}
-  m_Name: New_LootTable
+  m_Name: Acorn_LootTable
   m_EditorClassIdentifier: 
   lootPrefabList:
-  - {fileID: 7100689193101414950, guid: d2c4901b73c142b43815c58805c536d1, type: 3}
-  - {fileID: 6595917452783850376, guid: b9b449e3e4e3ff8439630c785da2df4c, type: 3}
+  - {fileID: 2356302116732928755, guid: fb08ce1315498e94a92219008e8c23ec, type: 3}
   coinPrefab: {fileID: 4410758431443236391, guid: b3c6d20e6f3ed8f49806ed594debfee3,
     type: 3}
   lootChance: 50

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f5dea2755d134ec42b944c1783700f68, type: 2}
+  - {fileID: 2100000, guid: e31a82d823e45d14da0d6913506504a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,3 +145,4 @@ MonoBehaviour:
   weightTag: Puzzel
   triggerDelay: 1
   checkPressureIsRunning: 0
+  secondPuzzlePart: {fileID: 0}

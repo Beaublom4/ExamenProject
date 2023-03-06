@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: 000_QuestTestItem
   m_EditorClassIdentifier: 
   itemName: Key
-  itemIcon: {fileID: 21300000, guid: f008857e434b98b4eaabda1fd6af3059, type: 3}
+  itemIcon: {fileID: 21300000, guid: 0afdd6ab512738e4791704f8a2ad7c81, type: 3}
   itemDiscription: Test key item to finish the quest
   itemId: 0
   melee: 0
+  meleeDamage: 0
+  meleeCooldown: 0
+  shield: 0
+  shieldDuration: 0
+  shieldCooldown: 0
   range: 0
   magic: 0
-  shield: 0
   food: 0
   healAmount: 0
   keyItem: 1
