@@ -12,6 +12,6 @@ public class Death : MonoBehaviour
             return;
 
         deathStarted = true;
-        animator.SetBool("death", true);
+        //animator.SetBool("death", true);
     }
 }

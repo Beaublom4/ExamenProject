@@ -10,15 +10,15 @@ public class EnemyDeath : Death
     [Tooltip("The amount of time it takes for the death animtion to finish")]
     [SerializeField] private float animationWaitTime;
 
-    public bool pijn = false;
+    //public bool pijn = false;
 
     public override void OnDeath()
     {
-        if (pijn)
-        {
-            return;
-        }
-        pijn = true;
+        //if (pijn)
+        //{
+        //    return;
+        //}
+        //pijn = true;
 
         Debug.Log("-- Died Start");
         base.OnDeath();

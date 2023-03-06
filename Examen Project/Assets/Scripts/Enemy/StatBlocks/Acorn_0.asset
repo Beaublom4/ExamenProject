@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f73eb341666b9244a2f5e6559fbaa9d, type: 3}
   m_Name: Acorn_0
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   attackSpeed: 0.5
   attackDamage: 1
   maxHealth: 1

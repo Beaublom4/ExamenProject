@@ -22,8 +22,11 @@ public class Health : MonoBehaviour
         if (curHealth > maxHealth)
             curHealth = maxHealth;
 
-        if (CompareTag("Player"))
+        if (transform.tag == "Player")
+        {
             HudManager.Instance.SetHealth(curHealth, maxHealth);
+        }
+            
 
     }
     public void DoDmg(int dmg)
@@ -34,7 +37,10 @@ public class Health : MonoBehaviour
         {
             deathScript.OnDeath();
         }
-            
-        HudManager.Instance.SetHealth(curHealth, maxHealth);
+
+        if (transform.tag == "Player")
+        {
+            HudManager.Instance.SetHealth(curHealth, maxHealth);
+        }
     }
 }
