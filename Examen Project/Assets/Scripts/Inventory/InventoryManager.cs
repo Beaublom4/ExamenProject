@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        
+        HudManager.Instance.SetCoins(coins);
     }
     /// <summary>
     /// Update checks input to open inventory

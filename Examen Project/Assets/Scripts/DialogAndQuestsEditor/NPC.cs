@@ -17,7 +17,11 @@ public class NPC : MonoBehaviour
     {
         if (messages[currentMessages].onStartActivate)
         {
-
+            Interact();
+        }
+        else if (messages[currentMessages].triggerActivate)
+        {
+            messages[currentMessages].trigger.npc = this;
         }
     }
     /// <summary>
@@ -85,6 +89,9 @@ public class NPC : MonoBehaviour
 public class MessageHolder
 {
     public Message[] messages = new Message[0];
+    [Space]
     public bool triggerActivate;
+    public TriggerDialog trigger;
+    [Space]
     public bool onStartActivate;
 }
