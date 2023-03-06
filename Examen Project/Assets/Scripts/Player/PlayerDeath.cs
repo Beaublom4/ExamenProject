@@ -10,5 +10,6 @@ public class PlayerDeath : MonoBehaviour
         GetComponentInParent<PlayerMovement>().canMove = false;
         GetComponentInParent<PlayerCombat>().canAttack = false;
         HudManager.Instance.GameOver();
+        Time.timeScale = 0;
     }
 }

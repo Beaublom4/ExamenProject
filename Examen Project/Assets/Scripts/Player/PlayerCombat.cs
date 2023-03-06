@@ -16,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
+        // assigns inventoryManager and anim
         inventoryManager = InventoryManager.Instance;
         anim = GetComponentInChildren<Animator>(); 
     }

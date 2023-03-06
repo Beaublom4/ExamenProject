@@ -53,13 +53,14 @@ public class PlayerInteractions : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //picks up the item or coin.
         if (collision.transform.tag == "Item")
         {
             collision.transform.GetComponent<Item>().PickUpItem();
         }
         if (collision.transform.tag == "Coin")
         {
-            InventoryManager.Instance.AddCoin();
+            InventoryManager.Instance.AddCoin(collision.gameObject);
         }
     }
 }

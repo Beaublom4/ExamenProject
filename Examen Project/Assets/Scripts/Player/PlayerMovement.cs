@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public bool canMove, isPushing;
 
+    private void Start()
+    {
+        //Set timescale to 1.
+        Time.timeScale = 1;
+    }
 
     private void FixedUpdate()
     {
