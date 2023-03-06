@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
   m_Name: 001_WeaponTestItem
   m_EditorClassIdentifier: 
-  itemName: Test weapon
-  itemIcon: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
-  itemDiscription: A test item, does nothing
+  itemName: Sword
+  itemIcon: {fileID: 21300000, guid: 8159e72901030cc4899a5e44c62f1deb, type: 3}
+  itemDiscription: A sharp sword. Can be used to slay your enemies.
   itemId: 1
   melee: 1
   meleeDamage: 5
