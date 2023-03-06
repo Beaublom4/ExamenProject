@@ -120,7 +120,7 @@ print("Attack end");
 
     public void StartDeath()
     {
-        anim.SetTrigger("death");
+        anim.SetBool("death", true);
     }
 
 }
