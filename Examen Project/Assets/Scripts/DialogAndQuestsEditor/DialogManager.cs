@@ -17,6 +17,9 @@ public class DialogManager : MonoBehaviour
 
     private Quest quest;
 
+    [Tooltip("Sprite display above player on player prefab")]
+    public SpriteRenderer spriteDisplay;
+
     public TMP_Text messageText;
     private string currentDisplayingMessage;
     private bool typingMessage;
@@ -67,6 +70,9 @@ public class DialogManager : MonoBehaviour
         currentDisplayingMessage = _message.message;
         messageText.text = _message.message;
 
+        if (_message.visualDisplaySprite)
+            spriteDisplay.gameObject.SetActive(false);
+
         //Displaying message 1 char for 1 char
         while (messageText.maxVisibleCharacters < _message.message.Length)
         {
@@ -78,6 +84,12 @@ public class DialogManager : MonoBehaviour
         {
             quest = _message.quest;
             QuestButtons(true);
+        }
+
+        if (_message.visualDisplaySprite)
+        {
+            spriteDisplay.sprite = _message.displaySprite;
+            spriteDisplay.gameObject.SetActive(true);
         }
 
         typingMessage = false;
@@ -155,6 +167,10 @@ public class Message
     }
 
     public string message;
+    [Space]
     public bool isQuest;
     public Quest quest;
+    [Space]
+    public bool visualDisplaySprite;
+    public Sprite displaySprite;
 }
