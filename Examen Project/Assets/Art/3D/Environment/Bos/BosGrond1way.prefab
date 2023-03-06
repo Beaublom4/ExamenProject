@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6870366787662520847}
   - component: {fileID: 2189460468710423820}
   - component: {fileID: 5737213694686074199}
-  - component: {fileID: -3706440345228508127}
+  - component: {fileID: 4047527329726211543}
   m_Layer: 0
   m_Name: BosGrond1way
   m_TagString: Untagged
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-3706440345228508127
-MeshCollider:
+--- !u!65 &4047527329726211543
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,7 +95,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5929294041616350591, guid: ae933d8582c19174188dc60a4450df56, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 22.45931, y: 1.9339262, z: 15.336344}
+  m_Center: {x: -0.0000009536743, y: -0.7143145, z: 0}
