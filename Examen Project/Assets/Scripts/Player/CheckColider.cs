@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class CheckColider : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public LayerMask all;
+    private void Start()
     {
-        if (other.GetComponent<Collider>().isTrigger)
-            return;
-        //check if the object that enterd the trigger has a Health or DamageButton scripts and call the right function.
-        if(other.GetComponent<Health>())
+        Collider[] hitColiders = Physics.OverlapSphere(transform.position, 1, all, QueryTriggerInteraction.Ignore);
+        foreach (var hitcoliders in hitColiders)
         {
-            if(transform.tag == "Sword")
-                other.GetComponent<Health>().DoDmg(InventoryManager.Instance.meleeSlot.item.meleeDamage);
-        }
-        else if(other.GetComponent<DamageButton>())
-        {
-            other.GetComponent<DamageButton>().TriggerOnDamage();
+            print(hitcoliders.name);
+            //check if the object that enterd the trigger has a Health or DamageButton scripts and call the right function.
+            if(hitcoliders.GetComponent<Health>())
+            {
+                if(transform.tag == "Sword")
+                    hitcoliders.GetComponent<Health>().DoDmg(InventoryManager.Instance.meleeSlot.item.meleeDamage);
+            }
+            else if(hitcoliders.GetComponent<DamageButton>())
+            {
+                hitcoliders.GetComponent<DamageButton>().TriggerOnDamage();
+            }
         }
     }
 

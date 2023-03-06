@@ -2055,6 +2055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   curHealth: 5
+  deathScript: {fileID: 0}
 --- !u!65 &1981984453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2246,24 +2247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1875648928, guid: 9732f9d882d604744a9db21cd41ef7cf, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6724498897644129001, guid: 9732f9d882d604744a9db21cd41ef7cf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7132737540205777932, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7132737540205777941, guid: 9732f9d882d604744a9db21cd41ef7cf,
-        type: 3}
-      propertyPath: RayRange
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7132737540205777942, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
