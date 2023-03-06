@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2044803600462015796}
   - component: {fileID: 4358558207611833179}
   - component: {fileID: 922869775968548955}
-  - component: {fileID: -1149602272485441711}
+  - component: {fileID: 4090762652876033453}
   m_Layer: 0
   m_Name: BosGrond3way
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 797242685270288676}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-1149602272485441711
-MeshCollider:
+--- !u!65 &4090762652876033453
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,7 +95,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2867716335350680030, guid: ae933d8582c19174188dc60a4450df56, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 22.45931, y: 1, z: 15.336344}
+  m_Center: {x: -0.0000009536743, y: 0.08457179, z: 0}

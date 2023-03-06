@@ -17,6 +17,8 @@ public class PressurePlate : MonoBehaviour
     [HideInInspector] public bool checkPressureIsRunning = false;
     IEnumerator coroutine;
 
+    bool didTrigger = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag != weightTag)
@@ -40,6 +42,9 @@ public class PressurePlate : MonoBehaviour
 
     public virtual IEnumerator CheckPressure()
     {
+        if (didTrigger == true)
+            yield break;
+
         checkPressureIsRunning = true;
 
 

@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1241446875ba4593cf8136255ed2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisEnemy: {fileID: 0}
 --- !u!1 &2690868770825159063
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ca2569183a5934798d12e821707a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 5643893671415517085}
   enemy: {fileID: 0}
   _lootTable: {fileID: 0}
+  animationWaitTime: 0
 --- !u!1 &4432380228627563662
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   curHealth: 10
+  deathScript: {fileID: 1089469210}
 --- !u!114 &9147595253224653122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 68be3a23444decd4eae9fde20bca9e5b, type: 2}
+  timeBeforeAttackDealsDamage: 0.1
 --- !u!54 &6270819912603026269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -271,7 +276,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1485973908
 CapsuleCollider:

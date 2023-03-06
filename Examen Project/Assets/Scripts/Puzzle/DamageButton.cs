@@ -7,8 +7,11 @@ using UnityEngine;
 /// </summary>
 public class DamageButton : MonoBehaviour
 {
+    bool didTrigger = false;
     public virtual void TriggerOnDamage()
     {
+        if (didTrigger == true)
+            return;
         Debug.Log($"{name} got triggerd by damage");
     }
 }

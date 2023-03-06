@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Health), typeof(NavMeshAgent))]
 public class EnemyBehavior : MonoBehaviour
 {
-    public enum enemyState { Idle, Aggro, Attacking };
+    public enum enemyState { Idle, Aggro, Attacking, Dead };
 
     public enemyState currentState { private set; get; }
 
@@ -18,7 +18,9 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] Enemy_Stats stats;
     private float _attackSpeed;
     private int _attackDamage;
-    private Health health;
+    private  Health health;
+    [Tooltip("The amount of time the game should wait after starting the animtion before dealing damage")]
+    [SerializeField] private float timeBeforeAttackDealsDamage;
 
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
@@ -45,8 +47,6 @@ public class EnemyBehavior : MonoBehaviour
             lastMoveDirection = (transform.position - previousPosition).normalized;
             previousPosition = transform.position;
 
-            //update for propper animations
-
             if (lastMoveDirection.x > 0.5f) 
                 anim.SetInteger("direction", 1);
 
@@ -63,7 +63,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag != "Player" || currentState == enemyState.Attacking)
+        if (other.tag != "Player" || currentState != enemyState.Idle)
             return;
 
         agent.SetDestination(other.transform.position);
@@ -71,7 +71,6 @@ public class EnemyBehavior : MonoBehaviour
 
     public IEnumerator Attack(Collider player)
     {
-print("Attack called");
 
         if (currentState == enemyState.Attacking)
             yield break;
@@ -79,10 +78,9 @@ print("Attack called");
         anim.SetBool("attacking", true);
         StartCoroutine(AttackCoolDown());
 
-print("Attack start");
 
         SetCurrentState(enemyState.Attacking);
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(timeBeforeAttackDealsDamage);
 
         //if (blocked)
         //{
@@ -91,7 +89,6 @@ print("Attack start");
         //}
         player.GetComponent<Health>().DoDmg(_attackDamage);
 
-print("Attack end");
     }
 
     private IEnumerator AttackCoolDown()
@@ -118,9 +115,9 @@ print("Attack end");
         health.maxHealth = stats.getMaxHealth();
     }
 
-    public void StartDeath()
-    {
-        anim.SetBool("death", true);
-    }
+    //public void StartDeath()
+    //{
+    //    anim.SetBool("death", true);
+    //}
 
 }

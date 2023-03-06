@@ -10,7 +10,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class EnemyAttackRangeFinder : MonoBehaviour
 {
-    EnemyBehavior thisEnemy;
+    public EnemyBehavior thisEnemy;
 
     private void Awake()
     {
