@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6518884986175609548}
   - component: {fileID: 8747452399665630794}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Item name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8134948829239307263}
   - component: {fileID: 9116474447902821495}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Items left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -395,7 +395,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3063667070987742018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561138067582164554}
+        m_TargetAssemblyTypeName: ShopHolder, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &561138067582164554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,6 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e0594df0faa2948998b75ccef799d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemPrice: {fileID: 5615061169425425975}
+  itemName: {fileID: 8747452399665630794}
+  itemIcon: {fileID: 6090663251861746358}
+  itemsLeft: {fileID: 9116474447902821495}
 --- !u!1 &6168705317817453879
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +436,7 @@ GameObject:
   - component: {fileID: 1519967608686763741}
   - component: {fileID: 5615061169425425975}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Item Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,8 +501,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

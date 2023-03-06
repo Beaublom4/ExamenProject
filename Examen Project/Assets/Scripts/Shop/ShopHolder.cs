@@ -11,24 +11,31 @@ public class ShopHolder : MonoBehaviour
     public Image itemIcon;
     public TMP_Text itemsLeft;
 
+    private ShopItem item;
+
     /// <summary>
     /// Set up shop buy button with all info
     /// </summary>
     /// <param name="_item"></param>
     /// <param name="_itemPrice"></param>
     /// <param name="_itemsLeft"></param>
-    public void SetUp(ItemScrObj _item, int _itemPrice, int _itemsLeft)
+    public void SetUp(ShopItem _item)
     {
-        itemPrice.text = "Price: " + _itemPrice;
-        itemName.text = _item.itemName;
-        itemIcon.sprite = _item.itemIcon;
-        itemsLeft.text = "Items left: " + _itemsLeft;
+        item = _item;   
+
+        itemPrice.text = "Price: " + _item.price;
+        itemName.text = _item.item.itemName;
+        itemIcon.sprite = _item.item.itemIcon;
+        itemsLeft.text = "Items left: " + _item.currentInStore;
     }
     /// <summary>
     /// Buy this item
     /// </summary>
     public void Buy()
     {
-
+        if (item.currentInStore <= 0)
+            return;
+        ShopManager.Instance.BuyItem(item);
+        itemsLeft.text = "Items left: " + item.currentInStore;
     }
 }

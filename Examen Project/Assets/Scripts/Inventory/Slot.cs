@@ -9,7 +9,6 @@ public class Slot : MonoBehaviour
     public ItemScrObj item;
     public int count;
 
-    public TMP_Text itemText;
     public Image itemImage;
 
     /// <summary>
@@ -39,7 +38,6 @@ public class Slot : MonoBehaviour
     {
         item = null;
         count = 0;
-        itemText.text = "Item";
         itemImage.sprite = null;
     }
     /// <summary>
@@ -47,7 +45,6 @@ public class Slot : MonoBehaviour
     /// </summary>
     public void UpdateSlot(string itemName, Sprite itemSprite)
     {
-        itemText.text = itemName;
         itemImage.sprite = itemSprite;
     }
     /// <summary>

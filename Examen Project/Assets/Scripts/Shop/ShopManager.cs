@@ -10,6 +10,7 @@ public class ShopManager : MonoBehaviour
 
     public GameObject shopItemPrefab;
     public Transform shopItemsHolder;
+    public GameObject shopObj;
 
     private void Awake()
     {
@@ -21,13 +22,29 @@ public class ShopManager : MonoBehaviour
     /// <param name="shopItems"></param>
     public void OpenShop(ShopItem[] shopItems)
     {
+        FindObjectOfType<PlayerMovement>().canMove = false;
+
         foreach (Transform t in shopItemsHolder)
             Destroy(t.gameObject);
         foreach(ShopItem si in shopItems)
         {
             GameObject g = Instantiate(shopItemPrefab, shopItemsHolder);
-            g.GetComponent<ShopHolder>().SetUp(si.item, si.price, si.maxInStore);
+            g.GetComponent<ShopHolder>().SetUp(si);
         }
+        shopObj.SetActive(true);
+    }
+    public void CloseShop()
+    {
+        FindObjectOfType<PlayerMovement>().canMove = true;
+        shopObj.SetActive(false);
+    }
+    public void BuyItem(ShopItem item)
+    {
+        if (InventoryManager.Instance.coins < item.price)
+            return;
+        InventoryManager.Instance.coins -= item.price;
+        InventoryManager.Instance.AddItem(item.item, 1, null);
+        item.currentInStore--;
     }
 }
 [System.Serializable]
@@ -35,5 +52,5 @@ public class ShopItem
 {
     public ItemScrObj item;
     public int price;
-    public int maxInStore;
+    public int currentInStore;
 }
