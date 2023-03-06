@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
-    public int direction;
+    public int direction, pushDirection, pushDirectionBack;
     public Vector3 movement;
     public Animator anim;
-    public bool canMove;
+    public bool canMove, isPushing;
 
 
     private void FixedUpdate()
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
             //reads WASD inputs.
             movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             moveCharacter(movement);
+        }
             //changes the paramater direction of the animator.
             if (movement == new Vector3(0, 0, 0))
                 direction = 0;
@@ -29,9 +30,19 @@ public class PlayerMovement : MonoBehaviour
                 direction = 2;
             else if (movement.z < 0)
                 direction = 1;
-            
+
+            print(direction + " " + pushDirection + " " + pushDirectionBack);
+            if (isPushing)
+            {
+                if (movement != new Vector3(0, 0, 0))
+                    if (direction != pushDirection && direction != pushDirectionBack)
+                    {
+                        isPushing = false;
+                        GetComponentInChildren<PushPuzzel>().LeavePuzzel();
+                    }
+            }
+
             anim.SetInteger("direction", direction);
-        }
     }
     void moveCharacter(Vector3 direction)
     {
