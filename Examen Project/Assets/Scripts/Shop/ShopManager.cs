@@ -33,11 +33,18 @@ public class ShopManager : MonoBehaviour
         }
         shopObj.SetActive(true);
     }
+    /// <summary>
+    /// Closes shop ui
+    /// </summary>
     public void CloseShop()
     {
         FindObjectOfType<PlayerMovement>().canMove = true;
         shopObj.SetActive(false);
     }
+    /// <summary>
+    /// Buy item that has been clicked and add it to inventory
+    /// </summary>
+    /// <param name="item"></param>
     public void BuyItem(ShopItem item)
     {
         if (InventoryManager.Instance.coins < item.price)

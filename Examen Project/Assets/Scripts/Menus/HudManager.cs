@@ -28,10 +28,17 @@ public class HudManager : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
     }
+    /// <summary>
+    /// Set coins in ui
+    /// </summary>
+    /// <param name="coins"></param>
     public void SetCoins(int coins)
     {
         coinText.text = "Coins: " + coins.ToString();
     }
+    /// <summary>
+    /// Enable game over screen
+    /// </summary>
     public void GameOver()
     {
         GameOverScreen.SetActive(true);

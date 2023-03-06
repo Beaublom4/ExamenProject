@@ -174,9 +174,13 @@ public class InventoryManager : MonoBehaviour
         if (currentSlot.item == null)
             ClearDisplay();
     }
-    public void AddCoin()
+    /// <summary>
+    /// Add coins and update to inventory
+    /// </summary>
+    public void AddCoin(GameObject coin)
     {
         coins++;
         HudManager.Instance.SetCoins(coins);
+        Destroy(coin);
     }
 }
