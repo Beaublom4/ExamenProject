@@ -10,6 +10,7 @@ public class Slot : MonoBehaviour
     public int count;
 
     public Image itemImage;
+    public TMP_Text itemNumber;
 
     /// <summary>
     /// Puts item in a slot and updates slot
@@ -40,6 +41,7 @@ public class Slot : MonoBehaviour
         count = 0;
         itemImage.sprite = null;
         itemImage.color = new Color(255, 255, 255, 0);
+        itemNumber.gameObject.SetActive(false);
     }
     /// <summary>
     /// Set display slot to variables
@@ -48,6 +50,8 @@ public class Slot : MonoBehaviour
     {
         itemImage.sprite = itemSprite;
         itemImage.color = new Color(255, 255, 255, 1);
+        itemNumber.gameObject.SetActive(true);
+        itemNumber.text = count.ToString();
     }
     /// <summary>
     /// Use item in slot

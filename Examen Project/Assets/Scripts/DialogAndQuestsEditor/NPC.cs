@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour
     [ContextMenu("Interact")]
     public void Interact()
     {
-        //Check if quest is already active
+        //Check if quest is already active and show thats active
         if (QuestManager.Instance.currentNPC != null && QuestManager.Instance.currentNPC != this)
         {
             DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.alreadyStartedQuestMessage, this, false);
@@ -42,6 +42,7 @@ public class NPC : MonoBehaviour
         else
             isInteracted = true;
 
+        //Check if quest active and has item
         Quest currentQuest = QuestManager.Instance.currentQuest;
         if (currentQuest != null)
             hasItem = InventoryManager.Instance.HasItem(currentQuest.questObjective, currentQuest.questCount);
@@ -50,6 +51,7 @@ public class NPC : MonoBehaviour
 
         if (!questActive)
         {
+            //Display next message
             if (currentMessages >= messages.Length)
             {
                 DialogManager.Instance.AddMessageAndPlay(DialogManager.Instance.dontHaveAnythingMessages, this, false);
@@ -61,6 +63,7 @@ public class NPC : MonoBehaviour
         }
         else
         {
+            //Check for item en give message based on that
             if (hasItem)
             {
                 InventoryManager.Instance.RemoveItem(QuestManager.Instance.currentQuest.questObjective, currentQuest.questCount);

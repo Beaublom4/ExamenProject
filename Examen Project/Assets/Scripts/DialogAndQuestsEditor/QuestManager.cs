@@ -71,4 +71,6 @@ public class Quest
     public string questName;
     public ItemScrObj questObjective;
     public int questCount = 1;
+    public int rewardCoins;
+    public int rewardItem;
 }

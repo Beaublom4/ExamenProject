@@ -19,6 +19,7 @@ public class PopupCollider : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            //Display popup for time
             PopupManager.Instance.NewRoutine(display);
             Destroy(gameObject);
         }

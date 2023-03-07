@@ -102,6 +102,7 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void ContinueMessage()
     {
+        //Check if message fully visable and finish showing it
         if (messageText.maxVisibleCharacters < currentDisplayingMessage.Length)
         {
             messageText.maxVisibleCharacters = currentDisplayingMessage.Length;
@@ -109,8 +110,10 @@ public class DialogManager : MonoBehaviour
         else
         {
             messages.RemoveAt(0);
+            //Display next message
             if (messages.Count > 0)
                 StartDisplayingMessages();
+            //Disable the conversation settings
             else
             {
                 FindObjectOfType<PlayerMovement>().canMove = true;
