@@ -84,7 +84,11 @@ public class EnemyBehavior : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeAttackDealsDamage);
 
         if (currentState != enemyState.Attacking)
+        {
+            Debug.Log("No longer in attacking state damage stopped!");
             yield break;
+        }
+            
 
         if (player.GetComponent<PlayerCombat>().isShielding)
         {
