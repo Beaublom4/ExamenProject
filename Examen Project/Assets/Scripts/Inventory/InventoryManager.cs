@@ -181,6 +181,7 @@ public class InventoryManager : MonoBehaviour
     {
         coins++;
         HudManager.Instance.SetCoins(coins);
-        Destroy(coin);
+        if(coin != null)
+            Destroy(coin);
     }
 }
