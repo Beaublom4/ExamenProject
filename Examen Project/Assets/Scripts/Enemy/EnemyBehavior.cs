@@ -73,17 +73,17 @@ public class EnemyBehavior : MonoBehaviour
     public IEnumerator Attack(Collider player)
     {
 
-        if (currentState == enemyState.Attacking)
+        if (currentState == enemyState.Attacking || currentState == enemyState.Dead)
             yield break;
 
         anim.SetBool("attacking", true);
+        SetCurrentState(enemyState.Attacking);
         StartCoroutine(AttackCoolDown());
 
 
-        SetCurrentState(enemyState.Attacking);
         yield return new WaitForSeconds(timeBeforeAttackDealsDamage);
 
-        if (currentState != enemyState.Attacking)
+        if (currentState == enemyState.Dead)
         {
             Debug.Log("No longer in attacking state damage stopped!");
             yield break;
@@ -118,6 +118,10 @@ public class EnemyBehavior : MonoBehaviour
     /// <param name="state"></param>
     public void SetCurrentState(enemyState state)
     {
+        if (currentState == enemyState.Dead)
+            return;
+
+        Debug.Log($"[STATE UPDATE] {currentState} > {state}");
         currentState = state;
     }
 
