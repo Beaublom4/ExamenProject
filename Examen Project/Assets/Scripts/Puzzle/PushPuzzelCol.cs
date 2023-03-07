@@ -8,7 +8,7 @@ public class PushPuzzelCol : MonoBehaviour
     private int prevBackDir;
     private void OnTriggerEnter(Collider other)
     {
-        //checks if the object that enter the trigger and leaves puzzel and completes puzzel.
+        //checks if the object that enter the trigger has puzzel tag.
         if (colided == false)
         {
             if (other.transform.tag == "Puzzel")

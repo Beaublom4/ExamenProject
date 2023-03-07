@@ -58,7 +58,7 @@ public class PlayerCombat : MonoBehaviour
         swordPos.transform.localPosition = newPos;
         if (canAttack)
         {
-            //call swordAttack if you use the J button.
+            //call swordAttack if you use the J button or call shieldblock if you use the H button.
             if (Input.GetButtonDown("Sword") && inventoryManager.meleeSlot.item != null)
             {
                 canAttack = false;
@@ -74,7 +74,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void SwordAttack()
     {
-        //spawn the swordHitBox.
+        //Plays the animation, spawns the swordHitBox and starts the cooldown.
         anim.SetTrigger("swordAttack");
         anim.SetBool("canMove", false);
         Instantiate(swordHitbox, swordPos.transform.position, Quaternion.Euler(swordRotation), swordPos.transform);
@@ -86,14 +86,14 @@ public class PlayerCombat : MonoBehaviour
         isShielding = true;
         if (!sideShieldBool)
         {
-            //spawn the shieldObj.
+            //Plays the animation, spawns the shieldObj and starts the cooldown.
             Instantiate(shieldObj, swordPos.transform.position, Quaternion.Euler(shieldRotation), swordPos.transform);
             StartCoroutine(AttackCooldown(inventoryManager.shieldSlot.item.shieldCooldown));
             GetComponent<PlayerMovement>().canMove = false;
         }
         else
         {
-            //spawn the sideShieldObj.
+            //Plays the animation, spawns the sideShieldObj and starts the cooldown.
             Instantiate(sideShieldObj, swordPos.transform.position, Quaternion.Euler(shieldRotation), swordPos.transform);
             StartCoroutine(AttackCooldown(inventoryManager.shieldSlot.item.shieldCooldown));
             GetComponent<PlayerMovement>().canMove = false;
@@ -102,7 +102,7 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator AttackCooldown(float cooldown)
     {
-        //waits for cooldown till player can attack again.
+        //waits for cooldown till player can attack or shield again.
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
     }

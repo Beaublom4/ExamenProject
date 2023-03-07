@@ -350,6 +350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 2a204b9c80a8798439966c64fd080c28, type: 2}
   count: 1
+  doPopup: 1
+  popupObj: {fileID: 4091263496320458222, guid: 9c9b8f626b782db469f43284ea9b0756,
+    type: 3}
 --- !u!65 &173846766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1295,6 +1298,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7198634156824910940, guid: 1c3c517cc4ac3884a9aecd67acd95e10,
+        type: 3}
+      propertyPath: spawnPos
+      value: 
+      objectReference: {fileID: 1952784659}
     - target: {fileID: 7987680697945533268, guid: 1c3c517cc4ac3884a9aecd67acd95e10,
         type: 3}
       propertyPath: m_Name
@@ -2046,6 +2054,12 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!4 &1952784659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6374266415443709879, guid: 9732f9d882d604744a9db21cd41ef7cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7132737540924512263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1954462898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,6 +2094,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: a2b9a5504a37af246b4baec50c36d905, type: 2}
   count: 1
+  doPopup: 0
+  popupObj: {fileID: 0}
 --- !u!65 &1954462900
 BoxCollider:
   m_ObjectHideFlags: 0
