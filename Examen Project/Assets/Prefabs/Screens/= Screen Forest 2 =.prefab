@@ -9713,6 +9713,16 @@ PrefabInstance:
       propertyPath: secondPuzzlePart
       value: 
       objectReference: {fileID: 7445727268432890941}
+    - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
+        type: 3}
+      propertyPath: rewards.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
+        type: 3}
+      propertyPath: rewards.Array.data[0]
+      value: 
+      objectReference: {fileID: 7445727268432890941}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f0dc6512f1218b4eb8efaa7b6e05153, type: 3}
 --- !u!4 &3982540062534754539 stripped
