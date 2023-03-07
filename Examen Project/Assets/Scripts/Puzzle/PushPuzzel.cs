@@ -5,7 +5,7 @@ using UnityEngine;
 public class PushPuzzel : MonoBehaviour
 {
     public int pushDir, pushDirBack;
-    public GameObject parent;
+    public GameObject parent, frontPos, backPos;
     private int prevDirBack;
     public GameObject[] rewards;
     public bool complete = false;
@@ -17,7 +17,13 @@ public class PushPuzzel : MonoBehaviour
     }
     public void SelectedPuzzel(Transform player)
     {
-        //sets player as parent and assigns direction.
+        //sets player to right position and set player as parent and assigns direction.
+        var dist1 = Vector3.Distance(player.position, frontPos.transform.position);
+        var dist2 = Vector3.Distance(player.position, backPos.transform.position);
+        if (dist1 <= dist2)
+            player.position = frontPos.transform.position;
+        else
+            player.position = backPos.transform.position;
         transform.SetParent(player);
         player.GetComponent<PlayerMovement>().pushDirection = pushDir;
         player.GetComponent<PlayerMovement>().pushDirectionBack = pushDirBack;

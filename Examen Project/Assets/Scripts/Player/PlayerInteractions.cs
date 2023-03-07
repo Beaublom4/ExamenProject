@@ -38,7 +38,6 @@ public class PlayerInteractions : MonoBehaviour
                 {
                     if (hit.transform.GetComponent<PushPuzzel>().complete == false)
                     {
-                        transform.position = hit.transform.GetChild(0).position;
                         GetComponent<PlayerMovement>().isPushing = true;
                         hit.transform.GetComponent<PushPuzzel>().SelectedPuzzel(transform);
                     }
