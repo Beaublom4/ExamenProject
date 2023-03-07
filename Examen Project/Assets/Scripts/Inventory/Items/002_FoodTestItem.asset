@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
   m_Name: 002_FoodTestItem
   m_EditorClassIdentifier: 
-  itemName: Test Food
+  itemName: Hot dog
   itemIcon: {fileID: 21300000, guid: 4c745985e01b9d545b275f42e3cdfb6d, type: 3}
-  itemDiscription: Heals the user with 20 health points
+  itemDiscription: The kingdoms favourite snack. Can be used to heal damage.
   itemId: 2
   melee: 0
   meleeDamage: 0

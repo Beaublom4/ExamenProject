@@ -311,6 +311,7 @@ Transform:
   - {fileID: 5917332069014110138}
   - {fileID: 1489590333710767046}
   - {fileID: 737501035}
+  - {fileID: 6339663055552638706}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -721,12 +722,12 @@ PrefabInstance:
         type: 3}
       propertyPath: newcamPos
       value: 
-      objectReference: {fileID: 737501034}
+      objectReference: {fileID: 0}
     - target: {fileID: 6106043872666444303, guid: 7a7e372fff929f24196ee6ff1c785eee,
         type: 3}
       propertyPath: newPlayerpos
       value: 
-      objectReference: {fileID: 4635839102452775798}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a7e372fff929f24196ee6ff1c785eee, type: 3}
 --- !u!4 &6240896621879329238 stripped
@@ -3421,6 +3422,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 976905157356078546, guid: f02bb33d2e7408040a80e44a9608f9bb,
     type: 3}
   m_PrefabInstance: {fileID: 5917332068478843726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5917332068517729724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5917332067975373444}
+    m_Modifications:
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.663
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.888
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356302116732928755, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+        type: 3}
+      propertyPath: m_Name
+      value: PickupSword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd, type: 3}
+--- !u!4 &6339663055552638706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424912728183225166, guid: 8c2bff1d00124bc4c87e2d762e4d5fdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5917332068517729724}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5917332068529173929
 PrefabInstance:
@@ -6728,6 +6804,129 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].onStartActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Hey nephew! Come over here I have to tell you something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[0].message
+      value: Listen, the princess of our kingdom has been kidnapped by the tiranic
+        Lord Nibbler.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[1].message
+      value: As his advisor the king has asked me to find someone to save her. I
+        think you are the one to do it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[2].message
+      value: As his advisor the king has asked me to find someone to save her. I
+        think you are the one to do it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[3].message
+      value: I already left a sword for you over to the left. I suggest you pick
+        it up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[4].message
+      value: You will need it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[1].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[2].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[3].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[4].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[0].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[1].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[2].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[3].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[4].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[1].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[2].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[3].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[1].messages.Array.data[4].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3dfbf36e6fa89a4c96a310c18d2b59c, type: 3}
 --- !u!4 &223602264048678357 stripped
