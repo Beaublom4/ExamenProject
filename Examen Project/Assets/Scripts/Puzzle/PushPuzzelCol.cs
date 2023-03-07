@@ -16,7 +16,11 @@ public class PushPuzzelCol : MonoBehaviour
                 colided = true;
                 other.transform.GetComponent<PushPuzzel>().LeavePuzzel();
                 if (transform.tag == "PushPuzzelFinish")
-                    print("finish puzzel");
+                {
+                    GameObject rew = other.transform.GetComponent<PushPuzzel>().reward;
+                    rew.SetActive(!rew.activeSelf);
+                    other.transform.GetComponent<PushPuzzel>().complete = true;
+                }
                 else
                 {
                     other.transform.GetComponent<PushPuzzel>().pushDirBack = 0;

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    public float RayRange;
+    public float OverlapRadius;
     public Vector3 raycastDir;
+    public GameObject overlapPos;
 
     // Update is called once per frame
     void Update()
@@ -23,28 +24,28 @@ public class PlayerInteractions : MonoBehaviour
 
         if (Input.GetButtonDown("InteractionKey"))
         {
-            //set all parameters for raycast.
-            Vector3 playerPos = transform.position;
+            //cast a overlapSphere and assigns all colliders to hitcoll.
+            Collider[] hitColl = Physics.OverlapSphere(overlapPos.transform.position, OverlapRadius);
 
-            Ray interactrionRay = new Ray(playerPos, raycastDir);
-            RaycastHit interactionRayHit;
-
-            //checks the tag of the object that the raycast hit and calls the right function.
-            if (Physics.Raycast(interactrionRay, out interactionRayHit, RayRange))
+            //checks each collider in hitcoll for a tag matching NPC Puzzel or Shop and calls the right functions.
+            foreach (var hit in hitColl)
             {
-                if (interactionRayHit.transform.tag == "NPC")
+                if (hit.transform.tag == "NPC")
                 {
-                    interactionRayHit.transform.GetComponent<NPC>().Interact();
+                    hit.transform.GetComponent<NPC>().Interact();
                 }
-                else if (interactionRayHit.transform.tag == "Puzzel")
+                else if (hit.transform.tag == "Puzzel")
                 {
-                    transform.position = interactionRayHit.transform.GetChild(0).position;
-                    GetComponent<PlayerMovement>().isPushing = true;
-                    interactionRayHit.transform.GetComponent<PushPuzzel>().SelectedPuzzel(transform);
+                    if (hit.transform.GetComponent<PushPuzzel>().complete == false)
+                    {
+                        transform.position = hit.transform.GetChild(0).position;
+                        GetComponent<PlayerMovement>().isPushing = true;
+                        hit.transform.GetComponent<PushPuzzel>().SelectedPuzzel(transform);
+                    }
                 }
-                else if (interactionRayHit.transform.tag == "Shop")
+                else if (hit.transform.tag == "Shop")
                 {
-                    interactionRayHit.transform.GetComponent<ShopNPC>().OpenShop();
+                    hit.transform.GetComponent<ShopNPC>().OpenShop();
                 }
             }
 
