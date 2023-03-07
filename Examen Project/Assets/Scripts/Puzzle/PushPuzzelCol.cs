@@ -17,8 +17,11 @@ public class PushPuzzelCol : MonoBehaviour
                 other.transform.GetComponent<PushPuzzel>().LeavePuzzel();
                 if (transform.tag == "PushPuzzelFinish")
                 {
-                    GameObject rew = other.transform.GetComponent<PushPuzzel>().reward;
-                    rew.SetActive(!rew.activeSelf);
+                    GameObject[] rewards = other.transform.GetComponent<PushPuzzel>().rewards;
+                    foreach (var rew in rewards)
+                    {
+                        rew.SetActive(!rew.activeSelf);
+                    }
                     other.transform.GetComponent<PushPuzzel>().complete = true;
                 }
                 else

@@ -7,7 +7,7 @@ public class PushPuzzel : MonoBehaviour
     public int pushDir, pushDirBack;
     public GameObject parent;
     private int prevDirBack;
-    public GameObject reward;
+    public GameObject[] rewards;
     public bool complete = false;
 
     private void Start()

@@ -45,6 +45,7 @@ public class PressurePlate : MonoBehaviour
         if (didTrigger == true)
             yield break;
 
+        didTrigger = true;
         checkPressureIsRunning = true;
 
 

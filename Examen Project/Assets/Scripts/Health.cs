@@ -29,12 +29,18 @@ public class Health : MonoBehaviour
             
 
     }
+
+    private bool deathStarted = false;
     public void DoDmg(int dmg)
     {
         //take dmg from current health and check if health is lower or equels 0 if true play death animation.
         curHealth -= dmg;
         if (curHealth <= 0)
         {
+            if (deathStarted)
+                return;
+
+            deathStarted = true;
             deathScript.OnDeath();
         }
 

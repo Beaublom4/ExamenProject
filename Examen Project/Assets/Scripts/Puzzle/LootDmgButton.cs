@@ -11,8 +11,17 @@ public class LootDmgButton : DamageButton
     [SerializeField] LootTable lootTable;
     [SerializeField] Transform lootSpawnPoint;
 
+    bool didTrigger = false;
     public override void TriggerOnDamage()
     {
+        if (didTrigger == true)
+        {
+            print("AAAHHHHHHHHHHHHHHHHHHHH");
+            return;
+        }
+
+
+        didTrigger = true;
         base.TriggerOnDamage();
         Debug.Log("Loot Button overide triggerd!");
 
