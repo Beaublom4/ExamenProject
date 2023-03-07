@@ -24,6 +24,7 @@ public class DialogManager : MonoBehaviour
     public List<Message> messages = new();
 
     private NPC currentNpc;
+    private bool nextMessage;
 
     //Set instance
     private void Awake()
@@ -34,8 +35,10 @@ public class DialogManager : MonoBehaviour
     /// Add a message to the list of messages, and play if its not yet playing
     /// </summary>
     /// <param name="_message"></param>
-    public void AddMessageAndPlay(Message _message)
+    public void AddMessageAndPlay(Message _message, NPC _npc, bool _nextMessage)
     {
+        _message.npc = _npc;
+        nextMessage = _nextMessage;
         messages.Add(_message);
         if (!typingMessage)
         {
@@ -48,12 +51,11 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     /// <param name="_messages"></param>
     /// <param name="_npc"></param>
-    public void AddMessageAndPlay(Message[] _messages, NPC _npc)
+    public void AddMessageAndPlay(Message[] _messages, NPC _npc, bool _nextMessage)
     {
-        currentNpc = _npc;
         foreach (Message m in _messages)
         {
-            AddMessageAndPlay(m);
+            AddMessageAndPlay(m, _npc, _nextMessage);
         }
     }
 
@@ -64,10 +66,14 @@ public class DialogManager : MonoBehaviour
 
         typingMessage = true;
         messageText.maxVisibleCharacters = 0;
+        currentNpc = _message.npc;
         currentNpc.anim.SetBool("talking", true);
 
         currentDisplayingMessage = _message.message;
         messageText.text = _message.message;
+
+        if (_message.isQuest)
+            nextMessage = false;
 
         //Displaying message 1 char for 1 char
         while (messageText.maxVisibleCharacters < _message.message.Length)
@@ -96,7 +102,6 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void ContinueMessage()
     {
-        Debug.Log(messageText.maxVisibleCharacters + " " + currentDisplayingMessage.Length);
         if (messageText.maxVisibleCharacters < currentDisplayingMessage.Length)
         {
             messageText.maxVisibleCharacters = currentDisplayingMessage.Length;
@@ -112,6 +117,8 @@ public class DialogManager : MonoBehaviour
                 currentNpc.isInteracted = false;
                 messageBox.SetActive(false);
                 currentNpc.anim.SetBool("talking", false);
+                if(nextMessage)
+                    currentNpc.currentMessages++;
             }
         }
     }
@@ -150,4 +157,6 @@ public class Message
     public Quest quest;
     [Space]
     public bool continueMovement;
+    [Space]
+    [HideInInspector] public NPC npc;
 }

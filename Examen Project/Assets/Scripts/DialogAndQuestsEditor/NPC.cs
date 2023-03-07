@@ -6,7 +6,7 @@ public class NPC : MonoBehaviour
 {
     public Animator anim;
     public MessageHolder[] messages;
-    int currentMessages = 0;
+    public int currentMessages = 0;
 
 
     private bool questActive;
@@ -30,9 +30,10 @@ public class NPC : MonoBehaviour
     [ContextMenu("Interact")]
     public void Interact()
     {
+        //Check if quest is already active
         if (QuestManager.Instance.currentNPC != null && QuestManager.Instance.currentNPC != this)
         {
-            DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.alreadyStartedQuestMessage, this);
+            DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.alreadyStartedQuestMessage, this, false);
             return;
         }
 
@@ -51,11 +52,11 @@ public class NPC : MonoBehaviour
         {
             if (currentMessages >= messages.Length)
             {
-                DialogManager.Instance.AddMessageAndPlay(DialogManager.Instance.dontHaveAnythingMessages, this);
+                DialogManager.Instance.AddMessageAndPlay(DialogManager.Instance.dontHaveAnythingMessages, this, false);
             }
             else
             {
-                DialogManager.Instance.AddMessageAndPlay(messages[currentMessages].messages, this);
+                DialogManager.Instance.AddMessageAndPlay(messages[currentMessages].messages, this, true);
             }
         }
         else
@@ -64,14 +65,14 @@ public class NPC : MonoBehaviour
             {
                 InventoryManager.Instance.RemoveItem(QuestManager.Instance.currentQuest.questObjective, currentQuest.questCount);
                 QuestManager.Instance.FinishQuest();
-                DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.questItemFoundMessage, this);
+                DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.questItemFoundMessage, this, false);
                 currentMessages++;
                 questActive = false;
                 hasItem = false;
             }
             else
             {
-                DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.noQuestItemFoundMessage, this);
+                DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.noQuestItemFoundMessage, this, false);
             }
         }
     }
