@@ -11,7 +11,7 @@ public class PlayerInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //makes the raycast face the direction the player is facing.
+        //makes the overlapsphere face the direction the player is facing.
         Vector3 move = GetComponent<PlayerMovement>().movement;
         if (move.x > 0)
             raycastDir = new Vector3(1, 0, 0);
@@ -53,10 +53,15 @@ public class PlayerInteractions : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //picks up the item or coin.
+        //picks up the item or coin and cakks the right function.
         if (collision.transform.tag == "Item")
         {
-            collision.transform.GetComponent<Item>().PickUpItem();
+            var item = collision.transform.GetComponent<Item>();
+            if(item.doPopup)
+            {
+                PopupManager.Instance.NewRoutine(item.popupObj);
+            }
+            item.PickUpItem();
         }
         if (collision.transform.tag == "Coin")
         {

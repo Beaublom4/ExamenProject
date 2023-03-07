@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
-            //reads WASD inputs.
+            //reads movement (WASD) inputs.
             movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             moveCharacter(movement);
         }
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void moveCharacter(Vector3 direction)
     {
-        //moves the player in the right direction times speed.
+        //moves the player in the right direction times speed and deltatime.
         transform.Translate(direction.normalized * speed * Time.deltaTime);
     }
 
