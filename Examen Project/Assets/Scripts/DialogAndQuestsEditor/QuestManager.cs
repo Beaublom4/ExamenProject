@@ -39,8 +39,9 @@ public class QuestManager : MonoBehaviour
     /// </summary>
     public void FinishQuest()
     {
-        //Remove item from inventory
-        //Add reward to player
+        for (int i = 0; i < currentQuest.rewardCoins; i++)
+            InventoryManager.Instance.AddCoin(null);
+        //add item reward
         currentQuest = null;
         EmptyQuest();
     }
@@ -72,5 +73,5 @@ public class Quest
     public ItemScrObj questObjective;
     public int questCount = 1;
     public int rewardCoins;
-    public int rewardItem;
+    //public int rewardItem;
 }
