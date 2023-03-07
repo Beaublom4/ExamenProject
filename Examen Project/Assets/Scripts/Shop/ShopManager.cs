@@ -50,6 +50,7 @@ public class ShopManager : MonoBehaviour
         if (InventoryManager.Instance.coins < item.price)
             return;
         InventoryManager.Instance.coins -= item.price;
+        HudManager.Instance.SetCoins(InventoryManager.Instance.coins);
         InventoryManager.Instance.AddItem(item.item, 1, null);
         item.currentInStore--;
     }

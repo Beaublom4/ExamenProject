@@ -168,7 +168,7 @@ public class InventoryManager : MonoBehaviour
         {
             //Add health that current food item gives
             Debug.Log($"Heal for {currentSlot.item.healAmount}");
-            FindObjectOfType<Health>().addHealth(currentSlot.item.healAmount);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().addHealth(currentSlot.item.healAmount);
             RemoveItem(currentSlot.item, 1);
         }
         if (currentSlot.item == null)
