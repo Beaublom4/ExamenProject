@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public bool sideShieldBool, canAttack = true;
     public bool isShielding;
 
-    public Animator anim;
+    [HideInInspector]public Animator anim;
 
     InventoryManager inventoryManager;
 

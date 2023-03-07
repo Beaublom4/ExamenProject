@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
             else if (movement.z < 0)
                 direction = 1;
 
+            //checks if the player is pushing a puzzel object and makes him leave if the player moves away
             if (isPushing)
             {
                 if (movement != new Vector3(0, 0, 0))

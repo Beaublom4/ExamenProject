@@ -7,11 +7,12 @@ public class CheckColider : MonoBehaviour
     public LayerMask all;
     private void Start()
     {
+
         Collider[] hitColiders = Physics.OverlapSphere(transform.position, 1, all, QueryTriggerInteraction.Ignore);
         foreach (var hitcoliders in hitColiders)
         {
             print(hitcoliders.name);
-            //check if the object that enterd the trigger has a Health or DamageButton scripts and call the right function.
+            //check if the objects that the overlapSphere found have a Health or DamageButton scripts and call the right function.
             if(hitcoliders.GetComponent<Health>())
             {
                 if(transform.tag == "Sword")
