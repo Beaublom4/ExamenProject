@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    public Animator anim;
     public MessageHolder[] messages;
     int currentMessages = 0;
 
-    public Animator anim;
 
     private bool questActive;
-    public bool isInteracted;
-    public bool hasItem;
+    [HideInInspector] public bool isInteracted;
+    private bool hasItem;
 
     private void Start()
     {

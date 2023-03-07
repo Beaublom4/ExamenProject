@@ -24,12 +24,12 @@ public class PopupManager : MonoBehaviour
             Destroy(currentObj);
         if (routine != null)
             StopCoroutine(routine);
-        routine = Routine();
+        routine = Routine(prefab);
         StartCoroutine(routine);
     }
-    IEnumerator Routine()
+    IEnumerator Routine(GameObject prefab)
     {
-        currentObj = Instantiate(currentObj, spawnPos);
+        currentObj = Instantiate(prefab, spawnPos);
         yield return new WaitForSeconds(popUpTime);
         Destroy(currentObj);
     }
