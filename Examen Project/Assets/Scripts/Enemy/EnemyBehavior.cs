@@ -83,6 +83,9 @@ public class EnemyBehavior : MonoBehaviour
         SetCurrentState(enemyState.Attacking);
         yield return new WaitForSeconds(timeBeforeAttackDealsDamage);
 
+        if (currentState != enemyState.Attacking)
+            yield break;
+
         if (player.GetComponent<PlayerCombat>().isShielding)
         {
             SetCurrentState(enemyState.Idle);
