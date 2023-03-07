@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 7641dfc97b138f54aa0f68b50f535e4b, type: 2}
+--- !u!4 &50535989 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6374266415443709879, guid: 9732f9d882d604744a9db21cd41ef7cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 358507516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &358507516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +136,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982064292}
     m_Modifications:
+    - target: {fileID: 1658008492996630028, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374266415443709879, guid: 9732f9d882d604744a9db21cd41ef7cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.52
+      objectReference: {fileID: 0}
     - target: {fileID: 7132737540205777932, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
       propertyPath: m_Name
@@ -190,7 +206,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5823160010690427981, guid: 9732f9d882d604744a9db21cd41ef7cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9732f9d882d604744a9db21cd41ef7cf, type: 3}
 --- !u!4 &358507517 stripped
 Transform:
@@ -520,6 +537,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198634156824910940, guid: 1c3c517cc4ac3884a9aecd67acd95e10,
+        type: 3}
+      propertyPath: spawnPos
+      value: 
+      objectReference: {fileID: 50535989}
+    - target: {fileID: 7198634156824910940, guid: 1c3c517cc4ac3884a9aecd67acd95e10,
+        type: 3}
+      propertyPath: popUpTime
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7987680697945533268, guid: 1c3c517cc4ac3884a9aecd67acd95e10,
         type: 3}
