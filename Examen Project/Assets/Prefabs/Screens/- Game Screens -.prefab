@@ -300,6 +300,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: = Screen Forest 2 =
       objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].message
+      value: A family heirloom was hidden here a long time ago.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].isQuest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].message
+      value: Maybe you can find it for me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questName
+      value: Find the ghost's heirloom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057794745558570, guid: 996858c826f3f44468ff169640e94f0c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996858c826f3f44468ff169640e94f0c, type: 3}
 --- !u!1 &1126215061334373602 stripped
