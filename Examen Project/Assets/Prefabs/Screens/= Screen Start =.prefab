@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8920780951079379574}
   - component: {fileID: 6487959814165929890}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Start Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
