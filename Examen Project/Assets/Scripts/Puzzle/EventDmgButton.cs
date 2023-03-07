@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EventDmgButton : DamageButton
 {
+    public GameObject[] rewards;
+
+
     public override void TriggerOnDamage()
     {
         base.TriggerOnDamage();
-        Debug.Log("Event button override triggerd!");
 
-        //run some event like a quest update or chance in a room
+        foreach (var reward in rewards)
+        {
+            reward.SetActive(!reward.activeSelf);
+        }
     }
 }

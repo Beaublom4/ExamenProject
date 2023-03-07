@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class EventPPlate : PressurePlate
 {
-    public GameObject secondPuzzlePart;
+    public GameObject[] rewards;
     public override IEnumerator CheckPressure()
     {
         base.CheckPressure();
-        print("wow cool event");
 
-        //run some event like a quest update or chance in a room
-        secondPuzzlePart.SetActive(true);
+        foreach (var reward in rewards)
+        {
+            reward.SetActive(!reward.activeSelf);
+        }
 
         checkPressureIsRunning = false;
         yield return null;

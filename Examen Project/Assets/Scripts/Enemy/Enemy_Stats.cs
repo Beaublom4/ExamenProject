@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// This is used to assign stats to enemys.
+/// This is used to assign stats to enemies.
 /// Create a statblock through the create asset menu.
 /// Assign the values as you like and assign the statblock to any enemy prefab as you see fit.
+/// I used functions to get the data to prevent accidental chances to the statblock.
 /// </summary>
 
 [CreateAssetMenu(fileName = "StatBlock", menuName = "Stats/EnemyStats")]

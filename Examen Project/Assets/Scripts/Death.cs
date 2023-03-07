@@ -9,6 +9,6 @@ public class Death : MonoBehaviour
     public virtual void OnDeath()
     {
 
-        //animator.SetBool("death", true);
+        animator.SetBool("death", true);
     }
 }

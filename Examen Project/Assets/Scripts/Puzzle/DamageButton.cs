@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// This is the base class for all the puzzle buttons that need to react on taking damage.
+/// This function should be called from a source of damage by the player.
 /// </summary>
 public class DamageButton : MonoBehaviour
 {

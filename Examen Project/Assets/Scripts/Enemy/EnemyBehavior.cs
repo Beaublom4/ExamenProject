@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Health), typeof(NavMeshAgent))]
 public class EnemyBehavior : MonoBehaviour
 {
-    public enum enemyState { Idle, Aggro, Attacking, Dead };
+    public enum enemyState { Idle, Attacking, Dead };
 
     public enemyState currentState { private set; get; }
 
@@ -42,6 +42,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Checks if the current position and comparais it to the last one if they aren't the same it will update what animation is being used. 
         if (transform.position != previousPosition)
         {
             lastMoveDirection = (transform.position - previousPosition).normalized;
@@ -82,15 +83,20 @@ public class EnemyBehavior : MonoBehaviour
         SetCurrentState(enemyState.Attacking);
         yield return new WaitForSeconds(timeBeforeAttackDealsDamage);
 
-        //if (blocked)
-        //{
-        //  SetCurrentState(enemyState.Idle);
-        //  yield break;
-        //}
+        if (player.GetComponent<PlayerCombat>().isShielding)
+        {
+            SetCurrentState(enemyState.Idle);
+            yield break;
+        }
+
         player.GetComponent<Health>().DoDmg(_attackDamage);
 
     }
 
+    /// <summary>
+    /// This makes the enemy wait before chasing and attacking the player again based on the _attackSpeed value.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator AttackCoolDown()
     {
         yield return new WaitForSeconds(_attackSpeed);
@@ -99,11 +105,18 @@ public class EnemyBehavior : MonoBehaviour
         SetCurrentState(enemyState.Idle);
     }
 
+    /// <summary>
+    /// The state chance is done through a function so that there is the potential to prevent a state change in specific situations.
+    /// </summary>
+    /// <param name="state"></param>
     public void SetCurrentState(enemyState state)
     {
         currentState = state;
     }
 
+    /// <summary>
+    /// Cashes all the info from the stats. Should be called at the Start.
+    /// </summary>
     private void AssignStats()
     {
         _attackSpeed = stats.getAttackSpeed();
@@ -114,10 +127,4 @@ public class EnemyBehavior : MonoBehaviour
         health = GetComponent<Health>();
         health.maxHealth = stats.getMaxHealth();
     }
-
-    //public void StartDeath()
-    //{
-    //    anim.SetBool("death", true);
-    //}
-
 }
