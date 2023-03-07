@@ -117,6 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: a2b9a5504a37af246b4baec50c36d905, type: 2}
   count: 1
+  doPopup: 1
+  popupObj: {fileID: 4091263496320458222, guid: 968d92c85b57e3e4d9bb78a85006dc1f,
+    type: 3}
 --- !u!1 &2528694358097122786
 GameObject:
   m_ObjectHideFlags: 0
