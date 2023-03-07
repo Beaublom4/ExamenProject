@@ -8,6 +8,8 @@ public class PushPuzzelCol : MonoBehaviour
     private int prevBackDir;
     private void OnTriggerEnter(Collider other)
     {
+        if (other.isTrigger)
+            return;
         //checks if the object that enter the trigger has puzzel tag.
         if (colided == false)
         {
