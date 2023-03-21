@@ -18,33 +18,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(canMove)
+            movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+
+        //changes the paramater direction of the animator.
+        if (movement == new Vector3(0, 0, 0))
+            direction = 0;
+        else if (movement.x > 0)
+            direction = 3;
+        else if (movement.x < 0)
+            direction = 4;
+        if (movement.z > 0)
+            direction = 2;
+        else if (movement.z < 0)
+            direction = 1;
+
+        //checks if the player is pushing a puzzel object and makes him leave if the player moves away
+        if (isPushing)
+        {
+            if (movement != new Vector3(0, 0, 0))
+                if (direction != pushDirection && direction != pushDirectionBack)
+                {
+                    GetComponentInChildren<PushPuzzel>().LeavePuzzel();
+                }
+        }
+
         if (canMove)
         {
             //reads movement (WASD) inputs.
-            movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             moveCharacter(movement);
         }
-            //changes the paramater direction of the animator.
-            if (movement == new Vector3(0, 0, 0))
-                direction = 0;
-            else if (movement.x > 0)
-                direction = 3;
-            else if (movement.x < 0)
-                direction = 4;
-            if (movement.z > 0)
-                direction = 2;
-            else if (movement.z < 0)
-                direction = 1;
-
-            //checks if the player is pushing a puzzel object and makes him leave if the player moves away
-            if (isPushing)
-            {
-                if (movement != new Vector3(0, 0, 0))
-                    if (direction != pushDirection && direction != pushDirectionBack)
-                    {
-                        GetComponentInChildren<PushPuzzel>().LeavePuzzel();
-                    }
-            }
 
             anim.SetInteger("direction", direction);
     }

@@ -17,6 +17,9 @@ public class PushPuzzel : MonoBehaviour
     }
     public void SelectedPuzzel(Transform player)
     {
+        transform.GetChild(2).gameObject.SetActive(false);
+        transform.GetChild(3).gameObject.SetActive(true);
+        transform.GetChild(4).gameObject.SetActive(true);
         //sets player to right position and set player as parent and assigns direction.
         var dist1 = Vector3.Distance(player.position, frontPos.transform.position);
         var dist2 = Vector3.Distance(player.position, backPos.transform.position);
@@ -31,6 +34,9 @@ public class PushPuzzel : MonoBehaviour
     public void LeavePuzzel()
     {
         //assigns gameobject parent as parent.
+        transform.GetChild(2).gameObject.SetActive(true);
+        transform.GetChild(3).gameObject.SetActive(false);
+        transform.GetChild(4).gameObject.SetActive(false);
         GetComponentInParent<PlayerMovement>().isPushing = false;
         transform.SetParent(parent.transform);
     }
