@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class DialogManager : MonoBehaviour
 {
@@ -62,7 +63,11 @@ public class DialogManager : MonoBehaviour
     //Routine of messages playing
     IEnumerator DislayMessage(Message _message)
     {
+
         FindObjectOfType<PlayerMovement>().canMove = _message.continueMovement;
+        FindObjectOfType<PlayerCombat>().canAttack = false;
+
+        FindObjectOfType<EventSystem>().SetSelectedGameObject(continueButton);
 
         typingMessage = true;
         messageText.maxVisibleCharacters = 0;
@@ -117,6 +122,7 @@ public class DialogManager : MonoBehaviour
             else
             {
                 FindObjectOfType<PlayerMovement>().canMove = true;
+                FindObjectOfType<PlayerCombat>().canAttack = true;
                 currentNpc.isInteracted = false;
                 messageBox.SetActive(false);
                 currentNpc.anim.SetBool("talking", false);
@@ -149,6 +155,10 @@ public class DialogManager : MonoBehaviour
         continueButton.SetActive(!b);
         foreach (GameObject g in questButtons)
             g.SetActive(b);
+        if(b)
+            FindObjectOfType<EventSystem>().SetSelectedGameObject(questButtons[0]);
+        else
+            FindObjectOfType<EventSystem>().SetSelectedGameObject(continueButton);
     }
 }
 [System.Serializable]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -27,22 +28,37 @@ public class InventoryManager : MonoBehaviour
     public Image itemImage;
     private Slot currentSlot;
 
+    [HideInInspector] public bool canOpen = true;
+
     private void Awake()
     {
         Instance = this;
         HudManager.Instance.SetCoins(coins);
+        canOpen = true;
     }
     /// <summary>
     /// Update checks input to open inventory
     /// </summary>
     private void Update()
     {
+        if (!canOpen)
+            return;
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventory.SetActive(!inventory.activeSelf);
+            Debug.Log(inventory.activeSelf);
             if (inventory.activeSelf)
             {
                 ClearDisplay();
+                FindObjectOfType<EventSystem>().SetSelectedGameObject(itemSlots[0].gameObject);
+                FindObjectOfType<PlayerMovement>().canMove = false;
+                FindObjectOfType<PlayerCombat>().canAttack = false;
+            }
+            else
+            {
+                FindObjectOfType<PlayerMovement>().canMove = true;
+                FindObjectOfType<PlayerCombat>().canAttack = true;
             }
         }
     }
@@ -161,6 +177,7 @@ public class InventoryManager : MonoBehaviour
         if (slot.item.food)
         {
             useButtonObj.SetActive(true);
+            FindObjectOfType<EventSystem>().SetSelectedGameObject(useButtonObj);
         }
         else useButtonObj.SetActive(false);
     }

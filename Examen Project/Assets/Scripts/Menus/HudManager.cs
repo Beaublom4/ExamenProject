@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class HudManager : MonoBehaviour
     public TMP_Text coinText;
 
     public GameObject GameOverScreen;
+    public GameObject retryButton;
 
     private void Awake()
     {
@@ -42,6 +44,7 @@ public class HudManager : MonoBehaviour
     public void GameOver()
     {
         GameOverScreen.SetActive(true);
+        FindObjectOfType<EventSystem>().SetSelectedGameObject(retryButton);
     }
     public void Restart()
     {

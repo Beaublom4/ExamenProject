@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ShopManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShopManager : MonoBehaviour
     public GameObject shopItemPrefab;
     public Transform shopItemsHolder;
     public GameObject shopObj;
+    public GameObject cancelButton;
 
     private void Awake()
     {
@@ -23,6 +25,8 @@ public class ShopManager : MonoBehaviour
     public void OpenShop(ShopItem[] shopItems)
     {
         FindObjectOfType<PlayerMovement>().canMove = false;
+        FindObjectOfType<PlayerCombat>().canAttack = false;
+        InventoryManager.Instance.canOpen = false;
 
         foreach (Transform t in shopItemsHolder)
             Destroy(t.gameObject);
@@ -32,6 +36,8 @@ public class ShopManager : MonoBehaviour
             g.GetComponent<ShopHolder>().SetUp(si);
         }
         shopObj.SetActive(true);
+
+        FindObjectOfType<EventSystem>().SetSelectedGameObject(cancelButton);
     }
     /// <summary>
     /// Closes shop ui
@@ -39,6 +45,8 @@ public class ShopManager : MonoBehaviour
     public void CloseShop()
     {
         FindObjectOfType<PlayerMovement>().canMove = true;
+        FindObjectOfType<PlayerCombat>().canAttack = true;
+        InventoryManager.Instance.canOpen = true;
         shopObj.SetActive(false);
     }
     /// <summary>
