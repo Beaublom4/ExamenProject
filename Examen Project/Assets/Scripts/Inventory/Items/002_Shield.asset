@@ -10,20 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
-  m_Name: 001_WeaponTestItem
+  m_Name: 002_Shield
   m_EditorClassIdentifier: 
-  itemName: Sword
-  itemIcon: {fileID: 21300000, guid: 8159e72901030cc4899a5e44c62f1deb, type: 3}
-  itemDiscription: A sharp sword. Can be used to slay your enemies.
-  itemId: 1
-  melee: 1
-  meleeDamage: 5
-  meleeCooldown: 0.3
-  shield: 0
+  itemName: Shield
+  itemIcon: {fileID: 21300000, guid: 32f2aedb6c5a5bf4b91a241e4b61d64e, type: 3}
+  itemDiscription: A Sturdy Shield. Can be used to block incoming attacks!
+  itemId: 2
+  melee: 0
+  meleeDamage: 0
+  meleeCooldown: 0
+  shield: 1
   shieldDuration: 0
-  shieldCooldown: 0
+  shieldCooldown: 0.3
   range: 0
+  rangeDamage: 0
+  rangeCooldown: 0
   magic: 0
+  magicDamage: 0
+  magicCooldown: 0
+  magicRange: 0
   food: 0
   healAmount: 0
   keyItem: 0

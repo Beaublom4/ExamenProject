@@ -10,20 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
-  m_Name: 003_ShieldTestItem
+  m_Name: 008_Taart
   m_EditorClassIdentifier: 
-  itemName: Shield
-  itemIcon: {fileID: 21300000, guid: 32f2aedb6c5a5bf4b91a241e4b61d64e, type: 3}
-  itemDiscription: A Sturdy Shield. Can be used to block incoming attacks!
-  itemId: 3
+  itemName: Hot dog
+  itemIcon: {fileID: 21300000, guid: 4c745985e01b9d545b275f42e3cdfb6d, type: 3}
+  itemDiscription: The kingdoms favourite snack. Can be used to heal damage.
+  itemId: 8
   melee: 0
   meleeDamage: 0
   meleeCooldown: 0
-  shield: 1
+  shield: 0
   shieldDuration: 0
-  shieldCooldown: 0.3
+  shieldCooldown: 0
   range: 0
+  rangeDamage: 0
+  rangeCooldown: 0
   magic: 0
-  food: 0
-  healAmount: 0
+  magicDamage: 0
+  magicCooldown: 0
+  magicRange: 0
+  food: 1
+  healAmount: 2
   keyItem: 0

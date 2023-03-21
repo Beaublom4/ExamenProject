@@ -10,9 +10,16 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject inventory;
     public int coins;
+    public GameObject useButtonObj;
     [Space]
     public Slot meleeSlot;
-    public Slot rangeSlot, magicSlot, shieldSlot;
+    public Image meleeUiImage;
+    public Slot rangeSlot;
+    public Image rangeUiImage;
+    public Slot magicSlot;
+    public Image magicUiImage;
+    public Slot shieldSlot;
+    public Image shieldUiImage;
     public Slot[] itemSlots;
     [Space]
     public TMP_Text itemName;
@@ -47,21 +54,26 @@ public class InventoryManager : MonoBehaviour
     /// <param name="itemObj"></param>
     public void AddItem(ItemScrObj item, int count, GameObject itemObj)
     {
+        Debug.Log(count);
         if (item.melee)
         {
             meleeSlot.SetSlot(item, count);
+            meleeUiImage.sprite = item.itemIcon;
         }
         else if (item.range)
         {
             rangeSlot.SetSlot(item, count);
+            rangeUiImage.sprite = item.itemIcon;
         }
         else if (item.magic)
         {
             magicSlot.SetSlot(item, count);
+            magicUiImage.sprite = item.itemIcon;
         }
         else if (item.shield)
         {
             shieldSlot.SetSlot(item, count);
+            shieldUiImage.sprite = item.itemIcon;
         }
         else
         {
@@ -88,6 +100,7 @@ public class InventoryManager : MonoBehaviour
                 if (s.count - count > 0)
                 {
                     s.count -= count;
+                    s.itemNumber.text = s.count.ToString();
                 }
                 else
                     s.EmptySlot();
@@ -145,6 +158,12 @@ public class InventoryManager : MonoBehaviour
         itemName.text = currentSlot.item.itemName;
         itemDiscription.text = currentSlot.item.itemDiscription;
         itemImage.sprite = currentSlot.item.itemIcon;
+        itemImage.color = Color.white;
+        if (slot.item.food)
+        {
+            useButtonObj.SetActive(true);
+        }
+        else useButtonObj.SetActive(false);
     }
     /// <summary>
     /// Clears display from all info
@@ -156,6 +175,8 @@ public class InventoryManager : MonoBehaviour
         itemName.text = "";
         itemDiscription.text = "";
         itemImage.sprite = null;
+        itemImage.color = new Color(0, 0, 0, 0);
+        useButtonObj.SetActive(false);
     }
     /// <summary>
     /// Uses current item displayed in display screen

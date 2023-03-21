@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
+  m_Name: 006_Brood
+  m_EditorClassIdentifier: 
+  itemName: Brood
+  itemIcon: {fileID: 21300000, guid: 4c745985e01b9d545b275f42e3cdfb6d, type: 3}
+  itemDiscription: The kingdoms favourite snack. Can be used to heal damage.
+  itemId: 6
+  melee: 0
+  meleeDamage: 0
+  meleeCooldown: 0
+  shield: 0
+  shieldDuration: 0
+  shieldCooldown: 0
+  range: 0
+  rangeDamage: 0
+  rangeCooldown: 0
+  magic: 0
+  magicDamage: 0
+  magicCooldown: 0
+  magicRange: 0
+  food: 1
+  healAmount: 2
+  keyItem: 0

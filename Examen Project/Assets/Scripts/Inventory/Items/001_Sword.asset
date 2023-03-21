@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
-  m_Name: 002_FoodTestItem
+  m_Name: 001_Sword
   m_EditorClassIdentifier: 
-  itemName: Hot dog
-  itemIcon: {fileID: 21300000, guid: 4c745985e01b9d545b275f42e3cdfb6d, type: 3}
-  itemDiscription: The kingdoms favourite snack. Can be used to heal damage.
-  itemId: 2
-  melee: 0
-  meleeDamage: 0
-  meleeCooldown: 0
+  itemName: Sword
+  itemIcon: {fileID: 21300000, guid: 8159e72901030cc4899a5e44c62f1deb, type: 3}
+  itemDiscription: A sharp sword. Can be used to slay your enemies.
+  itemId: 1
+  melee: 1
+  meleeDamage: 5
+  meleeCooldown: 0.3
   shield: 0
   shieldDuration: 0
   shieldCooldown: 0
   range: 0
   magic: 0
-  food: 1
-  healAmount: 2
+  food: 0
+  healAmount: 0
   keyItem: 0
