@@ -15,13 +15,16 @@ public class EnemyBehavior : MonoBehaviour
     private Animator anim;
     private EnemyDeath death;
 
+    [Tooltip("The amount of time the game should wait after starting the animtion before dealing damage")]
+    [SerializeField] private float timeBeforeDamage;
     [SerializeField] Enemy_Stats stats;
     private float _attackSpeed;
     private int _attackDamage;
     private  Health health;
-    [Tooltip("The amount of time the game should wait after starting the animtion before dealing damage")]
-    [SerializeField] private float timeBeforeDamage;
     [HideInInspector] public bool playerIsInAttackRange = false;
+
+    [Space]
+    [SerializeField] ParticleSystem moveParticle;
 
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
@@ -49,18 +52,39 @@ public class EnemyBehavior : MonoBehaviour
             lastMoveDirection = (transform.position - previousPosition).normalized;
             previousPosition = transform.position;
 
-            if (lastMoveDirection.x > 0.5f) 
-                anim.SetInteger("direction", 1);
-
+            if (lastMoveDirection.x > 0.5f)
+            {
+                anim.SetInteger("direction", 3);
+            }
             else if (lastMoveDirection.x < -0.5f)
-                anim.SetInteger("direction", 1);
-
+            {
+                anim.SetInteger("direction", 4);
+            }
+      
             if (lastMoveDirection.z > 0.5f)
+            {
                 anim.SetInteger("direction", 2);
-
+            }
             else if (lastMoveDirection.z < -0.5f)
+            {
                 anim.SetInteger("direction", 1);
+            }
+
+            if (moveParticle != null)
+            {
+                moveParticle.Play();
+            }
         }
+        else
+        {
+            anim.SetInteger("direction", 0);
+
+            if (moveParticle != null)
+            {
+                moveParticle.Stop();
+            }
+        }
+        
     }
 
     private void OnTriggerStay(Collider other)
@@ -98,8 +122,6 @@ public class EnemyBehavior : MonoBehaviour
 
         player.GetComponent<Health>().DoDmg(_attackDamage);
     }
-
-    
 
     /// <summary>
     /// This makes the enemy wait before chasing and attacking the player again based on the _attackSpeed value.
