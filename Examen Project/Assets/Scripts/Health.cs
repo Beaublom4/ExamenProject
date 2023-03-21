@@ -46,7 +46,15 @@ public class Health : MonoBehaviour
 
         if (transform.tag == "Player")
         {
+            GetComponentInChildren<SpriteRenderer>().color = Color.red;
             HudManager.Instance.SetHealth(curHealth, maxHealth);
+            StartCoroutine(playerColor());
         }
+    }
+
+    IEnumerator playerColor()
+    {
+        yield return new WaitForSeconds(.25f);
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 }
