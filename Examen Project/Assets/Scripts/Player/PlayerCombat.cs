@@ -77,7 +77,7 @@ public class PlayerCombat : MonoBehaviour
         //Plays the animation, spawns the swordHitBox and starts the cooldown.
         anim.SetTrigger("swordAttack");
         anim.SetBool("canMove", false);
-        Instantiate(swordHitbox, swordPos.transform.position, Quaternion.Euler(swordRotation), swordPos.transform);
+        Instantiate(swordHitbox, swordPos.transform.position, Quaternion.Euler(swordRotation), transform);
         StartCoroutine(AttackCooldown(inventoryManager.meleeSlot.item.meleeCooldown));
         GetComponent<PlayerMovement>().canMove = false;
     }
@@ -87,14 +87,14 @@ public class PlayerCombat : MonoBehaviour
         if (!sideShieldBool)
         {
             //Plays the animation, spawns the shieldObj and starts the cooldown.
-            Instantiate(shieldObj, swordPos.transform.position, Quaternion.Euler(shieldRotation), swordPos.transform);
+            Instantiate(shieldObj, swordPos.transform.position, Quaternion.Euler(shieldRotation), transform);
             StartCoroutine(AttackCooldown(inventoryManager.shieldSlot.item.shieldCooldown));
             GetComponent<PlayerMovement>().canMove = false;
         }
         else
         {
             //Plays the animation, spawns the sideShieldObj and starts the cooldown.
-            Instantiate(sideShieldObj, swordPos.transform.position, Quaternion.Euler(shieldRotation), swordPos.transform);
+            Instantiate(sideShieldObj, swordPos.transform.position, Quaternion.Euler(shieldRotation), transform);
             StartCoroutine(AttackCooldown(inventoryManager.shieldSlot.item.shieldCooldown));
             GetComponent<PlayerMovement>().canMove = false;
         }
