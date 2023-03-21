@@ -108,7 +108,7 @@ public class EnemyBehavior : MonoBehaviour
         StartCoroutine(AttackCoolDown());
 
         yield return new WaitForSeconds(timeBeforeDamage);
-
+        anim.SetBool("attacking", false);
         if (currentState == enemyState.Dead || !playerIsInAttackRange)
         {
             yield break;
@@ -131,7 +131,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(_attackSpeed);
 
-        anim.SetBool("attacking", false);
+        
         SetCurrentState(enemyState.Idle);
     }
 
