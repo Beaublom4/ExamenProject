@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
-  m_Name: 004_BowItem
+  m_Name: 009_Magic
   m_EditorClassIdentifier: 
   itemName: Bow
   itemIcon: {fileID: 21300000, guid: 4c745985e01b9d545b275f42e3cdfb6d, type: 3}
-  itemDiscription: A bow. Shoots arrows.
-  itemId: 4
+  itemDiscription: staff. shoot magic
+  itemId: 0
   melee: 0
   meleeDamage: 5
   meleeCooldown: 0.3
   shield: 0
   shieldDuration: 0
   shieldCooldown: 0
-  range: 1
-  rangeDamage: 1
+  range: 0
+  rangeDamage: 5
   rangeCooldown: 1.5
-  magic: 0
-  magicDamage: 0
-  magicCooldown: 0
-  magicRange: 0
+  magic: 1
+  magicDamage: 1
+  magicCooldown: 3
+  magicRange: 3
   food: 0
   healAmount: 0
   keyItem: 0

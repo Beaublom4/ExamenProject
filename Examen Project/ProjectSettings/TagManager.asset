@@ -13,6 +13,7 @@ TagManager:
   - Coin
   - PushPuzzelFinish
   - Arrow
+  - Magic
   layers:
   - Default
   - TransparentFX

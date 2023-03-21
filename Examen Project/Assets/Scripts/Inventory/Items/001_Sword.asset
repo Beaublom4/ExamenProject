@@ -17,13 +17,18 @@ MonoBehaviour:
   itemDiscription: A sharp sword. Can be used to slay your enemies.
   itemId: 1
   melee: 1
-  meleeDamage: 5
+  meleeDamage: 1
   meleeCooldown: 0.3
   shield: 0
   shieldDuration: 0
   shieldCooldown: 0
   range: 0
+  rangeDamage: 0
+  rangeCooldown: 0
   magic: 0
+  magicDamage: 0
+  magicCooldown: 0
+  magicRange: 0
   food: 0
   healAmount: 0
   keyItem: 0

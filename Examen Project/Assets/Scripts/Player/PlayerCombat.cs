@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj, arrow;
+    public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj, arrow, magicBall;
     private Vector3 newPos;
     private Vector3 swordRotation, shieldRotation, arrowRotation;
     public bool sideShieldBool, canAttack = true;
@@ -78,6 +78,11 @@ public class PlayerCombat : MonoBehaviour
                 canAttack = false;
                 BowAttack();
             }
+            else if (Input.GetButtonDown("Magic") && inventoryManager.magicSlot.item != null)
+            {
+                canAttack = false;
+                MagicAttack();
+            }
         }
     }
 
@@ -96,6 +101,13 @@ public class PlayerCombat : MonoBehaviour
         //anim.SetTrigger("swordAttack");
         Instantiate(arrow, swordPos.transform.position, Quaternion.Euler(arrowRotation));
         StartCoroutine(AttackCooldown(inventoryManager.rangeSlot.item.rangeCooldown));
+    }
+    private void MagicAttack()
+    {
+        //Plays the animation, spawns the maigcball and starts the cooldown.
+        //anim.SetTrigger("swordAttack");
+        Instantiate(magicBall, swordPos.transform.position, Quaternion.Euler(arrowRotation));
+        StartCoroutine(AttackCooldown(inventoryManager.magicSlot.item.magicCooldown));
     }
     private void ShieldBlock()
     {
