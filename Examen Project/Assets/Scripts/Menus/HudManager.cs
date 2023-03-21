@@ -45,6 +45,6 @@ public class HudManager : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game");
     }
 }
