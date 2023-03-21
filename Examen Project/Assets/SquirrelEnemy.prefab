@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4823,6 +4823,7 @@ GameObject:
   - component: {fileID: 2763529423448651537}
   - component: {fileID: 518037318686786221}
   - component: {fileID: 7413445714491674337}
+  - component: {fileID: 7106147221433306372}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -4917,6 +4918,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7106147221433306372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001233012393689323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5eb597a851597c45a49662e66d1f4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  system: {fileID: 3281011539731786528}
 --- !u!1 &1526720998788335090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,9 +5000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21b3e9f5ef2fe2478e6f25f346cbb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 755045787dadd3340a63b7e41257e2ef, type: 2}
   timeBeforeDamage: 0
+  stats: {fileID: 11400000, guid: 755045787dadd3340a63b7e41257e2ef, type: 2}
   playerIsInAttackRange: 0
+  moveParticle: {fileID: 2023704315}
 --- !u!114 &846974295747019698
 MonoBehaviour:
   m_ObjectHideFlags: 0
