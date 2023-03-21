@@ -21,8 +21,13 @@ public class ItemScrObj : ScriptableObject
     public float shieldCooldown;
     [Header("Range")]
     public bool range;
+    public float rangeDamage;
+    public float rangeCooldown;
     [Header("Magic")]
     public bool magic;
+    public float magicDamage;
+    public float magicCooldown;
+    public float magicRange;
     [Header("Food")]
     public bool food;
     public int healAmount;

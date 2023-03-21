@@ -59,7 +59,7 @@ public class PlayerInteractions : MonoBehaviour
             var item = collision.transform.GetComponent<Item>();
             if(item.doPopup)
             {
-                PopupManager.Instance.NewRoutine(item.popupObj);
+                PopupManager.Instance.NewRoutine(item.popupObj, null);
             }
             item.PickUpItem();
         }

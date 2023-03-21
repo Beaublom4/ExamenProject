@@ -5,13 +5,14 @@ using UnityEngine;
 public class PopupCollider : MonoBehaviour
 {
     public GameObject display;
+    public string extraInfo;
     public bool onStart;
 
     private void Start()
     {
         if (onStart)
         {
-            PopupManager.Instance.NewRoutine(display);
+            PopupManager.Instance.NewRoutine(display, extraInfo);
             Destroy(gameObject);
         }
     }
@@ -20,7 +21,7 @@ public class PopupCollider : MonoBehaviour
         if(other.tag == "Player")
         {
             //Display popup for time
-            PopupManager.Instance.NewRoutine(display);
+            PopupManager.Instance.NewRoutine(display, extraInfo);
             Destroy(gameObject);
         }
     }
