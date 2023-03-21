@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj;
+    public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj, arrow;
     private Vector3 newPos;
-    private Vector3 swordRotation, shieldRotation;
+    private Vector3 swordRotation, shieldRotation, arrowRotation;
     public bool sideShieldBool, canAttack = true;
     public bool isShielding;
 
@@ -31,6 +31,7 @@ public class PlayerCombat : MonoBehaviour
             newPos = new Vector3(0, 0, -0.5f);
             swordRotation = new Vector3(-90,0,0);
             shieldRotation = new Vector3(0,0,0);
+            arrowRotation = new Vector3(90, 0, 0);
             sideShieldBool = false;
         }
         else if (dir == 2)
@@ -38,6 +39,7 @@ public class PlayerCombat : MonoBehaviour
             newPos = new Vector3(0, 0, 0.5f);
             swordRotation = new Vector3(90, 0, 0);
             shieldRotation = new Vector3(0, 0, 0);
+            arrowRotation = new Vector3(180, 0, 0);
             sideShieldBool = false;
         }
         else if (dir == 3)
@@ -45,6 +47,7 @@ public class PlayerCombat : MonoBehaviour
             newPos = new Vector3(.75f, 0, 0);
             swordRotation = new Vector3(-90, 0, -90);
             shieldRotation = new Vector3(0, 180, 0);
+            arrowRotation = new Vector3(90, -90, 0);
             sideShieldBool = true;
         }
         else if (dir == 4)
@@ -52,6 +55,7 @@ public class PlayerCombat : MonoBehaviour
             newPos = new Vector3(-.75f, 0, 0);
             swordRotation = new Vector3(90, 0, 90);
             shieldRotation = new Vector3(0, 0, 0);
+            arrowRotation = new Vector3(90, 90, 0);
             sideShieldBool = true;
         }
 
@@ -69,6 +73,11 @@ public class PlayerCombat : MonoBehaviour
                 canAttack = false;
                 ShieldBlock();
             }
+            else if (Input.GetButtonDown("Bow") && inventoryManager.rangeSlot.item != null)
+            {
+                canAttack = false;
+                BowAttack();
+            }
         }
     }
 
@@ -80,6 +89,13 @@ public class PlayerCombat : MonoBehaviour
         Instantiate(swordHitbox, swordPos.transform.position, Quaternion.Euler(swordRotation), transform);
         StartCoroutine(AttackCooldown(inventoryManager.meleeSlot.item.meleeCooldown));
         GetComponent<PlayerMovement>().canMove = false;
+    }
+    private void BowAttack()
+    {
+        //Plays the animation, spawns the arrow and starts the cooldown.
+        //anim.SetTrigger("swordAttack");
+        Instantiate(arrow, swordPos.transform.position, Quaternion.Euler(arrowRotation));
+        StartCoroutine(AttackCooldown(inventoryManager.rangeSlot.item.rangeCooldown));
     }
     private void ShieldBlock()
     {

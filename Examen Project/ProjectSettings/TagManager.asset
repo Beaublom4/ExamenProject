@@ -12,6 +12,7 @@ TagManager:
   - Sword
   - Coin
   - PushPuzzelFinish
+  - Arrow
   layers:
   - Default
   - TransparentFX
