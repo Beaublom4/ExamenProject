@@ -54,7 +54,6 @@ public class InventoryManager : MonoBehaviour
     /// <param name="itemObj"></param>
     public void AddItem(ItemScrObj item, int count, GameObject itemObj)
     {
-        Debug.Log(count);
         if (item.melee)
         {
             meleeSlot.SetSlot(item, count);
