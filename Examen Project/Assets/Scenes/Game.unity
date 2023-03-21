@@ -572,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 4162751375504570440, guid: e449898eed196d649bafcd7269d3db9b,
         type: 3}
       propertyPath: doPopup
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e449898eed196d649bafcd7269d3db9b, type: 3}
