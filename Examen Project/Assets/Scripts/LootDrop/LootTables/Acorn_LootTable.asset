@@ -16,6 +16,7 @@ MonoBehaviour:
   - {fileID: 2356302116732928755, guid: fb08ce1315498e94a92219008e8c23ec, type: 3}
   - {fileID: 4410758431443236391, guid: b3c6d20e6f3ed8f49806ed594debfee3, type: 3}
   - {fileID: 4410758431443236391, guid: b3c6d20e6f3ed8f49806ed594debfee3, type: 3}
+  - {fileID: 2356302116732928755, guid: fb08ce1315498e94a92219008e8c23ec, type: 3}
   coinPrefab: {fileID: 4410758431443236391, guid: b3c6d20e6f3ed8f49806ed594debfee3,
     type: 3}
   lootChance: 100
