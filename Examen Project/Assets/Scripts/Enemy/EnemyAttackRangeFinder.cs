@@ -24,4 +24,20 @@ public class EnemyAttackRangeFinder : MonoBehaviour
             StartCoroutine(thisEnemy.Attack(other));
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            thisEnemy.playerIsInAttackRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            thisEnemy.playerIsInAttackRange = false;
+        }
+    }
 }

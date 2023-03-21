@@ -20,7 +20,8 @@ public class EnemyBehavior : MonoBehaviour
     private int _attackDamage;
     private  Health health;
     [Tooltip("The amount of time the game should wait after starting the animtion before dealing damage")]
-    [SerializeField] private float timeBeforeAttackDealsDamage;
+    [SerializeField] private float timeBeforeDamage;
+    [HideInInspector] public bool playerIsInAttackRange = false;
 
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
@@ -64,41 +65,41 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag != "Player" || currentState != enemyState.Idle)
-            return;
-
-        agent.SetDestination(other.transform.position);
+        if (other.tag == "Player" && currentState == enemyState.Idle)
+        {
+            agent.SetDestination(other.transform.position);
+        }
+            
     }
 
     public IEnumerator Attack(Collider player)
     {
-
         if (currentState == enemyState.Attacking || currentState == enemyState.Dead)
+        {
             yield break;
-
+        }
+            
         anim.SetBool("attacking", true);
         SetCurrentState(enemyState.Attacking);
         StartCoroutine(AttackCoolDown());
 
+        yield return new WaitForSeconds(timeBeforeDamage);
 
-        yield return new WaitForSeconds(timeBeforeAttackDealsDamage);
-
-        if (currentState == enemyState.Dead)
+        if (currentState == enemyState.Dead || !playerIsInAttackRange)
         {
-            Debug.Log("No longer in attacking state damage stopped!");
             yield break;
         }
-            
 
         if (player.GetComponent<PlayerCombat>().isShielding)
         {
-            SetCurrentState(enemyState.Idle);
+            GameObject.FindGameObjectWithTag("Shield").GetComponent<Animator>().SetTrigger("blocked");
             yield break;
         }
 
         player.GetComponent<Health>().DoDmg(_attackDamage);
-
     }
+
+    
 
     /// <summary>
     /// This makes the enemy wait before chasing and attacking the player again based on the _attackSpeed value.
@@ -121,7 +122,7 @@ public class EnemyBehavior : MonoBehaviour
         if (currentState == enemyState.Dead)
             return;
 
-        Debug.Log($"[STATE UPDATE] {currentState} > {state}");
+        //Debug.Log($"[STATE UPDATE] {currentState} > {state}");
         currentState = state;
     }
 

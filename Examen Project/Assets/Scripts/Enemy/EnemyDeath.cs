@@ -37,7 +37,8 @@ public class EnemyDeath : Death
         for (int i = 0; i < coins; i++)
         {
             //Instantiate coins and give force
-            GameObject newCoin = Instantiate(_lootTable.coinPrefab, transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
+            Vector3 spawnpoint = transform.position; spawnpoint.y += 1.5f; 
+            GameObject newCoin = Instantiate(_lootTable.coinPrefab, spawnpoint, Quaternion.Euler(0, Random.Range(0, 360), 0));
             newCoin.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(1, 3, 0), ForceMode.Impulse);
         }
 

@@ -173,7 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 68be3a23444decd4eae9fde20bca9e5b, type: 2}
-  timeBeforeAttackDealsDamage: 0.3
+  timeBeforeDamage: 0.3
+  playerIsInAttackRange: 0
 --- !u!114 &2554654103326442190
 MonoBehaviour:
   m_ObjectHideFlags: 0
