@@ -15,6 +15,8 @@ public class ShopManager : MonoBehaviour
     public GameObject cancelButton;
     public TMP_Text coins;
 
+    private bool canOpen = true;
+
     private void Awake()
     {
         Instance = this;
@@ -25,6 +27,10 @@ public class ShopManager : MonoBehaviour
     /// <param name="shopItems"></param>
     public void OpenShop(ShopItem[] shopItems)
     {
+        if (!canOpen)
+            return;
+        canOpen = false;
+
         FindObjectOfType<PlayerMovement>().canMove = false;
         FindObjectOfType<PlayerCombat>().canAttack = false;
         InventoryManager.Instance.canOpen = false;
@@ -51,6 +57,12 @@ public class ShopManager : MonoBehaviour
         FindObjectOfType<PlayerCombat>().canAttack = true;
         InventoryManager.Instance.canOpen = true;
         shopObj.SetActive(false);
+        StartCoroutine(CloseShopDelay());
+    }
+    IEnumerator CloseShopDelay()
+    {
+        yield return new WaitForEndOfFrame();
+        canOpen = true;
     }
     /// <summary>
     /// Buy item that has been clicked and add it to inventory
