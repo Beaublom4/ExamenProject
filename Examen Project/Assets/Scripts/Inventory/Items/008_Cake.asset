@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Cake
   itemIcon: {fileID: 21300000, guid: 7a58da1b5d948d744aedeee74ceaf664, type: 3}
-  itemDiscription: The kingdoms favourite snack. Can be used to heal damage.
+  itemDiscription: Sweeeet cake. Can be used to heal damage.
   itemId: 8
   melee: 0
   meleeDamage: 0

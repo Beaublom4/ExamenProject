@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
   m_Name: 007_Pizza
   m_EditorClassIdentifier: 
-  itemName: Hot dog
-  itemIcon: {fileID: 21300000, guid: 4c745985e01b9d545b275f42e3cdfb6d, type: 3}
-  itemDiscription: The kingdoms favourite snack. Can be used to heal damage.
+  itemName: Pizza
+  itemIcon: {fileID: 21300000, guid: 80a4f72c5dc2db94a9a4465d4d4a2acd, type: 3}
+  itemDiscription: This might be from a basement nearby. Can be used to heal damage.
   itemId: 7
   melee: 0
   meleeDamage: 0
