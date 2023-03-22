@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             moveCharacter(movement);
         }
 
-            anim.SetInteger("direction", direction);
+         anim.SetInteger("direction", direction);
     }
     void moveCharacter(Vector3 direction)
     {

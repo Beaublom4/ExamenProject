@@ -25,7 +25,7 @@ public class HudManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("PauseMenu"))
         {
             TogglePauseMenu();
         }

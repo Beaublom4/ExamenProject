@@ -22,12 +22,30 @@ public class PlayerInteractions : MonoBehaviour
         else if (move.z < 0)
             raycastDir = new Vector3(0, 0, -1);
 
-        if (Input.GetButtonDown("InteractionKey"))
+        //cast a overlapSphere and assigns all colliders to hitcoll.
+        Collider[] hitColl = Physics.OverlapSphere(overlapPos.transform.position, OverlapRadius);
+        //checks each collider in hitcoll for a tag matching NPC Puzzel or Shop and calls the right functions.
+        for (int i = 0; i < hitColl.Length; i++)
         {
-            //cast a overlapSphere and assigns all colliders to hitcoll.
-            Collider[] hitColl = Physics.OverlapSphere(overlapPos.transform.position, OverlapRadius);
-
-            //checks each collider in hitcoll for a tag matching NPC Puzzel or Shop and calls the right functions.
+            if (hitColl[i].transform.tag == "NPC")
+            {
+                GetComponent<PlayerCombat>().stopAttack = true;
+                break;
+            }
+            else if (hitColl[i].transform.tag == "Puzzel")
+            {
+                GetComponent<PlayerCombat>().stopAttack = true;
+                break;
+            }
+            else if (hitColl[i].transform.tag == "Shop")
+            {
+                GetComponent<PlayerCombat>().stopAttack = true;
+                break;
+            }
+            else
+                GetComponent<PlayerCombat>().stopAttack = false;
+        }
+        if(Input.GetButtonDown("InteractionKey"))
             foreach (var hit in hitColl)
             {
                 if (hit.transform.tag == "NPC")
@@ -47,8 +65,6 @@ public class PlayerInteractions : MonoBehaviour
                     hit.transform.GetComponent<ShopNPC>().OpenShop();
                 }
             }
-
-        }
     }
 
     private void OnCollisionEnter(Collision collision)

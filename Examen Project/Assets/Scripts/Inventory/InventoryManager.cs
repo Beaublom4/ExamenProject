@@ -44,7 +44,7 @@ public class InventoryManager : MonoBehaviour
         if (!canOpen)
             return;
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("Inventory"))
         {
             inventory.SetActive(!inventory.activeSelf);
             Debug.Log(inventory.activeSelf);

@@ -7,7 +7,7 @@ public class PlayerCombat : MonoBehaviour
     public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj, arrow, magicBall;
     private Vector3 newPos;
     private Vector3 swordRotation, shieldRotation, arrowRotation;
-    public bool sideShieldBool, canAttack = true;
+    public bool sideShieldBool, canAttack = true, stopAttack;
     public bool isShielding;
 
     [HideInInspector]public Animator anim;
@@ -60,7 +60,7 @@ public class PlayerCombat : MonoBehaviour
         }
 
         swordPos.transform.localPosition = newPos;
-        if (canAttack)
+        if (canAttack && stopAttack == false)
         {
             //call swordAttack if you use the J button or call shieldblock if you use the H button.
             if (Input.GetButtonDown("Sword") && inventoryManager.meleeSlot.item != null)
