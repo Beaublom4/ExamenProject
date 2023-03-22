@@ -15,5 +15,5 @@ MonoBehaviour:
   moveSpeed: 4
   attackSpeed: 0.7
   attackDamage: 1
-  maxHealth: 1
+  maxHealth: 2
   lootTable: {fileID: 11400000, guid: 5df12dd26fa19c04b99645bad6c549a0, type: 2}

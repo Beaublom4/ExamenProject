@@ -44,11 +44,12 @@ public class Health : MonoBehaviour
             deathScript.OnDeath();
         }
 
+        GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        StartCoroutine(playerColor());
+        
         if (transform.tag == "Player")
         {
-            GetComponentInChildren<SpriteRenderer>().color = Color.red;
             HudManager.Instance.SetHealth(curHealth, maxHealth);
-            StartCoroutine(playerColor());
         }
     }
 

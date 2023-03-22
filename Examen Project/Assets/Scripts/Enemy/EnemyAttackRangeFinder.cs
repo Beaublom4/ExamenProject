@@ -11,7 +11,7 @@ using UnityEngine;
 public class EnemyAttackRangeFinder : MonoBehaviour
 {
     EnemyBehavior thisEnemy;
-
+    
     private void Awake()
     {
         thisEnemy = GetComponentInParent<EnemyBehavior>();

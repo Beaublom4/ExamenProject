@@ -23,13 +23,16 @@ public class EnemyBehavior : MonoBehaviour
     private  Health health;
     [HideInInspector] public bool playerIsInAttackRange = false;
 
-    [Space]
+    [Space] [Header("These are optional and will be ignored if left empty")]
+    [SerializeField] ParticleSystem aggroParticle;
+    private bool aggroHasShown = false;
     [SerializeField] ParticleSystem moveParticle;
+    [SerializeField] GameObject summonPrefab;
 
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
 
-    private void Start()
+    private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
@@ -96,6 +99,19 @@ public class EnemyBehavior : MonoBehaviour
             
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (aggroParticle == null || aggroHasShown)
+        {
+            return;
+        }
+        else if (other.tag == "Player" && currentState == enemyState.Idle)
+        {
+            aggroHasShown = true;
+            aggroParticle.Play();
+        }
+    }
+
     public IEnumerator Attack(Collider player)
     {
         if (currentState == enemyState.Attacking || currentState == enemyState.Dead)
@@ -109,8 +125,16 @@ public class EnemyBehavior : MonoBehaviour
 
         yield return new WaitForSeconds(timeBeforeDamage);
         anim.SetBool("attacking", false);
-        if (currentState == enemyState.Dead || !playerIsInAttackRange)
+
+        if ((currentState == enemyState.Dead) || (!playerIsInAttackRange && summonPrefab == null))
         {
+            yield break;
+        }
+
+        if (summonPrefab != null)
+        {
+            Instantiate(summonPrefab, RandomNavmeshLocation(1), Quaternion.identity);
+
             yield break;
         }
 
@@ -122,6 +146,24 @@ public class EnemyBehavior : MonoBehaviour
 
         player.GetComponent<Health>().DoDmg(_attackDamage);
     }
+
+    public Vector3 RandomNavmeshLocation(float radius)
+    {
+        Vector3 finalPosition = Vector3.zero;
+        while (finalPosition == Vector3.zero)
+        {
+            Vector3 randomDirection = Random.insideUnitSphere * radius;
+            randomDirection += transform.position;
+            NavMeshHit hit;
+        
+            if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
+            {
+                finalPosition = hit.position;
+            }
+        }
+        return finalPosition;
+    }
+
 
     /// <summary>
     /// This makes the enemy wait before chasing and attacking the player again based on the _attackSpeed value.

@@ -4986,9 +4986,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBeforeDamage: 0.3
-  stats: {fileID: 11400000, guid: 68be3a23444decd4eae9fde20bca9e5b, type: 2}
+  stats: {fileID: 11400000, guid: 9fa7ab97c5c9a4549a04b92d38e13c15, type: 2}
   playerIsInAttackRange: 0
+  aggroParticle: {fileID: 0}
+  aggroHasShown: 0
   moveParticle: {fileID: 0}
+  summonPrefab: {fileID: 0}
 --- !u!114 &2554654103326442190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5062,7 +5065,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
