@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class QuestManager : MonoBehaviour
 
     public GameObject questBox;
     public TMP_Text questText;
+    public Image questItemImage;
 
     public Message[] noQuestItemFoundMessage, questItemFoundMessage, alreadyStartedQuestMessage;
 
@@ -52,6 +54,7 @@ public class QuestManager : MonoBehaviour
     {
         questText.text = currentQuest.questName;
         questText.text += "<br>" + "Find: " + currentQuest.questObjective.itemName + " and return it";
+        questItemImage.sprite = currentQuest.questObjective.itemIcon;
         questBox.SetActive(true);
     }
     /// <summary>

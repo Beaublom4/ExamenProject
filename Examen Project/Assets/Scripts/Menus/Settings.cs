@@ -9,7 +9,7 @@ public class Settings : MonoBehaviour
 {
     public AudioMixer mixer;
 
-    public static float volume;
+    public static float volume = 1;
     public static bool windowed;
     public static int resolution;
 
@@ -19,7 +19,7 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
-        
+        soundSlider.value = volume;
     }
     /// <summary>
     /// Set the volume with calculation volume
@@ -68,5 +68,9 @@ public class Settings : MonoBehaviour
     public void Return()
     {
         gameObject.SetActive(false);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

@@ -13,6 +13,7 @@ public class ShopManager : MonoBehaviour
     public Transform shopItemsHolder;
     public GameObject shopObj;
     public GameObject cancelButton;
+    public TMP_Text coins;
 
     private void Awake()
     {
@@ -27,6 +28,8 @@ public class ShopManager : MonoBehaviour
         FindObjectOfType<PlayerMovement>().canMove = false;
         FindObjectOfType<PlayerCombat>().canAttack = false;
         InventoryManager.Instance.canOpen = false;
+
+        coins.text = InventoryManager.Instance.coins.ToString();
 
         foreach (Transform t in shopItemsHolder)
             Destroy(t.gameObject);

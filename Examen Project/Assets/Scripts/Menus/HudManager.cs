@@ -15,10 +15,20 @@ public class HudManager : MonoBehaviour
 
     public GameObject GameOverScreen;
     public GameObject retryButton;
+    [Space]
+    public GameObject settingsObj;
+    public GameObject continueObj;
 
     private void Awake()
     {
         Instance = this;
+    }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            TogglePauseMenu();
+        }
     }
     /// <summary>
     /// Set health slider in the hud
@@ -49,5 +59,16 @@ public class HudManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Game");
+    }
+    public void TogglePauseMenu()
+    {
+        settingsObj.SetActive(!settingsObj.activeSelf);
+        if (settingsObj.activeSelf)
+        {
+            Time.timeScale = 0;
+            FindObjectOfType<EventSystem>().SetSelectedGameObject(continueObj);
+        }
+        else
+            Time.timeScale = 1;
     }
 }
