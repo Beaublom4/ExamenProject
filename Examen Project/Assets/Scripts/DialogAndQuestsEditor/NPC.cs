@@ -86,6 +86,11 @@ public class NPC : MonoBehaviour
     {
         questActive = true;
     }
+    public IEnumerator CanTalkAgain()
+    {
+        yield return new WaitForEndOfFrame();
+        isInteracted = false;
+    }
 }
 [System.Serializable]
 public class MessageHolder

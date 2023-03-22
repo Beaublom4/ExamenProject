@@ -123,11 +123,11 @@ public class DialogManager : MonoBehaviour
             {
                 FindObjectOfType<PlayerMovement>().canMove = true;
                 FindObjectOfType<PlayerCombat>().canAttack = true;
-                currentNpc.isInteracted = false;
                 messageBox.SetActive(false);
                 currentNpc.anim.SetBool("talking", false);
                 if(nextMessage)
                     currentNpc.currentMessages++;
+                StartCoroutine(currentNpc.CanTalkAgain());
             }
         }
     }
