@@ -39,7 +39,7 @@ public class PlayerCombat : MonoBehaviour
             newPos = new Vector3(0, 0, 0.5f);
             swordRotation = new Vector3(90, 0, 0);
             shieldRotation = new Vector3(0, 0, 0);
-            arrowRotation = new Vector3(180, 0, 0);
+            arrowRotation = new Vector3(90, 180, 0);
             sideShieldBool = false;
         }
         else if (dir == 3)
@@ -105,7 +105,7 @@ public class PlayerCombat : MonoBehaviour
     private void MagicAttack()
     {
         //Plays the animation, spawns the maigcball and starts the cooldown.
-        //anim.SetTrigger("swordAttack");
+        anim.SetTrigger("swordAttack");
         Instantiate(magicBall, swordPos.transform.position, Quaternion.Euler(arrowRotation));
         StartCoroutine(AttackCooldown(inventoryManager.magicSlot.item.magicCooldown));
     }

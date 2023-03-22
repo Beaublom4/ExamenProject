@@ -47,7 +47,8 @@ public class Ranged : MonoBehaviour
     IEnumerator delayMagicDestroy(float delay)
     {
         canMove = false;
-        transform.localScale = new Vector3(2, 2, 2);
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(true);
         radius = 4;
         yield return new WaitForSeconds(delay);
         DestroyObj();
