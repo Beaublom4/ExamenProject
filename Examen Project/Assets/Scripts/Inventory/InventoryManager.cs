@@ -72,23 +72,67 @@ public class InventoryManager : MonoBehaviour
     {
         if (item.melee)
         {
-            meleeSlot.SetSlot(item, count);
-            meleeUiImage.sprite = item.itemIcon;
+            if (meleeSlot.item != null)
+            {
+                if (item.level > meleeSlot.item.level)
+                {
+                    meleeSlot.SetSlot(item, count);
+                    meleeUiImage.sprite = item.itemIcon;
+                }
+            }
+            else
+            {
+                meleeSlot.SetSlot(item, count);
+                meleeUiImage.sprite = item.itemIcon;
+            }
         }
         else if (item.range)
         {
-            rangeSlot.SetSlot(item, count);
-            rangeUiImage.sprite = item.itemIcon;
+            if (rangeSlot.item != null)
+            {
+                if (item.level > rangeSlot.item.level)
+                {
+                    rangeSlot.SetSlot(item, count);
+                    rangeUiImage.sprite = item.itemIcon;
+                }
+            }
+            else
+            {
+                rangeSlot.SetSlot(item, count);
+                rangeUiImage.sprite = item.itemIcon;
+            }
         }
         else if (item.magic)
         {
-            magicSlot.SetSlot(item, count);
-            magicUiImage.sprite = item.itemIcon;
+            if (magicSlot.item != null)
+            {
+                if (item.level > magicSlot.item.level)
+                {
+                    magicSlot.SetSlot(item, count);
+                    magicUiImage.sprite = item.itemIcon;
+                }
+            }
+            else
+            {
+                magicSlot.SetSlot(item, count);
+                magicUiImage.sprite = item.itemIcon;
+            }
         }
         else if (item.shield)
         {
-            shieldSlot.SetSlot(item, count);
-            shieldUiImage.sprite = item.itemIcon;
+            if (shieldSlot.item != null)
+            {
+                if (item.level > shieldSlot.item.level)
+                {
+                    shieldSlot.SetSlot(item, count);
+                    shieldUiImage.sprite = item.itemIcon;
+                }
+            }
+            else
+            {
+                shieldSlot.SetSlot(item, count);
+                shieldUiImage.sprite = item.itemIcon;
+            }
         }
         else
         {

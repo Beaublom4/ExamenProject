@@ -33,4 +33,6 @@ public class ItemScrObj : ScriptableObject
     public int healAmount;
     [Header("Key Item")]
     public bool keyItem;
+    [Header("Upgrede lvl")]
+    public int level;
 }
