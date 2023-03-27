@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3034235455101357467}
+  death: {fileID: 8300000, guid: c8a94063d5d5b1b498d891349f40d404, type: 3}
 --- !u!1 &7132737540205777932
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   OverlapRadius: 0.8
   raycastDir: {x: 0, y: 0, z: 0}
   overlapPos: {fileID: 1875648928}
+  pickUp: {fileID: 0}
 --- !u!114 &501372130766937566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +292,8 @@ MonoBehaviour:
   maxHealth: 5
   curHealth: 5
   deathScript: {fileID: 7388444650667246369}
+  healAudio: {fileID: 8300000, guid: 7c9a6ac2735934546bd59d99569f9dfd, type: 3}
+  getHit: {fileID: 8300000, guid: bdd3e7cf2cb9b90469abe1a2e6f23037, type: 3}
 --- !u!114 &434323213426822350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +323,7 @@ MonoBehaviour:
   isShielding: 0
   swordSound: {fileID: 8300000, guid: 1929780545196154fb3b6650230156c4, type: 3}
   BowSound: {fileID: 8300000, guid: f547ac84dc814ea429392b18432dccbd, type: 3}
-  magicSound: {fileID: 8300000, guid: 2dc0e0710442f0b41972c840e69f3ac9, type: 3}
+  magicSound: {fileID: 8300000, guid: 1ea2e0a8d0d2b88408d564e921b55e09, type: 3}
   shieldSound: {fileID: 8300000, guid: 2dc0e0710442f0b41972c840e69f3ac9, type: 3}
   anim: {fileID: 0}
 --- !u!136 &3093294860337153564

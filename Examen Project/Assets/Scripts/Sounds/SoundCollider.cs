@@ -11,6 +11,8 @@ public class SoundCollider : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         SoundManager.Instance.SwitchSoundTrack(musicClip, backgroundClip);
+        if (directionalLight == null)
+            return;
         directionalLight.SetActive(directionalLightToggle);
     }
 }
