@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5643893671415517085}
-  death: {fileID: 0}
+  death: {fileID: 8300000, guid: d41ab2ddab2ea3740acd3500f4197cd4, type: 3}
   enemy: {fileID: 0}
   _lootTable: {fileID: 0}
   animationWaitTime: 0.5

@@ -23,6 +23,10 @@ public class SoundManager : MonoBehaviour
     /// <param name="volume"></param>
     public void PlaySound(AudioClip clip, float volume)
     {
+        if(clip == null)
+        {
+            Debug.LogError($"Errer: Clip with name {clip.name} is null!");
+        }
         source.PlayOneShot(clip, volume);
     }
     public void StopSound()
