@@ -10,6 +10,7 @@ public class LootDmgButton : DamageButton
 {
     [SerializeField] LootTable lootTable;
     [SerializeField] Transform lootSpawnPoint;
+    [SerializeField] AudioClip buttonClip;
 
     bool didTrigger = false;
     public override void TriggerOnDamage()
@@ -19,6 +20,7 @@ public class LootDmgButton : DamageButton
             return;
         }
 
+        SoundManager.Instance.PlaySound(buttonClip, 1f);
         didTrigger = true;
         base.TriggerOnDamage();
         Debug.Log("Loot Button overide triggerd!");

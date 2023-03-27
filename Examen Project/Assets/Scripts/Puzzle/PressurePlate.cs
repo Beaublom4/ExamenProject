@@ -15,6 +15,7 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] float triggerDelay = 1;
 
     [HideInInspector] public bool checkPressureIsRunning = false;
+
     IEnumerator coroutine;
 
    public bool didTrigger = false;
@@ -47,7 +48,6 @@ public class PressurePlate : MonoBehaviour
 
         didTrigger = true;
         checkPressureIsRunning = true;
-
 
         print("Pressure check started");
 
