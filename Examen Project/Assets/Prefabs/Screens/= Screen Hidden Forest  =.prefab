@@ -5284,6 +5284,7 @@ Transform:
   - {fileID: 2154048268578234159}
   - {fileID: 9022527471027816656}
   - {fileID: 5676836581087319568}
+  - {fileID: 2802730190105925475}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11655,6 +11656,64 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Hey there traveler.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].message
+      value: "Could you move that rock over there for me. I can\u2019t do it myself
+        because I\u2019m sadly a ghost."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].isQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].message
+      value: "I\u2019ll get rid of those barrels if you do."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].message
+      value: That should give you access to that pressure plate over there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79c3cb3203a2814fa284cf676181f01, type: 3}
 --- !u!4 &5676836581087319568 stripped
@@ -11662,6 +11721,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
     type: 3}
   m_PrefabInstance: {fileID: 2291452542539899948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2522257262330899501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5917332067975373444}
+    m_Modifications:
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0972
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0972
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0972
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.30996
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356302116732928755, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_Name
+      value: PickupBow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356302116732928755, guid: 807e47488c3c35f42a0209fb72719e69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 807e47488c3c35f42a0209fb72719e69, type: 3}
+--- !u!1 &266732551433875166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2356302116732928755, guid: 807e47488c3c35f42a0209fb72719e69,
+    type: 3}
+  m_PrefabInstance: {fileID: 2522257262330899501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2802730190105925475 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424912728183225166, guid: 807e47488c3c35f42a0209fb72719e69,
+    type: 3}
+  m_PrefabInstance: {fileID: 2522257262330899501}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3102867892110808569
 PrefabInstance:
@@ -13080,6 +13240,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate Event
       objectReference: {fileID: 0}
+    - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
+        type: 3}
+      propertyPath: weightTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
+        type: 3}
+      propertyPath: rewards.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
+        type: 3}
+      propertyPath: rewards.Array.data[0]
+      value: 
+      objectReference: {fileID: 266732551433875166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f0dc6512f1218b4eb8efaa7b6e05153, type: 3}
 --- !u!4 &1556780268571810 stripped
