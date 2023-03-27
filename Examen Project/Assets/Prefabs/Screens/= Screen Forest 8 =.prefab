@@ -974,6 +974,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Hey there adventurer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].message
+      value: I heard there is a powerful weapon hidden somewhere in these woods.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].isQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].message
+      value: Maybe you can find it someday.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.questName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.questObjective
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b7812840689fb46bfd8b81a0a1ffcb, type: 3}
 --- !u!4 &6019846357981837057 stripped

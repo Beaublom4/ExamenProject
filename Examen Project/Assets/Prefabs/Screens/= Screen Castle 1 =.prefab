@@ -1073,6 +1073,82 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Hello there stranger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].message
+      value: "Can I talk to you about Lord Nibbler\u2019s heroic deeds."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].isQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].message
+      value: "I know most of our kingdoms people don\u2019t agree with his ways."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].message
+      value: But he has done so much for us. Look at the power he has given our kingdom.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[4].message
+      value: These beautiful acorns will bring us new ways to rule this world.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[5].message
+      value: "You don\u2019t seem to feel the same, I can still respect you though. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[6].message
+      value: "I don\u2019t think my leader will feel the same about it. He\u2019s
+        up ahead so be careful."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.questName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[4].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[5].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[6].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b2b7812840689fb46bfd8b81a0a1ffcb,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.questObjective
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b7812840689fb46bfd8b81a0a1ffcb, type: 3}
 --- !u!4 &1580858249051593293 stripped

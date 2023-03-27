@@ -62,7 +62,9 @@ MonoBehaviour:
   weightTag: Puzzel
   triggerDelay: 1
   checkPressureIsRunning: 0
+  didTrigger: 0
   rewards: []
+  pressurePlateClip: {fileID: 8300000, guid: 1d51e7bb8242f86419dbc25d82689170, type: 3}
 --- !u!1001 &2697620193494101596
 PrefabInstance:
   m_ObjectHideFlags: 0
