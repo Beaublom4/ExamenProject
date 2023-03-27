@@ -16,7 +16,6 @@ public class LootDmgButton : DamageButton
     {
         if (didTrigger == true)
         {
-            print("AAAHHHHHHHHHHHHHHHHHHHH");
             return;
         }
 
