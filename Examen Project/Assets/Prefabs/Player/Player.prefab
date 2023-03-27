@@ -307,10 +307,12 @@ MonoBehaviour:
   sideShieldObj: {fileID: 1038354857457198451, guid: 82d889c82de427745bc1a97aaa6114f8,
     type: 3}
   arrow: {fileID: 4881673206321489203, guid: c0905a2c27192264995fc619410d9d0c, type: 3}
+  bow: {fileID: 8417560345546837662, guid: 6e05e6fbe707b06458bcc15155e0d36a, type: 3}
   magicBall: {fileID: 4881673206321489203, guid: 94821447a1f9bec4787dd7800196ce5f,
     type: 3}
   sideShieldBool: 0
   canAttack: 1
+  stopAttack: 0
   isShielding: 0
   anim: {fileID: 0}
 --- !u!136 &3093294860337153564

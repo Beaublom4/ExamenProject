@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj, arrow, magicBall;
+    public GameObject swordHitbox, swordPos, shieldObj, sideShieldObj, arrow, bow, magicBall;
     private Vector3 newPos;
-    private Vector3 swordRotation, shieldRotation, arrowRotation;
+    private Vector3 swordRotation, shieldRotation, arrowRotation, bowRotation;
     public bool sideShieldBool, canAttack = true, stopAttack;
     public bool isShielding;
 
@@ -32,6 +32,7 @@ public class PlayerCombat : MonoBehaviour
             swordRotation = new Vector3(-90,0,0);
             shieldRotation = new Vector3(0,0,0);
             arrowRotation = new Vector3(90, 0, 0);
+            bowRotation = new Vector3(90, 90, 0);
             sideShieldBool = false;
         }
         else if (dir == 2)
@@ -40,6 +41,7 @@ public class PlayerCombat : MonoBehaviour
             swordRotation = new Vector3(90, 0, 0);
             shieldRotation = new Vector3(0, 0, 0);
             arrowRotation = new Vector3(90, 180, 0);
+            bowRotation = new Vector3(90, 260, 0);
             sideShieldBool = false;
         }
         else if (dir == 3)
@@ -48,6 +50,7 @@ public class PlayerCombat : MonoBehaviour
             swordRotation = new Vector3(-90, 0, -90);
             shieldRotation = new Vector3(0, 180, 0);
             arrowRotation = new Vector3(90, -90, 0);
+            bowRotation = new Vector3(90, 0, 0);
             sideShieldBool = true;
         }
         else if (dir == 4)
@@ -56,6 +59,7 @@ public class PlayerCombat : MonoBehaviour
             swordRotation = new Vector3(90, 0, 90);
             shieldRotation = new Vector3(0, 0, 0);
             arrowRotation = new Vector3(90, 90, 0);
+            bowRotation = new Vector3(90, 180, 0);
             sideShieldBool = true;
         }
 
@@ -100,6 +104,7 @@ public class PlayerCombat : MonoBehaviour
         //Plays the animation, spawns the arrow and starts the cooldown.
         //anim.SetTrigger("swordAttack");
         Instantiate(arrow, swordPos.transform.position, Quaternion.Euler(arrowRotation));
+        Instantiate(bow, swordPos.transform.position, Quaternion.Euler(bowRotation), transform);
         StartCoroutine(AttackCooldown(inventoryManager.rangeSlot.item.rangeCooldown));
     }
     private void MagicAttack()
