@@ -18,7 +18,9 @@ public class HudManager : MonoBehaviour
     [Space]
     public GameObject settingsObj;
     public GameObject continueObj;
-
+    [Space]
+    public AudioClip buttonHover;
+    public AudioClip buttonPress;
     private void Awake()
     {
         Instance = this;
@@ -27,6 +29,8 @@ public class HudManager : MonoBehaviour
     {
         if (Input.GetButtonDown("PauseMenu"))
         {
+            if (DialogManager.Instance.messageBox.activeSelf)
+                return;
             TogglePauseMenu();
         }
     }
@@ -70,5 +74,13 @@ public class HudManager : MonoBehaviour
         }
         else
             Time.timeScale = 1;
+    }
+    public void PlayButtonHover() 
+    {
+        SoundManager.Instance.PlaySound(buttonHover, 1);
+    }
+    public void PlayButtonPress()
+    {
+        SoundManager.Instance.PlaySound(buttonPress, 1);
     }
 }

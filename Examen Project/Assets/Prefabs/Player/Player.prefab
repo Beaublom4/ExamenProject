@@ -259,6 +259,7 @@ MonoBehaviour:
   canMove: 1
   isPushing: 0
   playerSource: {fileID: 5769221461798066718}
+  pushClip: {fileID: 8300000, guid: 28d068382703caa40a0bdc5b6d80299e, type: 3}
 --- !u!114 &7132737540205777941
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove, isPushing;
 
     public AudioSource playerSource;
+    public AudioClip pushClip;
 
     private void Start()
     {
@@ -60,10 +61,17 @@ public class PlayerMovement : MonoBehaviour
         if (isPushing)
         {
             if (movement != new Vector3(0, 0, 0))
+            {
+                SoundManager.Instance.PlaySound(pushClip, 1f);
                 if (direction != pushDirection && direction != pushDirectionBack)
                 {
                     GetComponentInChildren<PushPuzzel>().LeavePuzzel();
                 }
+                else
+                {
+                    //SoundManager.Instance.StopSound();
+                }
+            }
         }
 
         if (canMove)

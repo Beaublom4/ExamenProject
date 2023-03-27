@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     [HideInInspector]public int maxHealth, curHealth;
     public Death deathScript;
+    public AudioClip healAudio, getHit;
 
     private void Start()
     {
@@ -25,9 +26,12 @@ public class Health : MonoBehaviour
         if (transform.tag == "Player")
         {
             HudManager.Instance.SetHealth(curHealth, maxHealth);
+            SoundManager.Instance.PlaySound(healAudio, 1);
         }
-            
-
+        else
+        {
+            SoundManager.Instance.PlaySound(getHit, 1);
+        }
     }
 
     private bool deathStarted = false;
@@ -50,6 +54,7 @@ public class Health : MonoBehaviour
         if (transform.tag == "Player")
         {
             HudManager.Instance.SetHealth(curHealth, maxHealth);
+            SoundManager.Instance.PlaySound(getHit, 1);
         }
     }
 

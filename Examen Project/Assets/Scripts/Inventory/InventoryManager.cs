@@ -41,26 +41,40 @@ public class InventoryManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        if(Input.GetButtonDown("Cancel") && inventory.activeSelf)
+        {
+            inventory.SetActive(false);
+            CloseInv();
+        }
+            
+
         if (!canOpen)
             return;
 
         if (Input.GetButtonDown("Inventory"))
         {
             inventory.SetActive(!inventory.activeSelf);
-            Debug.Log(inventory.activeSelf);
             if (inventory.activeSelf)
             {
-                ClearDisplay();
-                FindObjectOfType<EventSystem>().SetSelectedGameObject(itemSlots[0].gameObject);
-                FindObjectOfType<PlayerMovement>().canMove = false;
-                FindObjectOfType<PlayerCombat>().canAttack = false;
+                OpenInv();
             }
             else
             {
-                FindObjectOfType<PlayerMovement>().canMove = true;
-                FindObjectOfType<PlayerCombat>().canAttack = true;
+                CloseInv();
             }
         }
+    }
+    void OpenInv()
+    {
+        ClearDisplay();
+        FindObjectOfType<EventSystem>().SetSelectedGameObject(itemSlots[0].gameObject);
+        FindObjectOfType<PlayerMovement>().canMove = false;
+        FindObjectOfType<PlayerCombat>().canAttack = false;
+    }
+    void CloseInv()
+    {
+        FindObjectOfType<PlayerMovement>().canMove = true;
+        FindObjectOfType<PlayerCombat>().canAttack = true;
     }
     /// <summary>
     /// Add item to inventory with item, count of added items, object to destroy
