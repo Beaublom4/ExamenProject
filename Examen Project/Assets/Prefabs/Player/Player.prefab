@@ -276,7 +276,7 @@ MonoBehaviour:
   OverlapRadius: 0.8
   raycastDir: {x: 0, y: 0, z: 0}
   overlapPos: {fileID: 1875648928}
-  pickUp: {fileID: 0}
+  pickUp: {fileID: 8300000, guid: 0bec3df7c8486544eb896ecdca3029d0, type: 3}
 --- !u!114 &501372130766937566
 MonoBehaviour:
   m_ObjectHideFlags: 0
