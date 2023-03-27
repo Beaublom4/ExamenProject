@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f63f741219245b4586081bd88c6888f, type: 3}
   m_Name: Big money
   m_EditorClassIdentifier: 
-  lootPrefabList: []
+  lootPrefabList:
+  - {fileID: 4331044721265803773, guid: 214546b20eb0fba47880489555f68c52, type: 3}
+  - {fileID: 4331044721265803773, guid: 214546b20eb0fba47880489555f68c52, type: 3}
+  - {fileID: 4331044721265803773, guid: e3b67e15b9c168640b16864284925944, type: 3}
+  - {fileID: 4331044721265803773, guid: e3b67e15b9c168640b16864284925944, type: 3}
+  - {fileID: 4331044721265803773, guid: 4f7ad2424af40e2449369d914215028d, type: 3}
+  - {fileID: 4331044721265803773, guid: 4f7ad2424af40e2449369d914215028d, type: 3}
+  - {fileID: 4331044721265803773, guid: 7528d438805e5a34f82d86d1cac6f114, type: 3}
+  - {fileID: 4331044721265803773, guid: 7528d438805e5a34f82d86d1cac6f114, type: 3}
+  - {fileID: 4331044721265803773, guid: b26b7b40472a34b43b6e93a3c778d78a, type: 3}
+  - {fileID: 4331044721265803773, guid: 4f7ad2424af40e2449369d914215028d, type: 3}
   coinPrefab: {fileID: 0}
   lootChance: 0
   minCoins: 0

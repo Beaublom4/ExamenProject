@@ -10,11 +10,15 @@ public class LootPPlate : PressurePlate
 {
     [SerializeField] LootTable lootTable;
     [SerializeField] Transform lootSpawnPoint;
-
     public override IEnumerator CheckPressure()
     {
+        if (didTrigger == true)
+        {
+            yield break;
+        }
+
+        didTrigger = true;
         base.CheckPressure();
-        print("wow cool loot");
 
         int newLootIndex = Random.Range(0, lootTable.lootPrefabList.Length);
         GameObject newLoot = Instantiate(lootTable.lootPrefabList[newLootIndex], lootSpawnPoint.position, Quaternion.identity, null);

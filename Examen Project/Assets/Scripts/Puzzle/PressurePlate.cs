@@ -17,7 +17,7 @@ public class PressurePlate : MonoBehaviour
     [HideInInspector] public bool checkPressureIsRunning = false;
     IEnumerator coroutine;
 
-    bool didTrigger = false;
+   public bool didTrigger = false;
 
     private void OnTriggerEnter(Collider other)
     {

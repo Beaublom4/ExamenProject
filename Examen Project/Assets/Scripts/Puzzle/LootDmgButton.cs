@@ -19,7 +19,6 @@ public class LootDmgButton : DamageButton
             return;
         }
 
-
         didTrigger = true;
         base.TriggerOnDamage();
         Debug.Log("Loot Button overide triggerd!");
