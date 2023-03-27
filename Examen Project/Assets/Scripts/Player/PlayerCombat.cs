@@ -9,6 +9,7 @@ public class PlayerCombat : MonoBehaviour
     private Vector3 swordRotation, shieldRotation, arrowRotation, bowRotation;
     public bool sideShieldBool, canAttack = true, stopAttack;
     public bool isShielding;
+    public AudioClip swordSound, BowSound, magicSound, shieldSound;
 
     [HideInInspector]public Animator anim;
 
@@ -95,6 +96,7 @@ public class PlayerCombat : MonoBehaviour
         //Plays the animation, spawns the swordHitBox and starts the cooldown.
         anim.SetTrigger("swordAttack");
         anim.SetBool("canMove", false);
+        SoundManager.Instance.PlaySound(swordSound, 1f);
         Instantiate(swordHitbox, swordPos.transform.position, Quaternion.Euler(swordRotation), transform);
         StartCoroutine(AttackCooldown(inventoryManager.meleeSlot.item.meleeCooldown));
         GetComponent<PlayerMovement>().canMove = false;
@@ -103,6 +105,7 @@ public class PlayerCombat : MonoBehaviour
     {
         //Plays the animation, spawns the arrow and starts the cooldown.
         //anim.SetTrigger("swordAttack");
+        SoundManager.Instance.PlaySound(BowSound, 1f);
         Instantiate(arrow, swordPos.transform.position, Quaternion.Euler(arrowRotation));
         Instantiate(bow, swordPos.transform.position, Quaternion.Euler(bowRotation), transform);
         StartCoroutine(AttackCooldown(inventoryManager.rangeSlot.item.rangeCooldown));
@@ -111,12 +114,14 @@ public class PlayerCombat : MonoBehaviour
     {
         //Plays the animation, spawns the maigcball and starts the cooldown.
         anim.SetTrigger("swordAttack");
+        SoundManager.Instance.PlaySound(magicSound, 1f);
         Instantiate(magicBall, swordPos.transform.position, Quaternion.Euler(arrowRotation));
         StartCoroutine(AttackCooldown(inventoryManager.magicSlot.item.magicCooldown));
     }
     private void ShieldBlock()
     {
         isShielding = true;
+        SoundManager.Instance.PlaySound(shieldSound, 1f);
         if (!sideShieldBool)
         {
             //Plays the animation, spawns the shieldObj and starts the cooldown.

@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public bool canMove, isPushing;
 
+    public AudioSource playerSource;
+
     private void Start()
     {
         //Set timescale to 1.
@@ -23,15 +25,36 @@ public class PlayerMovement : MonoBehaviour
 
         //changes the paramater direction of the animator.
         if (movement == new Vector3(0, 0, 0))
+        {
             direction = 0;
+            if (playerSource.isPlaying)
+                playerSource.Stop();
+        }
         else if (movement.x > 0)
+        {
             direction = 3;
+            if(!playerSource.isPlaying)
+                playerSource.Play();
+        }
         else if (movement.x < 0)
+        {
             direction = 4;
-        if (movement.z > 0)
+            if (!playerSource.isPlaying)
+                playerSource.Play();
+        }
+        else if (movement.z > 0)
+        {
             direction = 2;
+            if (!playerSource.isPlaying)
+                playerSource.Play();
+
+        }
         else if (movement.z < 0)
+        {
             direction = 1;
+            if (!playerSource.isPlaying)
+                playerSource.Play();
+        }
 
         //checks if the player is pushing a puzzel object and makes him leave if the player moves away
         if (isPushing)
