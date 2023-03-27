@@ -67,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     GetComponentInChildren<PushPuzzel>().LeavePuzzel();
                 }
-                else
-                {
-                    //SoundManager.Instance.StopSound();
-                }
+            }
+            else
+            {
+                SoundManager.Instance.StopSound();
             }
         }
 

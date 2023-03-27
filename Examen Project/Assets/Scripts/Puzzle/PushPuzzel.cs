@@ -34,6 +34,7 @@ public class PushPuzzel : MonoBehaviour
     public void LeavePuzzel()
     {
         //assigns gameobject parent as parent.
+        SoundManager.Instance.StopSound();
         transform.GetChild(3).gameObject.SetActive(true);
         transform.GetChild(4).gameObject.SetActive(false);
         transform.GetChild(5).gameObject.SetActive(false);
