@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Acorn_Summoned
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  attackSpeed: 0.7
+  attackSpeed: 0.8
   attackDamage: 1
-  maxHealth: 2
-  lootTable: {fileID: 11400000, guid: 5df12dd26fa19c04b99645bad6c549a0, type: 2}
+  maxHealth: 1
+  lootTable: {fileID: 11400000, guid: 44a47cc135f594e43ad4a6870a1346a4, type: 2}
