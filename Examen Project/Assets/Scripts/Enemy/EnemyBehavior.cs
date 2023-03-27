@@ -32,7 +32,8 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
 
-    public AudioClip blockedClip; 
+    public AudioClip blockedClip;
+    public AudioClip attack;
 
     private void Awake()
     {
@@ -125,6 +126,7 @@ public class EnemyBehavior : MonoBehaviour
         SetCurrentState(enemyState.Attacking);
         StartCoroutine(AttackCoolDown());
 
+        SoundManager.Instance.PlaySound(attack, 1);
         yield return new WaitForSeconds(timeBeforeDamage);
         anim.SetBool("attacking", false);
 

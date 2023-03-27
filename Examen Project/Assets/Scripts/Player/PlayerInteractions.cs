@@ -7,6 +7,7 @@ public class PlayerInteractions : MonoBehaviour
     public float OverlapRadius;
     public Vector3 raycastDir;
     public GameObject overlapPos;
+    public AudioClip pickUp;
 
     // Update is called once per frame
     void Update()
@@ -76,12 +77,14 @@ public class PlayerInteractions : MonoBehaviour
             if(item.doPopup)
             {
                 PopupManager.Instance.NewRoutine(item.popupObj, null);
+                SoundManager.Instance.PlaySound(pickUp, 1);
             }
             item.PickUpItem();
         }
         if (collision.transform.tag == "Coin")
         {
             InventoryManager.Instance.AddCoin(collision.gameObject);
+            SoundManager.Instance.PlaySound(pickUp, 1);
         }
     }
 }

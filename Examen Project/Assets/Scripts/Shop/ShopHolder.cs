@@ -38,4 +38,8 @@ public class ShopHolder : MonoBehaviour
         ShopManager.Instance.BuyItem(item);
         itemsLeft.text = "Items left: " + item.currentInStore;
     }
+    public void PlayButtonPress()
+    {
+        HudManager.Instance.PlayButtonPress();
+    }
 }

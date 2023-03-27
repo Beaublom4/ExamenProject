@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerDeath : Death
 {
-
     public override void OnDeath()
     {
         base.OnDeath();

@@ -17,9 +17,20 @@ public class ShopManager : MonoBehaviour
 
     private bool canOpen = true;
 
+    public AudioClip buyItem;
+
     private void Awake()
     {
         Instance = this;
+    }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (!shopObj.activeSelf)
+                return;
+            CloseShop();
+        }
     }
     /// <summary>
     /// Opens shop panel
@@ -76,6 +87,7 @@ public class ShopManager : MonoBehaviour
         HudManager.Instance.SetCoins(InventoryManager.Instance.coins);
         InventoryManager.Instance.AddItem(item.item, 1, null);
         item.currentInStore--;
+        SoundManager.Instance.PlaySound(buyItem, 1);
     }
 }
 [System.Serializable]

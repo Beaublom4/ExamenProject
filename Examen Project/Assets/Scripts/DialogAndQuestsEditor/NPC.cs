@@ -88,7 +88,7 @@ public class NPC : MonoBehaviour
     }
     public IEnumerator CanTalkAgain()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSecondsRealtime(.1f);
         isInteracted = false;
     }
 }

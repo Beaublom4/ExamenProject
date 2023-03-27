@@ -16,6 +16,7 @@ public class QuestManager : MonoBehaviour
 
     public Message[] noQuestItemFoundMessage, questItemFoundMessage, alreadyStartedQuestMessage;
 
+    public AudioClip questStart, questFinish;
 
     public Quest currentQuest;
     public NPC currentNPC;
@@ -35,6 +36,7 @@ public class QuestManager : MonoBehaviour
         currentNPC = _npc;
         currentQuest = _quest;
         DisplayQuest();
+        SoundManager.Instance.PlaySound(questStart, 1);
     }
     /// <summary>
     /// Finish the current quest
@@ -46,6 +48,7 @@ public class QuestManager : MonoBehaviour
         //add item reward
         currentQuest = null;
         EmptyQuest();
+        SoundManager.Instance.PlaySound(questFinish, 1);
     }
     /// <summary>
     /// Display the current quests titel and discription

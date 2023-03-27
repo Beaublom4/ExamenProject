@@ -25,11 +25,17 @@ public class SoundManager : MonoBehaviour
     {
         source.PlayOneShot(clip, volume);
     }
+    public void StopSound()
+    {
+        source.Stop();
+    }
     /// <summary>
     /// Switch Sound track
     /// </summary>
     public void SwitchSoundTrack(AudioClip musicClip, AudioClip backgroundClip)
     {
+        if (musicClip == music.clip)
+            return;
         StartCoroutine(SmoothSwitch(musicClip, backgroundClip));
     }
     IEnumerator SmoothSwitch(AudioClip musicClip, AudioClip backgroundClip)

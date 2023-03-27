@@ -522,6 +522,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1866105094881866389
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +880,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2245985778815861599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1026,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2407301186552866030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1088,8 @@ MonoBehaviour:
   retryButton: {fileID: 1558179835298705026}
   settingsObj: {fileID: 19772023080765375}
   continueObj: {fileID: 2517712788003175514}
+  buttonHover: {fileID: 8300000, guid: 96a83932ecf374f44b46b4904cb635dc, type: 3}
+  buttonPress: {fileID: 8300000, guid: 1a9fcb9ebeaac574a842dbfebb55d9bb, type: 3}
 --- !u!1 &2499183850792987358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1296,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2654501773667036176}
         m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
         m_MethodName: TogglePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2041,6 +2091,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3816509140823868509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,6 +2595,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1007659905868226273}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
         m_MethodName: CloseShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3506,6 +3580,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5340900558494799844
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,6 +4092,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5340900559183622672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,6 +4365,18 @@ MonoBehaviour:
       - m_Target: {fileID: 7987680697125336639}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: DenyQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2654501773667036176}
+        m_TargetAssemblyTypeName: HudManager, Assembly-CSharp
+        m_MethodName: PlayButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5782,6 +5892,7 @@ MonoBehaviour:
   shopObj: {fileID: 2854515731607601352}
   cancelButton: {fileID: 4890022484161685255}
   coins: {fileID: 5455646174414010077}
+  buyItem: {fileID: 8300000, guid: ae69ea48575c810428f0783ce2046a9f, type: 3}
 --- !u!1 &7221487811280090680
 GameObject:
   m_ObjectHideFlags: 0
@@ -6788,6 +6899,8 @@ MonoBehaviour:
       rewardCoins: 0
     continueMovement: 0
     npc: {fileID: 0}
+  questStart: {fileID: 8300000, guid: 44385c1813c3f2a489d6283a2b347b58, type: 3}
+  questFinish: {fileID: 8300000, guid: 66dfe2f265f924a488e12199ea407706, type: 3}
   currentQuest:
     questName: 
     questObjective: {fileID: 0}
@@ -7678,6 +7791,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -7857,6 +8005,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -8036,6 +8219,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -8215,6 +8433,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -8394,6 +8647,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -8573,6 +8861,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -8747,6 +9070,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -8926,6 +9284,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -9105,6 +9498,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -9284,6 +9712,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -9463,6 +9926,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
@@ -9642,6 +10140,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5340900559444669675}
     m_Modifications:
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2654501773667036176}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HudManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 10357869608684507, guid: b2a70445e8b140648bf41b19c27d52d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2282356916688698360, guid: b2a70445e8b140648bf41b19c27d52d0,
         type: 3}
       propertyPath: m_Sprite
