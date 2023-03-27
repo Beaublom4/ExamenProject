@@ -5007,6 +5007,7 @@ MonoBehaviour:
   aggroParticle: {fileID: 1027392194173778387}
   moveParticle: {fileID: 2023704315}
   summonPrefab: {fileID: 0}
+  blockedClip: {fileID: 8300000, guid: a1a294911e3d0b549a7e06a6169e81f5, type: 3}
 --- !u!114 &846974295747019698
 MonoBehaviour:
   m_ObjectHideFlags: 0

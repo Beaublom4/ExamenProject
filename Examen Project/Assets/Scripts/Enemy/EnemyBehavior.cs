@@ -32,6 +32,8 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
 
+    public AudioClip blockedClip; 
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -141,6 +143,7 @@ public class EnemyBehavior : MonoBehaviour
         if (player.GetComponent<PlayerCombat>().isShielding)
         {
             GameObject.FindGameObjectWithTag("Shield").GetComponent<Animator>().SetTrigger("blocked");
+            SoundManager.Instance.PlaySound(blockedClip ,1f);
             yield break;
         }
 
