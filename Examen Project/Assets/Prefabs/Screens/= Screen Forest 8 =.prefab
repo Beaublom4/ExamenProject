@@ -1768,6 +1768,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
         type: 3}
+      propertyPath: weightTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026085410585694141, guid: 3f0dc6512f1218b4eb8efaa7b6e05153,
+        type: 3}
       propertyPath: rewards.Array.size
       value: 5
       objectReference: {fileID: 0}
