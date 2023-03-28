@@ -115,6 +115,12 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This activates states/animations and makes sure that the player takes damage if they remain in range without blocking.
+    /// IF the enemy has a "summonPrefab" it will spawn a enemy instead of dealing damage.
+    /// </summary>
+    /// <param name="player"></param>
+    /// <returns></returns>
     public IEnumerator Attack(Collider player)
     {
         if (currentState == enemyState.Attacking || currentState == enemyState.Dead)
