@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
         if (!canOpen)
             return;
 
-        if (!HudManager.Instance.settingsObj.activeSelf && Input.GetButtonDown("Inventory"))
+        if (!HudManager.Instance.settingsObj.activeSelf && !DialogManager.Instance.messageBox.activeSelf && Input.GetButtonDown("Inventory"))
         {
             inventory.SetActive(!inventory.activeSelf);
             if (inventory.activeSelf)
@@ -255,7 +255,10 @@ public class InventoryManager : MonoBehaviour
             RemoveItem(currentSlot.item, 1);
         }
         if (currentSlot.item == null)
+        {
+            FindObjectOfType<EventSystem>().SetSelectedGameObject(itemSlots[0].gameObject);
             ClearDisplay();
+        }
     }
     /// <summary>
     /// Add coins and update to inventory

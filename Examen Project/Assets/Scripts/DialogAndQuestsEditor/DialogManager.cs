@@ -48,6 +48,7 @@ public class DialogManager : MonoBehaviour
             Debug.Log("test");
             HudManager.Instance.FadeOut();
         }
+        FindObjectOfType<EventSystem>().SetSelectedGameObject(continueButton);
     }
     /// <summary>
     /// Add a message to the list of messages, and play if its not yet playing

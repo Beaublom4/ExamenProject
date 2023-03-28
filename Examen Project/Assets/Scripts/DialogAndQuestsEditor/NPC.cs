@@ -30,17 +30,27 @@ public class NPC : MonoBehaviour
     [ContextMenu("Interact")]
     public void Interact()
     {
-        //Check if quest is already active and show thats active
-        if (QuestManager.Instance.currentNPC != null && QuestManager.Instance.currentNPC != this)
-        {
-            DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.alreadyStartedQuestMessage, this, false);
-            return;
-        }
-
         if (isInteracted)
             return;
         else
             isInteracted = true;
+
+        //Check if quest is already active and show thats active
+        bool hasQuest = false;
+        foreach(MessageHolder m in messages)
+        {
+            foreach(Message me in m.messages)
+            {
+                if (me.isQuest)
+                    hasQuest = true;
+            }
+        }
+
+        if (hasQuest && QuestManager.Instance.currentNPC != null && QuestManager.Instance.currentNPC != this)
+        {
+            DialogManager.Instance.AddMessageAndPlay(QuestManager.Instance.alreadyStartedQuestMessage, this, false);
+            return;
+        }
 
         //Check if quest active and has item
         Quest currentQuest = QuestManager.Instance.currentQuest;

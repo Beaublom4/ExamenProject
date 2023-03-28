@@ -30,6 +30,10 @@ public class HudManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         if (Input.GetButtonDown("PauseMenu"))
