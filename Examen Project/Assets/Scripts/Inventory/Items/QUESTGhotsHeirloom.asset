@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Key
   itemIcon: {fileID: 21300000, guid: 0afdd6ab512738e4791704f8a2ad7c81, type: 3}
-  itemDiscription: Test key item to finish the quest
+  itemDiscription: An heirloom of a lost family member
   itemId: 0
   melee: 0
   meleeDamage: 0
@@ -23,7 +23,13 @@ MonoBehaviour:
   shieldDuration: 0
   shieldCooldown: 0
   range: 0
+  rangeDamage: 0
+  rangeCooldown: 0
   magic: 0
+  magicDamage: 0
+  magicCooldown: 0
+  magicRange: 0
   food: 0
   healAmount: 0
   keyItem: 1
+  level: 0
