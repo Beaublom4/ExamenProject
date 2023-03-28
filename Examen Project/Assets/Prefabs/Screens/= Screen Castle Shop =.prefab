@@ -1431,6 +1431,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Hey nephew!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].message
+      value: Good to see you are getting further on your journey.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].isQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].message
+      value: Have you found some new tools yet. They can be crucial to getting this
+        quest to completion.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].message
+      value: Good luck and keep on!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questName
+      value: Find item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[3].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3dfbf36e6fa89a4c96a310c18d2b59c, type: 3}
 --- !u!4 &7898563667517577878 stripped
