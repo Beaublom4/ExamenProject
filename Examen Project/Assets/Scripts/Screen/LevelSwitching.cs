@@ -25,7 +25,7 @@ public class LevelSwitching : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawCube(transform.position, transform.localScale);
 
         if (newPlayerpos != null)
