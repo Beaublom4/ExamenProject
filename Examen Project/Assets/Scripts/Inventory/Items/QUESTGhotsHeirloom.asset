@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
-  m_Name: 000_QuestTestItem
+  m_Name: QUESTGhotsHeirloom
   m_EditorClassIdentifier: 
   itemName: Key
   itemIcon: {fileID: 21300000, guid: 0afdd6ab512738e4791704f8a2ad7c81, type: 3}
-  itemDiscription: Test key item to finish the quest
+  itemDiscription: An heirloom of a lost family member
   itemId: 0
   melee: 0
   meleeDamage: 0
@@ -23,7 +23,13 @@ MonoBehaviour:
   shieldDuration: 0
   shieldCooldown: 0
   range: 0
+  rangeDamage: 0
+  rangeCooldown: 0
   magic: 0
+  magicDamage: 0
+  magicCooldown: 0
+  magicRange: 0
   food: 0
   healAmount: 0
   keyItem: 1
+  level: 0

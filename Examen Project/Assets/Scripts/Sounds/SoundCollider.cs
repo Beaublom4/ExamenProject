@@ -10,6 +10,8 @@ public class SoundCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag != "Player")
+            return;
         SoundManager.Instance.SwitchSoundTrack(musicClip, backgroundClip);
         if (directionalLight == null)
             return;

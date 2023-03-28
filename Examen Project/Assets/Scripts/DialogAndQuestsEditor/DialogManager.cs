@@ -27,6 +27,8 @@ public class DialogManager : MonoBehaviour
     private NPC currentNpc;
     private bool nextMessage;
 
+    public AudioSource talking;
+
     //Set instance
     private void Awake()
     {
@@ -80,6 +82,8 @@ public class DialogManager : MonoBehaviour
         if (_message.isQuest)
             nextMessage = false;
 
+        talking.Play();
+
         //Displaying message 1 char for 1 char
         while (messageText.maxVisibleCharacters < _message.message.Length)
         {
@@ -93,6 +97,7 @@ public class DialogManager : MonoBehaviour
             QuestButtons(true);
         }
 
+        talking.Pause();
         typingMessage = false;
     }
     /// <summary>
