@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         if (transform.tag == "Player")
         {
             HudManager.Instance.SetHealth(curHealth, maxHealth);
-            SoundManager.Instance.PlaySound(healAudio, 1);
+            SoundManager.Instance.PlaySound(healAudio, .5f);
         }
     }
 

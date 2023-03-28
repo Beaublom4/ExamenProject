@@ -48,7 +48,7 @@ public class Ranged : MonoBehaviour
 
     IEnumerator delayMagicDestroy(float delay)
     {
-        SoundManager.Instance.PlaySound(boom, 1f);
+        SoundManager.Instance.PlaySound(boom, .5f);
         canMove = false;
         transform.GetChild(0).gameObject.SetActive(false);
         transform.GetChild(1).gameObject.SetActive(true);
