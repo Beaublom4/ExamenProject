@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f43b42995a4fe4dbf41212d0519034, type: 3}
-  m_Name: 000_QuestTestItem
+  m_Name: QUESTGhotsHeirloom
   m_EditorClassIdentifier: 
   itemName: Key
   itemIcon: {fileID: 21300000, guid: 0afdd6ab512738e4791704f8a2ad7c81, type: 3}
