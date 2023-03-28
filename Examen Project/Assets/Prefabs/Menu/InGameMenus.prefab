@@ -6778,6 +6778,8 @@ MonoBehaviour:
   messageText: {fileID: 5340900558909727136}
   messages: []
   talking: {fileID: 4414270714214764863}
+  npcSteve: {fileID: 0}
+  npcSteve2: {fileID: 0}
 --- !u!82 &4414270714214764863
 AudioSource:
   m_ObjectHideFlags: 0
