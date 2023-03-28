@@ -33,3 +33,4 @@ MonoBehaviour:
   healAmount: 0
   keyItem: 0
   level: 0
+  upgrade: {fileID: 11400000, guid: 034b83a22b82ff8469cddcabda30d76f, type: 2}

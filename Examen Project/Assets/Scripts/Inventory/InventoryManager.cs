@@ -82,17 +82,14 @@ public class InventoryManager : MonoBehaviour
     /// <param name="item"></param>
     /// <param name="count"></param>
     /// <param name="itemObj"></param>
-    public void AddItem(ItemScrObj item, int count, GameObject itemObj)
+    public void AddItem(ItemScrObj item,  int count, GameObject itemObj)
     {
         if (item.melee)
         {
             if (meleeSlot.item != null)
             {
-                if (item.level > meleeSlot.item.level)
-                {
-                    meleeSlot.SetSlot(item, count);
-                    meleeUiImage.sprite = item.itemIcon;
-                }
+                meleeSlot.SetSlot(item.upgrade, count);
+                meleeUiImage.sprite = item.upgrade.itemIcon;
             }
             else
             {
@@ -104,11 +101,8 @@ public class InventoryManager : MonoBehaviour
         {
             if (rangeSlot.item != null)
             {
-                if (item.level > rangeSlot.item.level)
-                {
-                    rangeSlot.SetSlot(item, count);
-                    rangeUiImage.sprite = item.itemIcon;
-                }
+                rangeSlot.SetSlot(item.upgrade, count);
+                rangeUiImage.sprite = item.upgrade.itemIcon;
             }
             else
             {
@@ -120,11 +114,8 @@ public class InventoryManager : MonoBehaviour
         {
             if (magicSlot.item != null)
             {
-                if (item.level > magicSlot.item.level)
-                {
-                    magicSlot.SetSlot(item, count);
-                    magicUiImage.sprite = item.itemIcon;
-                }
+                magicSlot.SetSlot(item.upgrade, count);
+                magicUiImage.sprite = item.upgrade.itemIcon;
             }
             else
             {
@@ -136,11 +127,8 @@ public class InventoryManager : MonoBehaviour
         {
             if (shieldSlot.item != null)
             {
-                if (item.level > shieldSlot.item.level)
-                {
-                    shieldSlot.SetSlot(item, count);
-                    shieldUiImage.sprite = item.itemIcon;
-                }
+                shieldSlot.SetSlot(item.upgrade, count);
+                shieldUiImage.sprite = item.upgrade.itemIcon;
             }
             else
             {

@@ -32,3 +32,5 @@ MonoBehaviour:
   food: 0
   healAmount: 0
   keyItem: 0
+  level: 0
+  upgrade: {fileID: 11400000, guid: b3fd36e2118e27f4ebeea422a68caaac, type: 2}

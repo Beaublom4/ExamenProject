@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: e38e2dac665bbfb4db1780a909d7138e, type: 2}
+  itemUpgrade: {fileID: 11400000, guid: 034b83a22b82ff8469cddcabda30d76f, type: 2}
   count: 1
   doPopup: 1
   popupObj: {fileID: 4091263496320458222, guid: 95e99988e331f4745815d6f350242a04,

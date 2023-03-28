@@ -35,4 +35,5 @@ public class ItemScrObj : ScriptableObject
     public bool keyItem;
     [Header("Upgrede lvl")]
     public int level;
+    public ItemScrObj upgrade;
 }
