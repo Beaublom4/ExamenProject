@@ -9,6 +9,8 @@ public class Ranged : MonoBehaviour
     private bool canMove = true;
     private Vector3 startDist;
 
+    public AudioClip boom;
+
     private void Start()
     {
         startDist = transform.position;
@@ -46,6 +48,7 @@ public class Ranged : MonoBehaviour
 
     IEnumerator delayMagicDestroy(float delay)
     {
+        SoundManager.Instance.PlaySound(boom, 1f);
         canMove = false;
         transform.GetChild(0).gameObject.SetActive(false);
         transform.GetChild(1).gameObject.SetActive(true);

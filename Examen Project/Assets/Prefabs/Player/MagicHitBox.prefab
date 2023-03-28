@@ -9792,6 +9792,7 @@ MonoBehaviour:
   all:
     serializedVersion: 2
     m_Bits: 247
+  boom: {fileID: 8300000, guid: 0dbcf0765af146a458d607a8a6f67766, type: 3}
 --- !u!1 &8451480571887904849
 GameObject:
   m_ObjectHideFlags: 0
