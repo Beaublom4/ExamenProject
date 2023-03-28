@@ -26,7 +26,6 @@ public class PlayerInteractions : MonoBehaviour
         //cast a overlapSphere and assigns all colliders to hitcoll.
         Collider[] hitColl = Physics.OverlapSphere(overlapPos.transform.position, OverlapRadius);
         //checks each collider in hitcoll for a tag matching NPC Puzzel or Shop and calls the right functions.
-        print(Input.GetJoystickNames().Length);
         if(Input.GetJoystickNames().Length != 0)
         {
             for (int i = 0; i < hitColl.Length; i++)
