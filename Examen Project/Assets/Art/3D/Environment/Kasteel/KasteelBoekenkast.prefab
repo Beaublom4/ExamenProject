@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 199497626602110779}
   - component: {fileID: 3849198470920007838}
   - component: {fileID: 1337550210317485140}
+  - component: {fileID: 5588210017703613228}
   m_Layer: 0
   m_Name: KasteelBoekenkast
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5588210017703613228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688789765030847873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.279822, y: 2.1396778, z: 0.653114}
+  m_Center: {x: 0.00000005960464, y: 1.0698386, z: 0.0298544}

@@ -1322,7 +1322,7 @@ PrefabInstance:
         type: 3}
       propertyPath: newPlayerpos
       value: 
-      objectReference: {fileID: 6064432747844450400}
+      objectReference: {fileID: 3775516788678157905}
     - target: {fileID: 5001563908560253549, guid: b6326616c71dfed4387863c7f5a7cf07,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3202,15 +3202,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9089097947715106283}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5744080223418394796 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3573013577230540103, guid: e864455af43f7ad409849ff6e5b4cdd2,
+--- !u!1 &3775516788678157905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5352425805624710074, guid: e864455af43f7ad409849ff6e5b4cdd2,
     type: 3}
   m_PrefabInstance: {fileID: 9089097947715106283}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6064432747844450400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3029734086501059979, guid: e864455af43f7ad409849ff6e5b4cdd2,
+--- !u!4 &5744080223418394796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3573013577230540103, guid: e864455af43f7ad409849ff6e5b4cdd2,
     type: 3}
   m_PrefabInstance: {fileID: 9089097947715106283}
   m_PrefabAsset: {fileID: 0}
