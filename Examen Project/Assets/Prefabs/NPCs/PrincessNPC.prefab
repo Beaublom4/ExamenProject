@@ -185,7 +185,7 @@ MonoBehaviour:
   anim: {fileID: 8888777668736554689}
   messages:
   - messages:
-    - message: Hello there.
+    - message: Thank goodness!
       isQuest: 0
       quest:
         questName: 
@@ -194,7 +194,7 @@ MonoBehaviour:
         rewardCoins: 0
       continueMovement: 0
       npc: {fileID: 0}
-    - message: I have a question for you!
+    - message: Have you come to save me?
       isQuest: 0
       quest:
         questName: 
@@ -203,13 +203,21 @@ MonoBehaviour:
         rewardCoins: 0
       continueMovement: 0
       npc: {fileID: 0}
-    - message: Can you get me this item?
-      isQuest: 1
+    - message: You are the hero of our kingdom. How can I repay you.
+      isQuest: 0
       quest:
-        questName: Find item
-        questObjective: {fileID: 11400000, guid: 252c8cf9610840c4f8652bc1ae26fe8b,
-          type: 2}
-        questCount: 1
+        questName: 
+        questObjective: {fileID: 0}
+        questCount: 0
+        rewardCoins: 0
+      continueMovement: 0
+      npc: {fileID: 0}
+    - message: The royal family is forever in your debt.
+      isQuest: 0
+      quest:
+        questName: 
+        questObjective: {fileID: 0}
+        questCount: 0
         rewardCoins: 0
       continueMovement: 0
       npc: {fileID: 0}
