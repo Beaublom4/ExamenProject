@@ -29,10 +29,24 @@ public class DialogManager : MonoBehaviour
 
     public AudioSource talking;
 
+    public static bool hasFinished;
+    public GameObject npcSteve, npcSteve2;
+
     //Set instance
     private void Awake()
     {
         Instance = this;
+        if (!hasFinished)
+            npcSteve.SetActive(true);
+        else
+        {
+            npcSteve.SetActive(false);
+            npcSteve2.SetActive(true);
+        }
+    }
+    private void Start()
+    {
+        
     }
     /// <summary>
     /// Add a message to the list of messages, and play if its not yet playing

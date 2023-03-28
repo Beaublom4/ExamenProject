@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5536414365603732577
 Transform:
@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832569737026054219}
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -0.1, y: 9.38, z: -10.69}
+  m_LocalPosition: {x: 0, y: 9.2, z: -10.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,7 +168,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3327565183238426118
 Transform:
@@ -244,7 +244,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &190677982934397625
 Transform:
@@ -379,7 +379,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4653905043443104476
 Transform:
@@ -424,7 +424,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5657139131577195057
 Transform:
@@ -1036,6 +1036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelPilaar (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
       propertyPath: m_RootOrder
@@ -1542,6 +1547,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -2338,6 +2348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -3521,6 +3536,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}

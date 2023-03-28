@@ -88,6 +88,7 @@ public class ShopManager : MonoBehaviour
         InventoryManager.Instance.AddItem(item.item, 1, null);
         item.currentInStore--;
         SoundManager.Instance.PlaySound(buyItem, 1);
+        coins.text = InventoryManager.Instance.coins.ToString();
     }
 }
 [System.Serializable]

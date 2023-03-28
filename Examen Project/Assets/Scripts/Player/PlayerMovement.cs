@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (movement != new Vector3(0, 0, 0))
             {
+                GetComponentInChildren<ParticleSystem>().Play();
                 SoundManager.Instance.PlaySound(pushClip, 1f);
                 if (direction != pushDirection && direction != pushDirectionBack)
                 {
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
+                GetComponentInChildren<ParticleSystem>().Stop();
                 SoundManager.Instance.StopSound();
             }
         }

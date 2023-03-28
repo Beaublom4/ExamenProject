@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
         if (!canOpen)
             return;
 
-        if (Input.GetButtonDown("Inventory"))
+        if (!HudManager.Instance.settingsObj.activeSelf && Input.GetButtonDown("Inventory"))
         {
             inventory.SetActive(!inventory.activeSelf);
             if (inventory.activeSelf)

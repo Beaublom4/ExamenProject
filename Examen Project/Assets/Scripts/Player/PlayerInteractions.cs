@@ -26,25 +26,28 @@ public class PlayerInteractions : MonoBehaviour
         //cast a overlapSphere and assigns all colliders to hitcoll.
         Collider[] hitColl = Physics.OverlapSphere(overlapPos.transform.position, OverlapRadius);
         //checks each collider in hitcoll for a tag matching NPC Puzzel or Shop and calls the right functions.
-        for (int i = 0; i < hitColl.Length; i++)
+        if(Input.GetJoystickNames().Length != 0)
         {
-            if (hitColl[i].transform.tag == "NPC")
+            for (int i = 0; i < hitColl.Length; i++)
             {
-                GetComponent<PlayerCombat>().stopAttack = true;
-                break;
+                if (hitColl[i].transform.tag == "NPC")
+                {
+                    GetComponent<PlayerCombat>().stopAttack = true;
+                    break;
+                }
+                else if (hitColl[i].transform.tag == "Puzzel")
+                {
+                    GetComponent<PlayerCombat>().stopAttack = true;
+                    break;
+                }
+                else if (hitColl[i].transform.tag == "Shop")
+                {
+                    GetComponent<PlayerCombat>().stopAttack = true;
+                    break;
+                }
+                else
+                    GetComponent<PlayerCombat>().stopAttack = false;
             }
-            else if (hitColl[i].transform.tag == "Puzzel")
-            {
-                GetComponent<PlayerCombat>().stopAttack = true;
-                break;
-            }
-            else if (hitColl[i].transform.tag == "Shop")
-            {
-                GetComponent<PlayerCombat>().stopAttack = true;
-                break;
-            }
-            else
-                GetComponent<PlayerCombat>().stopAttack = false;
         }
         if(Input.GetButtonDown("InteractionKey"))
             foreach (var hit in hitColl)

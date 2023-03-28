@@ -4974,6 +4974,8 @@ MonoBehaviour:
   maxHealth: 10
   curHealth: 10
   deathScript: {fileID: 2554654103326442190}
+  healAudio: {fileID: 0}
+  getHit: {fileID: 0}
 --- !u!114 &9147595253224653122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4992,6 +4994,8 @@ MonoBehaviour:
   aggroParticle: {fileID: 0}
   moveParticle: {fileID: 0}
   summonPrefab: {fileID: 0}
+  blockedClip: {fileID: 8300000, guid: 0a2247403c76ff9448614191abafebe6, type: 3}
+  attack: {fileID: 8300000, guid: fbb90294952eae84a8d00aaeb132f3fa, type: 3}
 --- !u!114 &2554654103326442190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5005,6 +5009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5643893671415517085}
+  death: {fileID: 8300000, guid: d41ab2ddab2ea3740acd3500f4197cd4, type: 3}
   enemy: {fileID: 0}
   _lootTable: {fileID: 0}
   animationWaitTime: 0.5

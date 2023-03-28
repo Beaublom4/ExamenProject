@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3505500580994945075}
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -0.1, y: 9.38, z: -10.69}
+  m_LocalPosition: {x: 0, y: 9.2, z: -10.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -214,7 +214,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3703339232158605874
 Transform:
@@ -288,7 +288,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8591015962741783728
 Transform:
@@ -998,6 +998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelSpandoek
       objectReference: {fileID: 0}
+    - target: {fileID: 6470641253956362673, guid: 317635f643ffd47408251d6b60aa0f31,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7943039067217074401, guid: 317635f643ffd47408251d6b60aa0f31,
         type: 3}
       propertyPath: m_RootOrder
@@ -1072,6 +1077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -1203,6 +1213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618866692170249 stripped
@@ -1222,6 +1237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -1353,6 +1373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618866899650151 stripped
@@ -1428,6 +1453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618866975022171 stripped
@@ -1447,6 +1477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -1578,6 +1613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618867148527540 stripped
@@ -1652,6 +1692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelBarrel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
@@ -1728,6 +1773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618867404299718 stripped
@@ -1802,6 +1852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelBarrel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
@@ -1878,6 +1933,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618867526383425 stripped
@@ -1897,6 +1957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelSpandoek (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470641253956362673, guid: 317635f643ffd47408251d6b60aa0f31,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7943039067217074401, guid: 317635f643ffd47408251d6b60aa0f31,
         type: 3}
@@ -2028,6 +2093,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618867952625476 stripped
@@ -2103,6 +2173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618868212633117 stripped
@@ -2122,6 +2197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -2253,6 +2333,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618868396277573 stripped
@@ -2328,6 +2413,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618868493448098 stripped
@@ -2347,6 +2437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -2478,6 +2573,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelBarrel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
 --- !u!4 &2112618868655263556 stripped
@@ -2497,6 +2597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelPilaar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 662145597841029465, guid: 780ab9716f4db3346b2f9ebbbc10e116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4186966749816061826, guid: 780ab9716f4db3346b2f9ebbbc10e116,
         type: 3}
@@ -2627,6 +2732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelBarrel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404463717741689846, guid: 9adf44c866f36d94cad040e9f20d2dc9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adf44c866f36d94cad040e9f20d2dc9, type: 3}
@@ -2983,6 +3093,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelDeurOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 273863121563250085, guid: e4abc096d9b5df44a9a626f7291ba000,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2935204394281158606, guid: e4abc096d9b5df44a9a626f7291ba000,
         type: 3}
       propertyPath: m_RootOrder
@@ -3238,6 +3353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelDeurOpen (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 273863121563250085, guid: e4abc096d9b5df44a9a626f7291ba000,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2935204394281158606, guid: e4abc096d9b5df44a9a626f7291ba000,
         type: 3}
       propertyPath: m_RootOrder
@@ -3312,6 +3432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelDeurOpen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 273863121563250085, guid: e4abc096d9b5df44a9a626f7291ba000,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2935204394281158606, guid: e4abc096d9b5df44a9a626f7291ba000,
         type: 3}

@@ -28,10 +28,6 @@ public class Health : MonoBehaviour
             HudManager.Instance.SetHealth(curHealth, maxHealth);
             SoundManager.Instance.PlaySound(healAudio, 1);
         }
-        else
-        {
-            SoundManager.Instance.PlaySound(getHit, 1);
-        }
     }
 
     private bool deathStarted = false;
