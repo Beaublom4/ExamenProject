@@ -30,6 +30,7 @@ MonoBehaviour:
   magicCooldown: 0
   magicRange: 0
   food: 1
-  healAmount: 2
+  healAmount: 10
   keyItem: 0
   level: 0
+  upgrade: {fileID: 0}

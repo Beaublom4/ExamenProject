@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Squirrel_LootTable
   m_EditorClassIdentifier: 
   lootPrefabList:
-  - {fileID: 2356302116732928755, guid: fb08ce1315498e94a92219008e8c23ec, type: 3}
-  - {fileID: 2356302116732928755, guid: fb08ce1315498e94a92219008e8c23ec, type: 3}
-  - {fileID: 2356302116732928755, guid: fb08ce1315498e94a92219008e8c23ec, type: 3}
+  - {fileID: 2148918475546307681, guid: cde226d21f5925441bcd6b524f051649, type: 3}
+  - {fileID: 2868233270522419878, guid: 93087575291eb7d49aa6a893895bad22, type: 3}
+  - {fileID: 6760190636154243106, guid: 8de98dfe345f5974ba6dd5c2272cf84f, type: 3}
+  - {fileID: 6760190636154243106, guid: 8de98dfe345f5974ba6dd5c2272cf84f, type: 3}
   coinPrefab: {fileID: 4410758431443236391, guid: b3c6d20e6f3ed8f49806ed594debfee3,
     type: 3}
-  lootChance: 50
-  minCoins: 1
-  maxCoins: 3
+  lootChance: 100
+  minCoins: 2
+  maxCoins: 5

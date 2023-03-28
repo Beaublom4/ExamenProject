@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f63f741219245b4586081bd88c6888f, type: 3}
   m_Name: Summoned_LootTable
   m_EditorClassIdentifier: 
-  lootPrefabList: []
+  lootPrefabList:
+  - {fileID: 3852339982370860078, guid: c6f7af86c9f010f448de0cae2a6d9b73, type: 3}
+  - {fileID: 2868233270522419878, guid: 93087575291eb7d49aa6a893895bad22, type: 3}
+  - {fileID: 2868233270522419878, guid: 93087575291eb7d49aa6a893895bad22, type: 3}
+  - {fileID: 2868233270522419878, guid: 93087575291eb7d49aa6a893895bad22, type: 3}
+  - {fileID: 6760190636154243106, guid: 8de98dfe345f5974ba6dd5c2272cf84f, type: 3}
   coinPrefab: {fileID: 4410758431443236391, guid: b3c6d20e6f3ed8f49806ed594debfee3,
     type: 3}
-  lootChance: 0
+  lootChance: 75
   minCoins: 1
   maxCoins: 1

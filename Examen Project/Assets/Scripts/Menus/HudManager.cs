@@ -21,6 +21,9 @@ public class HudManager : MonoBehaviour
     [Space]
     public AudioClip buttonHover;
     public AudioClip buttonPress;
+    [Space]
+    public Image cover;
+
     private void Awake()
     {
         Instance = this;
@@ -84,5 +87,22 @@ public class HudManager : MonoBehaviour
     public void PlayButtonPress()
     {
         SoundManager.Instance.PlaySound(buttonPress, 1);
+    }
+    [ContextMenu("Fade")]
+    public void Fade()
+    {
+        StartCoroutine(FadeRoutine(true));
+    }
+    IEnumerator FadeRoutine(bool fade)
+    {
+        Debug.Log(cover.color.a);
+        while(cover.color.a < 255)
+        {
+            cover.color = Color.Lerp(cover.color, Color.black, .1f);
+            yield return null;
+        }
+        cover.color = new Color(0, 0, 0, 0);
+        DialogManager.hasFinished = true;
+        SceneManager.LoadScene("Game");
     }
 }
