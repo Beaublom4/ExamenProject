@@ -722,15 +722,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItems:
-  - item: {fileID: 11400000, guid: a2b9a5504a37af246b4baec50c36d905, type: 2}
+  - item: {fileID: 11400000, guid: e38e2dac665bbfb4db1780a909d7138e, type: 2}
     price: 10
     currentInStore: 1
-  - item: {fileID: 11400000, guid: 65ab97d7a72efc54aab701661f241eed, type: 2}
-    price: 3
+  - item: {fileID: 11400000, guid: 2a2e4276b0e97bb498a8eee7ff0b6332, type: 2}
+    price: 10
+    currentInStore: 1
+  - item: {fileID: 11400000, guid: ab75caf2c10f09e45924661f7340e88d, type: 2}
+    price: 6
     currentInStore: 3
-  - item: {fileID: 11400000, guid: 520be301c07e4fe4fb96c2c6da34ed4b, type: 2}
+  - item: {fileID: 11400000, guid: 773450c4f775ccb409a1cba813afc972, type: 2}
     price: 5
-    currentInStore: 2
+    currentInStore: 1
 --- !u!1001 &2079303789455046003
 PrefabInstance:
   m_ObjectHideFlags: 0

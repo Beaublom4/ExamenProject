@@ -1852,8 +1852,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseNPC (Shop)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1971732750, guid: 816e0af0557de62499f7ed3233ffbf9a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 816e0af0557de62499f7ed3233ffbf9a, type: 3}
+--- !u!1 &20352920099490335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7092741286676083353, guid: 816e0af0557de62499f7ed3233ffbf9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7072397716206073990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4597023935471552550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20352920099490335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0451831c846cbbc4c921f93c00f0f680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItems:
+  - item: {fileID: 11400000, guid: a2b9a5504a37af246b4baec50c36d905, type: 2}
+    price: 10
+    currentInStore: 1
+  - item: {fileID: 11400000, guid: 65ab97d7a72efc54aab701661f241eed, type: 2}
+    price: 3
+    currentInStore: 3
+  - item: {fileID: 11400000, guid: 520be301c07e4fe4fb96c2c6da34ed4b, type: 2}
+    price: 5
+    currentInStore: 2
 --- !u!4 &9111912361708437926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2040746651523512608, guid: 816e0af0557de62499f7ed3233ffbf9a,
