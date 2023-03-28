@@ -3129,7 +3129,7 @@ PrefabInstance:
     - target: {fileID: 2040746651523512608, guid: 816e0af0557de62499f7ed3233ffbf9a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.074
+      value: -4.38
       objectReference: {fileID: 0}
     - target: {fileID: 2040746651523512608, guid: 816e0af0557de62499f7ed3233ffbf9a,
         type: 3}
@@ -3139,7 +3139,7 @@ PrefabInstance:
     - target: {fileID: 2040746651523512608, guid: 816e0af0557de62499f7ed3233ffbf9a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.682
+      value: -2.02
       objectReference: {fileID: 0}
     - target: {fileID: 2040746651523512608, guid: 816e0af0557de62499f7ed3233ffbf9a,
         type: 3}
@@ -3215,7 +3215,10 @@ MonoBehaviour:
   shopItems:
   - item: {fileID: 11400000, guid: 65ab97d7a72efc54aab701661f241eed, type: 2}
     price: 3
-    currentInStore: 1
+    currentInStore: 3
+  - item: {fileID: 11400000, guid: 520be301c07e4fe4fb96c2c6da34ed4b, type: 2}
+    price: 5
+    currentInStore: 2
 --- !u!4 &5344231632593846138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2040746651523512608, guid: 816e0af0557de62499f7ed3233ffbf9a,
