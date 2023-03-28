@@ -355,7 +355,7 @@ PrefabInstance:
         type: 3}
       propertyPath: magicSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 1ea2e0a8d0d2b88408d564e921b55e09, type: 3}
     - target: {fileID: 434323213426822350, guid: 9732f9d882d604744a9db21cd41ef7cf,
         type: 3}
       propertyPath: swordSound
