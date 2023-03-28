@@ -88,21 +88,42 @@ public class HudManager : MonoBehaviour
     {
         SoundManager.Instance.PlaySound(buttonPress, 1);
     }
-    [ContextMenu("Fade")]
-    public void Fade()
+    [ContextMenu("FadeIn")]
+    public void FadeIn()
     {
         StartCoroutine(FadeRoutine(true));
     }
-    IEnumerator FadeRoutine(bool fade)
+    [ContextMenu("FadeOut")]
+    public void FadeOut()
     {
-        Debug.Log(cover.color.a);
-        while(cover.color.a < 255)
+        StartCoroutine(FadeRoutine(false));
+    }
+    IEnumerator FadeRoutine(bool fadeIn)
+    {
+        Debug.Log(fadeIn);
+        if (fadeIn) 
         {
-            cover.color = Color.Lerp(cover.color, Color.black, .1f);
-            yield return null;
+            cover.color = new Color(0, 0, 0, 0);
+            while (cover.color.a < .95f)
+            {
+                cover.color = Color.Lerp(cover.color, new Color(0, 0, 0, 1), .05f);
+                Debug.Log(cover.color.a);
+                yield return null;
+            }
+            cover.color = Color.black;
+            DialogManager.hasFinished = true;
+            SceneManager.LoadScene("Game");
         }
-        cover.color = new Color(0, 0, 0, 0);
-        DialogManager.hasFinished = true;
-        SceneManager.LoadScene("Game");
+        else
+        {
+            cover.color = new Color(0, 0, 0, 1);
+            while (cover.color.a > 0.05f)
+            {
+                cover.color = Color.Lerp(cover.color, new Color(0, 0, 0, 0), .05f);
+                Debug.Log(cover.color.a);
+                yield return null;
+            }
+            cover.color = new Color(0, 0, 0, 0);
+        }
     }
 }

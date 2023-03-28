@@ -36,17 +36,18 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    private void Start()
+    {
         if (!hasFinished)
             npcSteve.SetActive(true);
         else
         {
             npcSteve.SetActive(false);
             npcSteve2.SetActive(true);
+            Debug.Log("test");
+            HudManager.Instance.FadeOut();
         }
-    }
-    private void Start()
-    {
-        
     }
     /// <summary>
     /// Add a message to the list of messages, and play if its not yet playing
@@ -113,6 +114,11 @@ public class DialogManager : MonoBehaviour
 
         talking.Pause();
         typingMessage = false;
+
+        if (_message.fadeToBlack)
+        {
+            HudManager.Instance.FadeIn();
+        }
     }
     /// <summary>
     /// Start coroutine from here (public)
@@ -189,6 +195,7 @@ public class Message
     public Quest quest;
     [Space]
     public bool continueMovement;
+    public bool fadeToBlack;
     [Space]
     [HideInInspector] public NPC npc;
 }
