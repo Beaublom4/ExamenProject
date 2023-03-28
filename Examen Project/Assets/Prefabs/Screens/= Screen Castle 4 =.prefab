@@ -1516,6 +1516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelDeurOpen (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 273863121563250085, guid: e4abc096d9b5df44a9a626f7291ba000,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2935204394281158606, guid: e4abc096d9b5df44a9a626f7291ba000,
         type: 3}
       propertyPath: m_RootOrder
@@ -3759,6 +3764,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KasteelDeurOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 273863121563250085, guid: e4abc096d9b5df44a9a626f7291ba000,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2935204394281158606, guid: e4abc096d9b5df44a9a626f7291ba000,
         type: 3}
       propertyPath: m_RootOrder
@@ -4211,6 +4221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KasteelDeurOpen (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 273863121563250085, guid: e4abc096d9b5df44a9a626f7291ba000,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2935204394281158606, guid: e4abc096d9b5df44a9a626f7291ba000,
         type: 3}

@@ -1112,6 +1112,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2870559934063590191, guid: 9b74191d4c6de804e89d592da5d648ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 3110254323465237916, guid: 9b74191d4c6de804e89d592da5d648ba,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1222,10 +1227,20 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5749082229407533234, guid: 9b74191d4c6de804e89d592da5d648ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 6234878138933853737, guid: 9b74191d4c6de804e89d592da5d648ba,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848890415252159749, guid: 9b74191d4c6de804e89d592da5d648ba,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 6855617314661222030, guid: 9b74191d4c6de804e89d592da5d648ba,
         type: 3}
