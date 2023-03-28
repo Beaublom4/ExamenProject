@@ -6116,12 +6116,17 @@ PrefabInstance:
     - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
         type: 3}
       propertyPath: messages.Array.data[0].messages.Array.data[2].isQuest
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
         type: 3}
       propertyPath: messages.Array.data[0].messages.Array.data[2].message
       value: Maybe you can figure it out?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.rewardCoins
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79c3cb3203a2814fa284cf676181f01, type: 3}
