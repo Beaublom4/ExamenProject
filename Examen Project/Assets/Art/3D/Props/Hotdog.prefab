@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 4484901750071867028}
   - component: {fileID: 689695007266879793}
   - component: {fileID: 3348073094598118907}
+  - component: {fileID: 1043302608399693836}
+  - component: {fileID: 7357126381789865080}
   m_Layer: 0
   m_Name: Hotdog
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +85,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1043302608399693836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852339982370860078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6df6ddd7408b54caa5fe477728358a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 65ab97d7a72efc54aab701661f241eed, type: 2}
+  count: 1
+  doPopup: 0
+  popupObj: {fileID: 0}
+--- !u!65 &7357126381789865080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852339982370860078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.60477346, y: 0.17513694, z: 0.18275833}
+  m_Center: {x: 0, y: 0.018272996, z: 0}
