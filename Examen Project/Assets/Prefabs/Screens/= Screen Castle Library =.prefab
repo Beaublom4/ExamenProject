@@ -631,6 +631,7 @@ Transform:
   - {fileID: 8331132135634744863}
   - {fileID: 1753158232849516181}
   - {fileID: 8841001408080726869}
+  - {fileID: 6726029771712663050}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -709,6 +710,114 @@ Transform:
   m_Father: {fileID: 7253130556500287411}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &888153922991307830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7253130556500287411}
+    m_Modifications:
+    - target: {fileID: 5213659356277627484, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_Name
+      value: GhostNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.977
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0620337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9914449
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.13052616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Can you help me good sir!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].message
+      value: "My family was taken to help with creating Lord Nibbler\u2019s army."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].message
+      value: "I tried saving them but I didn\u2019t make it. They have to be somewhere
+        in this castle. Please bring them to me, or at least something to remember
+        them by."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.questName
+      value: Find the ghost's family
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.rewardCoins
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: a79c3cb3203a2814fa284cf676181f01,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[2].quest.questObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d5fa452fb98a2949b0ec23ce125fc0b,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a79c3cb3203a2814fa284cf676181f01, type: 3}
+--- !u!4 &6726029771712663050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5838058445104132668, guid: a79c3cb3203a2814fa284cf676181f01,
+    type: 3}
+  m_PrefabInstance: {fileID: 888153922991307830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1009961803142647310
 PrefabInstance:
   m_ObjectHideFlags: 0

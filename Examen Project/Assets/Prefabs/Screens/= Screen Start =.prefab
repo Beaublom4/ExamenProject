@@ -869,7 +869,7 @@ PrefabInstance:
     - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
         type: 3}
       propertyPath: messages.Array.data[0].messages.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
         type: 3}
@@ -879,6 +879,11 @@ PrefabInstance:
     - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
         type: 3}
       propertyPath: messages.Array.data[0].messages.Array.data[0].message
+      value: Wake up!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,
+        type: 3}
+      propertyPath: messages.Array.data[0].messages.Array.data[1].message
       value: Hey nephew! Come over here I have to tell you something.
       objectReference: {fileID: 0}
     - target: {fileID: 7942057795536770677, guid: b3dfbf36e6fa89a4c96a310c18d2b59c,

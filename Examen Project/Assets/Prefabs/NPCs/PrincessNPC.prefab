@@ -193,6 +193,7 @@ MonoBehaviour:
         questCount: 0
         rewardCoins: 0
       continueMovement: 0
+      fadeToBlack: 0
       npc: {fileID: 0}
     - message: Have you come to save me?
       isQuest: 0
@@ -202,6 +203,7 @@ MonoBehaviour:
         questCount: 0
         rewardCoins: 0
       continueMovement: 0
+      fadeToBlack: 0
       npc: {fileID: 0}
     - message: You are the hero of our kingdom. How can I repay you.
       isQuest: 0
@@ -211,6 +213,7 @@ MonoBehaviour:
         questCount: 0
         rewardCoins: 0
       continueMovement: 0
+      fadeToBlack: 0
       npc: {fileID: 0}
     - message: The royal family is forever in your debt.
       isQuest: 0
@@ -220,6 +223,7 @@ MonoBehaviour:
         questCount: 0
         rewardCoins: 0
       continueMovement: 0
+      fadeToBlack: 1
       npc: {fileID: 0}
     triggerActivate: 0
     trigger: {fileID: 0}

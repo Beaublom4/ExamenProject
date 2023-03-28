@@ -6838,6 +6838,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   - message: I dont have anything to tell you.
     isQuest: 0
@@ -6847,6 +6848,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   messageBox: {fileID: 5340900559303897490}
   continueButton: {fileID: 5340900558436352769}
@@ -7012,6 +7014,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   - message: You dont have the item I asked for.
     isQuest: 0
@@ -7021,6 +7024,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   - message: Come back when you have it!
     isQuest: 0
@@ -7030,6 +7034,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   questItemFoundMessage:
   - message: You've found it!
@@ -7040,6 +7045,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   - message: Thanks!
     isQuest: 0
@@ -7049,6 +7055,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   - message: Here is your reward.
     isQuest: 0
@@ -7058,6 +7065,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   alreadyStartedQuestMessage:
   - message: You already started a quest!
@@ -7068,6 +7076,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   - message: Come back when you finished it.
     isQuest: 0
@@ -7077,6 +7086,7 @@ MonoBehaviour:
       questCount: 0
       rewardCoins: 0
     continueMovement: 0
+    fadeToBlack: 0
     npc: {fileID: 0}
   questStart: {fileID: 8300000, guid: 44385c1813c3f2a489d6283a2b347b58, type: 3}
   questFinish: {fileID: 8300000, guid: 66dfe2f265f924a488e12199ea407706, type: 3}
